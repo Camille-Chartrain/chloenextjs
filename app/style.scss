@@ -1,0 +1,28 @@
+main{
+    height: 100%;
+    width: 100%;
+}
+
+.background{
+    height: 100%;
+    width: 100%;
+    font-size: 1.2rem;
+    background-image:  url("./public/style/logo/chartrain.jpg");
+
+    // l'image sera fixe et le contenu defilera 
+    // par dessus: parallax.
+    background-attachment: fixed;
+
+    // indique que l'image doit être centrée à la fois horizontalement
+    //  et verticalement dans le conteneur.
+    background-position: center;
+
+    // Ajuste l'image pour qu'elle couvre tout le conteneur
+    background-size: cover;
+
+    .burger_logo{
+        display: flex;
+        padding-top: 2%;
+        padding-left: 2%;
+    }
+}

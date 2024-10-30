@@ -1,15 +1,16 @@
 "use client"
 import Link from 'next/link';
-import styles from "./page.module.css";
-import BurgerMenu from './BurgerMenu';
+import "./style.scss"
+import BurgerMenu from './Components/BurgerMenu';
+import React from "react";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div className="background">
+      <main className="burger_logo">
 
         <BurgerMenu />
-        <Link href="/">Home</Link>
+        <Link href="/">Chloé Chartrain</Link>
 
       </main>
 

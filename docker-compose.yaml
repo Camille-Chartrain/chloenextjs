@@ -34,17 +34,30 @@ services:
   #   depends_on:
   #     - bdd
 
+  # front:
+  #   image: "node:18"
+  #   working_dir: /home/server/chloenextjs
+  #   ports:
+  #     - "1234:1234"
+  #   volumes:
+  #     - ./volumeDockerFront:/home/server/chloenextjs
+  #     - node_modules_front:/home/server/chloenextjs/node_modules
+  #   command: >
+  #     sh -c "ls -al /home/server/chloenextjs && npm install && npx next dev"
+  #   # depends_on:
+  #   #   - back
+
   front:
     image: "node:18"
     working_dir: /home/server/chloenextjs
     ports:
-      - "1234:1234"
+      - "3000:3000"
+    #mappe le port 3000 de la machine hôte au port 3000 du conteneur.
     volumes:
-      - ./FRONT:/home/server/chloenextjs
-      # - ./FRONT:/Skillswap/FRONT
-      - node_modules_front:/home/server/chloenextjs/node_modules
+      - ../chloenextjs:/home/server/chloenextjs
+      - ../chloenextjs/node_modules:/home/server/chloenextjs/node_modules
     command: >
-      sh -c "ls -al /home/server/chloenextjs && npm install && npm start"
+      sh -c "ls -al /home/server/chloenextjs && npm install && npx next dev"
     # depends_on:
     #   - back
 
@@ -59,5 +72,5 @@ services:
 
 volumes:
   
-  node_modules_back:
+  # node_modules_back:
   node_modules_front:
