@@ -1,0 +1,62 @@
+body {
+    background-image: url(../public/style/logo/chartrain.jpg);
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+    font-family: ZH-Sans,Arial,"Lucida Sans Unicode",sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    width: 60%;
+}
+input{
+    border-radius: 4px;
+    border-style: none;
+    padding: 12px 0px 12px 0px;
+    margin: 4px;
+    background-color: rgba(255, 255, 255, 0.7); /* Couleur blanche avec 50% d'opacité */
+
+}
+.checkbox{
+    display: flex;
+    flex-direction: row;
+}
+.checkbox-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-label label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+/* .checkbox-group input {
+    margin-right: 10px;
+    
+}  */
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 6px;
+}
+
+
+button{
+    border-radius: 4px;
+    border-style: none;
+    padding: 12px 0px 12px 0px;
+    margin: auto;
+    margin-top: 20px;
+    width: 40%;
+}

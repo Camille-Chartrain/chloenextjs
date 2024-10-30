@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 // import styles from "./BurgerMenu.module.css"; // Import du fichier CSS
 import Link from 'next/link';

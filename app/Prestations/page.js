@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import BurgerMenu from '../Components/BurgerMenu';
 
 const prestations = () => {
     return (
-        <div>Prestations</div>
+        <>
+            <BurgerMenu />
+            <div>Prestations</div>
+        </>
     )
 }
 

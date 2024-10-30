@@ -1,8 +1,12 @@
 import React from 'react'
+import BurgerMenu from '../Components/BurgerMenu';
 
 const Partenaires = () => {
     return (
-        <div>Partenaires</div>
+        <>
+            <BurgerMenu />
+            <div>Partenaires</div>
+        </>
     )
 }
 
