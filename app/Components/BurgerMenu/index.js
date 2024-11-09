@@ -28,9 +28,21 @@ const BurgerMenu = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <div className={`line ${isOpen ? "line1" : ""}`}></div>
-                <div className={`line ${isOpen ? "line2" : ""}`}></div>
-                <div className={`line ${isOpen ? "line3" : ""}`}></div>
+                {/* Affiche les lignes de l'icône burger conditionnellement */}
+                {isOpen && (
+                    <>
+                        <div className="line line1"></div>
+                        <div className="line line2"></div>
+                        <div className="line line3"></div>
+                    </>
+                )}
+                {!isOpen && (
+                    <>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                    </>
+                )}
             </div>
 
             {/* Menu déroulant */}
@@ -38,11 +50,20 @@ const BurgerMenu = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
+                <div className="croix_logo">
+                    <div>
+                        <p>X</p>
+                        {/* <div className="line line1"></div>
+                        <div className="line line2"></div>
+                        <div className="line line3"></div> */}
+                    </div>
+                    <Link href="/">CHLOE CHARTRAIN</Link>
+                </div>
                 <ul>
-                    <li><Link href="/Devis">Devis-Contact</Link></li>
-                    <li><Link href="/Prestations">Types-de-prestations</Link></li>
-                    <li><Link href="/Realisations">Réalisations</Link></li>
-                    <li><Link href="/Partenaires">Partenaires</Link></li>
+                    <li><Link href="/Devis">DEVIS-CONTACT</Link></li>
+                    <li><Link href="/Prestations">TYPES DE PRESTATIONS</Link></li>
+                    <li><Link href="/Realisations">RÉALISATIONS</Link></li>
+                    <li><Link href="/Partenaires">PARTENAIRES</Link></li>
                 </ul>
             </nav >
         </div >

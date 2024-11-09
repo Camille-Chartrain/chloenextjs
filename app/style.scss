@@ -1,3 +1,14 @@
+html body {
+    background-color: #fff;
+    font-family: ZH-Sans,Arial,Lucida Sans Unicode,"sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: .02rem;
+    line-height: 1.8rem
+}
+
 main{
     height: 100%;
     width: 100%;

@@ -10,4 +10,16 @@ body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
+
+    background-color: #fff;
+    font-family: ZH-Sans,Arial,Lucida Sans Unicode,"sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 1.4rem;
+    /* letter-spacing: .02rem; */
+    line-height: 1.8rem;
+    letter-spacing: 0.2px;
+    line-height: 22px;
+
 }
