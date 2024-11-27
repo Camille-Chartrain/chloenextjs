@@ -3,9 +3,10 @@ body {
     background-size: cover;
     background-position: center;  
     background-repeat: no-repeat;
-    font-family: ZH-Sans,Arial,"Lucida Sans Unicode",sans-serif;
+    font-family: PortherasThin,ZH-Sans,Arial,"Lucida Sans Unicode",sans-serif;
     width: 100%;
-    display: flex;
+    // display: flex;
+    
     justify-content: center;
 
 }
@@ -38,6 +39,15 @@ input{
     align-items: center;
     margin-bottom: 5px;
     margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    &:checked{
+        background-color:beige;
+    }
+    &:hover{
+        background-color:beige;
+    }
 }
 
 /* .checkbox-group input {
@@ -45,10 +55,7 @@ input{
     
 }  */
 .box{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 6px;
+    display: none;
 }
 
 

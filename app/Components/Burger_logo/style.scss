@@ -1,0 +1,20 @@
+.burger_logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+    // padding-left: 20px;
+    max-height: 50px;
+    max-width: fit-content;
+
+    .burger{
+        // padding-top: 5px;
+        height: auto;
+    }
+
+    .logo{
+        margin-left: 10px;
+        // padding-bottom: 10px;
+        height: auto;
+    }
+}

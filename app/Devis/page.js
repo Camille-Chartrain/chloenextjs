@@ -1,11 +1,11 @@
 import React from 'react'
 import "./style.scss"
-import BurgerMenu from '../Components/BurgerMenu';
+import Burger_logo from '../Components/Burger_logo';
 
 const Devis = () => {
     return (
         <body>
-            <BurgerMenu />
+            <Burger_logo />
             <div>Devis-Contact</div>
             <form method="POST">
                 <label htmlFor="lastname">Nom </label>
@@ -25,28 +25,33 @@ const Devis = () => {
 
                 <span>Ascenseur:</span>
 
-                <label htmlFor="oui">Oui
-                    <input type="radio" name="ascenseur" id="oui" />
-                </label>
+                <label htmlFor="oui">Oui </label>
+                <input type="radio" name="ascenseur" id="oui" />
 
-                <label htmlFor="non">Non
-                    <input type="radio" name="ascenseur" id="non" />
-                </label>
+
+
+                <label htmlFor="non">Non</label>
+                <input type="radio" name="ascenseur" id="non" />
+
 
 
                 <label htmlFor="date">Date souhaitée du projet</label>
                 <input type="text" name="date" id="date" />
 
-                <label htmlFor="surface_totale">Surface totale en m²</label>
-                <input type="text" name="surface_totale" id="surface_totale" />
 
-
-                <label htmlFor="surface_mur">Surface des murs </label>
+                <label htmlFor="surface_mur">Surface des murs (hauteur x Largeur en mètres)</label>
                 <input type="text" name="surface_mur" id="surface_mur" />
 
 
-                <label htmlFor="surface_sol">Surface du sol </label>
+                <label htmlFor="surface_sol">Surface des sols (longueur x Largeur en mètres)</label>
                 <input type="text" name="surface_sol" id="surface_sol" />
+
+                <label htmlFor="surface_plafond">Surface des plafonds (longueur x Largeur en mètres)</label>
+                <input type="text" name="surface_plafond" id="surface_plafond" />
+
+                <label htmlFor="element">Précisez si vous avez des éléments à décorer (exemple: meuble vasque, niche, banquette, etc)</label>
+                <input type="text" name="element" id="element" />
+
 
 
                 <p>Type de support:</p>

@@ -1,18 +1,19 @@
 html body {
     background-color: #fff;
-    font-family: ZH-Sans,Arial,Lucida Sans Unicode,"sans-serif";
+    font-family: PortherasThin,ZH-Sans,Arial,Lucida Sans Unicode,"sans-serif";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
     font-size: 1.4rem;
     letter-spacing: .02rem;
-    line-height: 1.8rem
+    line-height: 1.8rem;
+    color: black;
 }
 
-main{
-    height: 100%;
-    width: 100%;
-}
+// main{
+//     height: 100%;
+//     width: 100%;
+// }
 
 .background{
     height: 100%;
@@ -31,9 +32,23 @@ main{
     // Ajuste l'image pour qu'elle couvre tout le conteneur
     background-size: cover;
 
-    .burger_logo{
-        display: flex;
-        padding-top: 2%;
-        padding-left: 2%;
-    }
+    // .burger_logo{
+    //     display: flex;
+    //     align-items: center;
+    //     padding-top: 10px;
+    //     // padding-left: 20px;
+    //     max-height: 50px;
+    //     max-width: fit-content;
+
+    //     .burger{
+    //         // padding-top: 5px;
+    //         height: auto;
+    //     }
+
+    //     .logo{
+    //         margin-left: 10px;
+    //         // padding-bottom: 10px;
+    //         height: auto;
+    //     }
+    // }
 }
