@@ -1,14 +1,17 @@
 body {
-    background-image: url(../public/style/logo/chartrain.jpg);
+    background-image: url(../public/beton_cire.jpg);
     background-size: cover;
     background-position: center;  
     background-repeat: no-repeat;
     font-family: PortherasThin,ZH-Sans,Arial,"Lucida Sans Unicode",sans-serif;
     width: 100%;
-    // display: flex;
-    
-    justify-content: center;
 
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
 }
 
 form{
