@@ -27,7 +27,7 @@ const Devis = () => {
 
                         <fieldset>
                             <legend>Ascenseur :</legend>
-                            <div>
+                            <div className='ascenseur_radio'>
                                 <input type="radio" name="ascenseur" id="oui" />
                                 <label htmlFor="oui">Oui</label>
 
@@ -101,7 +101,7 @@ const Devis = () => {
                         <input type="text" name="element" id="element" />
 
                         <label htmlFor="message">Message</label>
-                        <input type="text" name="message" id="message" />
+                        <textarea name="message" id="message" rows="12" cols="50"></textarea>
                     </div>
 
                     <button type="button" name="valider">Envoyer ma demande de devis</button>
