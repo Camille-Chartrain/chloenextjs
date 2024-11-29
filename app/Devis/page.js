@@ -101,7 +101,8 @@ const Devis = () => {
                         <input type="text" name="element" id="element" />
 
                         <label htmlFor="message">Message</label>
-                        <textarea name="message" id="message" rows="12"></textarea>
+                        <textarea name="message" id="message" rows="12" cols="50"></textarea>
+                        {/* cols ne sert pas puisque la width est indiquée en scss, il sert de valeur de secours pour des environnements très simples. */}
                     </div>
 
                     <button type="button" name="valider">Envoyer ma demande de devis</button>
