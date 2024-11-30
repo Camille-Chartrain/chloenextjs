@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./style/globals.scss";
 import Head from "next/head";
 import React from "react";
 
@@ -18,6 +18,9 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Chloé Chartrain</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        {/* à voir si besoin */}
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> */}
 
         {/* <!--* ne pas oublier les metadonnees--> */}
       </Head>

@@ -4,7 +4,7 @@ import Burger_logo from '../Components/Burger_logo';
 
 const Devis = () => {
     return (
-        <body>
+        <>
             <Burger_logo />
             <main className="main">
                 <h2>Devis - Contact</h2>
@@ -108,7 +108,7 @@ const Devis = () => {
                     <button type="button" name="valider">Envoyer ma demande de devis</button>
                 </form>
             </main>
-        </body>
+        </>
     )
 };
 

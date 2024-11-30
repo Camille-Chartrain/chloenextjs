@@ -1,0 +1,62 @@
+//  Les styles globaux de base
+
+// Ce fichier est utilisé pour les styles universels ou fondamentaux qui s'appliquent à l'ensemble de l'application.
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body{
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+
+    background-color: #fff;
+    font-family: PortherasThin,ZH-Sans,Arial,Lucida Sans Unicode,"sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 1.1em;
+    letter-spacing: .02rem;
+    line-height: 1.8rem;
+    color: black;
+
+    a{
+      text-decoration: none;
+      color: black;
+    }
+
+    h1, h2 {
+      font-weight: 400;
+      font-size: 1.4rem;
+    }
+    
+
+}
+@font-face {
+  font-family: 'PortherasThin'; /* Nom personnalisé pour votre police */
+  src: url('../fonts/PortherasTest-Thin.otf') format('otf'); /* Chemin vers le fichier */
+  /* font-weight: normal; /* Optionnel, défini pour les variantes */
+  /* font-style: normal; Optionnel */ 
+}
+.background{
+  height: 100%;
+  width: 100%;
+  font-size: 1.2rem;
+  background-image:  url("../public/style/logo/chartrain.jpg");
+
+  // l'image sera fixe et le contenu defilera 
+  // par dessus: parallax.
+  background-attachment: fixed;
+
+  // indique que l'image doit être centrée à la fois horizontalement
+  //  et verticalement dans le conteneur.
+  background-position: center;
+
+  // Ajuste l'image pour qu'elle couvre tout le conteneur
+  background-size: cover;
+}

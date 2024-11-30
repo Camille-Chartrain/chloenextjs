@@ -1,0 +1,19 @@
+@use './var';
+
+@mixin small {
+    @media screen and (max-width:60rem){
+        @content;
+    } 
+}
+
+@mixin medium {
+    @media screen and (min-width:60rem){
+        @content;
+    } 
+}
+
+@mixin big {
+    @media screen and (min-width:90rem){
+        @content;
+    } 
+}

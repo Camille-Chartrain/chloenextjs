@@ -1,5 +1,8 @@
+@use '../style/mixin';
+@use '../style/var';
+
 body {
-    background-image: url(../public/beton_cire.jpg);
+    background-image: url(../public/background_chloe.jpg);
     background-size: cover;
     background-position: center;  
     background-repeat: no-repeat;
@@ -20,6 +23,12 @@ body {
             flex-direction: column;
             margin: 8px;
             width: 80%;
+
+            @include mixin.medium {
+                width: 50%;
+                
+            }
+        
 
             .segment{
                 display: flex;
@@ -90,13 +99,13 @@ body {
                 }
 
                 fieldset{
-                    display: block;
-                    min-inline-size: min-content;
-                    margin-inline: 0px;
-                    border-width: 0px;
-                    border-style: none;
-                    padding-block: 0em 0em;
-                    padding-inline: 0em;
+                    // display: block;
+                    // min-inline-size: min-content;
+                    // margin-inline: 0px;
+                    // border-width: 0px;
+                    // border-style: none;
+                    // padding-block: 0em 0em;
+                    // padding-inline: 0em;
 
                     #oui, #non{
                         margin-top: 0.5rem;

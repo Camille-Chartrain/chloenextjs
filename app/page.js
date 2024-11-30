@@ -1,5 +1,5 @@
 "use client"
-import "./style.scss"
+import "./index.scss"
 import Burger_logo from './Components/Burger_logo';
 import React from "react";
 
