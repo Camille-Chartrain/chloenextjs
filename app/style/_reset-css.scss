@@ -77,16 +77,22 @@ button, input[type="button"], input[type="submit"] {
 }
 
 fieldset {
-  
-  display: block;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-block-start: 0em;
-  padding-inline-start: 0em;
-  padding-inline-end: 0em;
-  padding-block-end: 0em;
-  min-inline-size: min-content;
-  border-width: 0px;
+   display: block;
+                    min-inline-size: min-content;
+                    margin-inline: 0px;
+                    border-width: 0px;
+                    border-style: none;
+                    padding-block: 0em 0em;
+                    padding-inline: 0em;
+  // display: block;
+  // margin-inline-start: 0px;
+  // margin-inline-end: 0px;
+  // padding-block-start: 0em;
+  // padding-inline-start: 0em;
+  // padding-inline-end: 0em;
+  // padding-block-end: 0em;
+  // min-inline-size: min-content;
+  // border-width: 0px;
   // border-style: groove;
   // border-color: rgb(192, 192, 192);
   // border-image: initial;

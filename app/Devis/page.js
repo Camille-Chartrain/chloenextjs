@@ -9,7 +9,7 @@ const Devis = () => {
             <main className="main">
                 <h2>Devis - Contact</h2>
                 <form method="POST">
-                    <div className='segment'>
+                    <div className="segment segment1">
                         <label htmlFor="lastname">Nom </label>
                         <input type="text" name="lastname" id="lastname" />
 
@@ -107,7 +107,7 @@ const Devis = () => {
 
                     <button type="button" name="valider">Envoyer ma demande de devis</button>
                 </form>
-            </main>
+            </main >
         </>
     )
 };
