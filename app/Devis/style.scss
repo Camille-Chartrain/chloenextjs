@@ -16,7 +16,7 @@ body {
         align-items: center;
 
         h2{
-            margin-top: 1rem;
+            margin-top: 3rem;
             margin-bottom: 2rem;
         }
 
@@ -26,7 +26,7 @@ body {
             align-items: center;
             margin: 8px;
             width: 90%;
-            background-color: rgba(255, 255, 255, 0.712);
+            background-color: var.$soft-white-transparent;
             border-radius: 0.2rem;
 
             @include mixin.medium {
@@ -49,59 +49,76 @@ body {
                     border-radius: 4px;
                     border-style: none;
                     padding: 12px 0px 12px 12px; /*hauteur de la bande blanche*/
-                    background-color: rgba(255, 255, 255, 0.8); /* Couleur blanche avec 50% d'opacité */
+                    background-color: var.$soft-white; /* Couleur blanche avec 50% d'opacité */
                     // margin-top: 0.4rem;
                     margin-bottom: 0.7rem;
                     font-size: 1rem;
                     outline: none; /* Supprime le contour par défaut */
 
                     &:focus {
-                        border: 1px solid rgb(80, 80, 80); /* Bordure appliquée au focus */
+                        border: 1px solid var.$anthracite; /* Bordure appliquée au focus */
                         transition: border-color 0.3s ease; 
                     }
-
                 }
-
+    
+                input::placeholder {
+                        color: var.$black;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 400;
+                        font-size: 1.1em;
+                        letter-spacing: .02rem;
+                        // line-height: 1.8rem;
+                    }
                 
 
                 textarea {
-                    border: 0px solid rgb(80, 80, 80);
+                    border: 0px solid var.$anthracite;
+                    background-color: var.$soft-white;
                     outline: none;
                     border-radius: 4px;
                     border-radius: 4px;
                     padding: 10px;
                     font-size: 1rem;
+                    color: var.$black;
                     width: 100%; /* Prend toute la largeur du parent */
                     resize: vertical; /* Permet le redimensionnement vertical uniquement */
                     margin-top: 0.4rem;
                 
                     &:focus {
-                        border: 1px solid rgb(80, 80, 80); ;
+                        border: 1px solid var.$anthracite; ;
                         border-radius: 4px;
                     }
                 }
-
+                
                 .checkbox_choices{
                     display: flex;
                     flex-direction: row;
             
                     .checkbox-label {
                         display: flex;
-                        flex-direction: column;
+                        flex-direction: row;
+                        flex-wrap: wrap;
 
                         label{
                             display: flex;
                             align-items: center;
-                            margin-bottom: 5px;
-                            margin-left: 20px;
-                            border: 1px solid black;
+                            margin: 0.1rem 0.5rem 0.5rem 0rem;
+                            padding: 0.2rem 0.7rem ;
+                            // border: 0.02rem solid var.$black;
                             border-radius: 5px;
+                            background-color:var.$soft-white;
                         
                             &:checked{
-                                background-color:beige;
+                                background-color:rgb(231, 231, 221);
+                                border: 0.15rem solid var.$black;
                             }
                             &:hover{
-                                background-color:beige;
+                                background-color:var.$soft-grey;
+                                border: 0.02rem solid var.$black;
+                            }
+
+                            &.label_autre{
+                                display: none;
                             }
                         }
                     }
@@ -137,18 +154,18 @@ body {
             button{
                 border-radius: 4px;
                 border-style: none;
-                background-color: rgb(80, 80, 80);
-                color: beige;
+                background-color: var.$deep-anthracite;
+                color: var.$white;
                 padding: 12px;
                 margin: 3rem auto 2rem auto;
                 width: auto;
                 font-size: 1.2rem;
 
                 &:hover{
-                    background-color:rgb(53, 53, 52);
+                    background-color:var.$black;
                 }
                 &:active{
-                    background-color: black;
+                    background-color: var.$deep-anthracite;
                 }
             }
         }

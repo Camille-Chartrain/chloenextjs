@@ -1,10 +1,10 @@
 import React from 'react';
-import BurgerMenu from '../Components/BurgerMenu';
+import Burger_logo from '../Components/Burger_logo';
 
 const prestations = () => {
     return (
         <>
-            <BurgerMenu />
+            <Burger_logo />
             <div>Prestations</div>
             <h2>Les bétons</h2>
             <ul>

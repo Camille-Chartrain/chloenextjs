@@ -7,7 +7,7 @@ const Devis = () => {
         <>
             <Burger_logo />
             <main className="main">
-                <h2>Devis - Contact</h2>
+                <h2>DEVIS - CONTACT</h2>
                 <form method="POST">
                     <div className="segment segment1">
                         <label htmlFor="lastname">Nom </label>
@@ -79,9 +79,11 @@ const Devis = () => {
                                         {/* <!-- <input type="checkbox" name="support" id="chape ciment" /> --> */}
                                     </label>
 
-                                    <label htmlFor="support">Autre
-                                        {/* <!-- <input type="text" name="support" id="support"> --> */}
+                                    <label htmlFor="autre_support" className='label_autre'>Autre
                                     </label>
+                                    <input type="text" placeholder="Autre:"
+                                        className="support" name="autre_support" id="autre_support" >
+                                    </input>
                                 </div>
 
                                 <div className="box">
@@ -90,7 +92,7 @@ const Devis = () => {
                                     <input type="checkbox" name="support" id="mur en pierre" />
                                     <input type="checkbox" name="support" id="chape anhydrite" />
                                     <input type="checkbox" name="support" id="chape ciment" />
-                                    <input type="text" name="support" id="support" />
+                                    {/* <input type="text" name="support" id="support" /> */}
                                 </div>
                             </div>
                         </fieldset>

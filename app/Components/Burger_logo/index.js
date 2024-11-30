@@ -8,7 +8,9 @@ const Burger_logo = () => {
     return (
         <header className="burger_logo">
             <BurgerMenu className="burger" />
-            <Link href="/" className='logo'>CHLOE CHARTRAIN</Link>
+            <h1>
+                <Link href="/" className='logo' aria-label="Retour à l'accueil">CHLOE CHARTRAIN</Link>
+            </h1>
         </header>
     );
 };
