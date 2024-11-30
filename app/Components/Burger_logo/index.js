@@ -6,10 +6,10 @@ import BurgerMenu from '../BurgerMenu';
 const Burger_logo = () => {
 
     return (
-        <div className="burger_logo">
+        <header className="burger_logo">
             <BurgerMenu className="burger" />
             <Link href="/" className='logo'>CHLOE CHARTRAIN</Link>
-        </div>
+        </header>
     );
 };
 
