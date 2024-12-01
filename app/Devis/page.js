@@ -8,7 +8,9 @@ const Devis = () => {
             <Burger_logo />
             <main className="main">
                 <h2>DEVIS - CONTACT</h2>
+
                 <form method="POST">
+
                     <div className="segment segment1">
                         <label htmlFor="lastname">Nom </label>
                         <input type="text" name="lastname" id="lastname" />
@@ -35,66 +37,130 @@ const Devis = () => {
                                 <label htmlFor="non">Non</label>
                             </div>
                         </fieldset>
+
+                        <fieldset>
+                            <legend>Parking :</legend>
+                            <div className='ascenseur_radio'>
+                                <input type="radio" name="parking" id="grauit" />
+                                <label htmlFor="gratuit">Gratuit</label>
+
+                                <input type="radio" name="parking" id="payant" />
+                                <label htmlFor="payant">Payant</label>
+                            </div>
+                        </fieldset>
+
+                        <label htmlFor="date">Date souhaitée du projet</label>
+                        <input type="text" name="date" id="date" />
                     </div>
 
                     <div className='segment'>
-                        <label htmlFor="date">Date souhaitée du projet</label>
-                        <input type="text" name="date" id="date" />
+
+                        <fieldset className='fieldset1'>
+                            <legend className='legend1'>MURS</legend>
+
+                            <label htmlFor="surface_mur">Surface des murs (hauteur x Largeur en mètres)</label>
+                            <input type="text" name="surface_mur" id="surface_mur" />
+                            <fieldset>
+                                <legend>Type de support:</legend>
+
+                                <div className="checkbox_choices">
+                                    <div class="checkbox-label ">
+
+                                        <label htmlFor="carrelage">Carrelage
+                                        </label>
+
+                                        <label htmlFor="placo">Placo
+                                        </label>
+
+                                        <label htmlFor="mur pierre">Mur en pierre
+                                        </label>
+
+                                        <label htmlFor="chape anhydrite">Chape anhydrite
+                                        </label>
+
+                                        <label htmlFor="chape ciment">Chape ciment
+                                        </label>
 
 
-                        <label htmlFor="surface_mur">Surface des murs (hauteur x Largeur en mètres)</label>
-                        <input type="text" name="surface_mur" id="surface_mur" />
+                                    </div>
+
+                                    <div className="box">
+                                        <input type="checkbox" name="support" id="carrelage" />
+                                        <input type="checkbox" name="support" id="placo" />
+                                        <input type="checkbox" name="support" id="mur en pierre" />
+                                        <input type="checkbox" name="support" id="chape anhydrite" />
+                                        <input type="checkbox" name="support" id="chape ciment" />
+                                    </div>
+                                </div>
+
+                                <label htmlFor="autre_support" className='label_autre'>Autre
+                                </label>
+                                <input type="text" placeholder="Autre:"
+                                    className="support" name="autre_support" id="autre_support" >
+                                </input>
+                            </fieldset>
+                        </fieldset>
 
 
-                        <label htmlFor="surface_sol">Surface des sols (longueur x Largeur en mètres)</label>
-                        <input type="text" name="surface_sol" id="surface_sol" />
+                        <fieldset className='fieldset1'>
+                            <legend className='legend1'>SOLS</legend>
 
-                        <label htmlFor="surface_plafond">Surface des plafonds (longueur x Largeur en mètres)</label>
-                        <input type="text" name="surface_plafond" id="surface_plafond" />
+                            <label htmlFor="surface_sol">Surface des sols (longueur x Largeur en mètres)</label>
+                            <input type="text" name="surface_sol" id="surface_sol" />
 
-                        <fieldset>
-                            <legend>Type de support:</legend>
+                            <fieldset>
+                                <legend>Type de support:</legend>
 
-                            <div className="checkbox_choices">
-                                <div class="checkbox-label ">
+                                <div className="checkbox_choices">
+                                    <div class="checkbox-label ">
 
-                                    <label htmlFor="carrelage">Carrelage
-                                        {/* <!-- <input type="checkbox" name="support" id="carrelage" /> --> */}
-                                    </label>
+                                        <label htmlFor="carrelage">Carrelage
+                                        </label>
 
-                                    <label htmlFor="placo">Placo
-                                        {/* <!-- <input type="checkbox" name="support" id="placo" /> --> */}
-                                    </label>
+                                        <label htmlFor="placo">Placo
+                                        </label>
 
-                                    <label htmlFor="mur pierre">Mur en pierre
-                                        {/* <!-- <input type="checkbox" name="support" id="mur en pierre" /> --> */}
-                                    </label>
+                                        <label htmlFor="mur pierre">Mur en pierre
+                                        </label>
 
-                                    <label htmlFor="chape anhydrite">Chape anhydrite
-                                        {/* <!-- <input type="checkbox" name="support" id="chape anhydrite" /> --> */}
-                                    </label>
+                                        <label htmlFor="chape anhydrite">Chape anhydrite
+                                        </label>
 
-                                    <label htmlFor="chape ciment">Chape ciment
-
-                                        {/* <!-- <input type="checkbox" name="support" id="chape ciment" /> --> */}
-                                    </label>
-
-                                    <label htmlFor="autre_support" className='label_autre'>Autre
+                                        <label htmlFor="chape ciment">Chape ciment
+                                        </label>
+                                    </div>
+                                    {/* <label htmlFor="autre_support" className='label_autre'>Autre
                                     </label>
                                     <input type="text" placeholder="Autre:"
                                         className="support" name="autre_support" id="autre_support" >
-                                    </input>
+                                    </input> */}
+
+
+                                    <div className="box">
+                                        <input type="checkbox" name="support" id="carrelage" />
+                                        <input type="checkbox" name="support" id="placo" />
+                                        <input type="checkbox" name="support" id="mur en pierre" />
+                                        <input type="checkbox" name="support" id="chape anhydrite" />
+                                        <input type="checkbox" name="support" id="chape ciment" />
+                                        {/* <input type="text" name="support" id="support" /> */}
+                                    </div>
                                 </div>
 
-                                <div className="box">
-                                    <input type="checkbox" name="support" id="carrelage" />
-                                    <input type="checkbox" name="support" id="placo" />
-                                    <input type="checkbox" name="support" id="mur en pierre" />
-                                    <input type="checkbox" name="support" id="chape anhydrite" />
-                                    <input type="checkbox" name="support" id="chape ciment" />
-                                    {/* <input type="text" name="support" id="support" /> */}
-                                </div>
-                            </div>
+                                <label htmlFor="autre_support" className='label_autre'>Autre</label>
+                                <input type="text" placeholder="Autre:"
+                                    className="support" name="autre_support" id="autre_support" >
+                                </input>
+
+                            </fieldset>
+                        </fieldset>
+
+                        <fieldset className='fieldset1'>
+
+                            <legend className='legend1'>PLAFONDS</legend>
+
+                            <label htmlFor="surface_plafond">Surface des plafonds (longueur x Largeur en mètres)</label>
+                            <input type="text" name="surface_plafond" id="surface_plafond" />
+
                         </fieldset>
                     </div>
 

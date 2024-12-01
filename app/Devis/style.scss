@@ -46,10 +46,11 @@ body {
                 }
     
                 input{   
-                    border-radius: 4px;
+                    // border-radius: 4px;
                     border-style: none;
+                    border-bottom: 0.02rem solid var.$black;
                     padding: 12px 0px 12px 12px; /*hauteur de la bande blanche*/
-                    background-color: var.$soft-white; /* Couleur blanche avec 50% d'opacité */
+                    background-color: var.$white; /* Couleur blanche avec 50% d'opacité */
                     // margin-top: 0.4rem;
                     margin-bottom: 0.7rem;
                     font-size: 1rem;
@@ -61,13 +62,19 @@ body {
                     }
 
                     &.support{
+                    
                         &:checked{
                             background-color:rgb(231, 231, 221);
-                            border: 0.15rem solid var.$black;
+                            border: 0.15rem solid var.$anthracite;
                         }
                         &:hover{
                             background-color:var.$soft-grey;
                             // border: 0.02rem solid var.$black;
+                        }
+                        &:focus {
+                            border: 1px solid var.$anthracite; /* Bordure appliquée au focus */
+                            transition: border-color 0.3s ease; 
+                            background-color: var.$soft-white;
                         }
                     }
                 }
@@ -84,7 +91,7 @@ body {
 
                 textarea {
                     border: 0px solid var.$anthracite;
-                    background-color: var.$soft-white;
+                    background-color: var.$white;
                     outline: none;
                     border-radius: 4px;
                     border-radius: 4px;
@@ -112,25 +119,26 @@ body {
 
                         label{
                             display: flex;
+                            // centre le texte du label verticalement dans son background blanc
                             align-items: center;
                             margin: 0.1rem 0.5rem 0.5rem 0rem;
                             padding: 0.2rem 0.7rem ;
-                            // border: 0.02rem solid var.$black;
-                            border-radius: 5px;
-                            background-color:var.$soft-white;
+                            border: 0.02rem solid var.$black;
+                            border-radius: 3px;
+                            background-color:var.$white;
                         
                             &:checked{
                                 background-color:rgb(231, 231, 221);
-                                border: 0.15rem solid var.$black;
+                                border: 1px solid var.$black;
                             }
                             &:hover{
                                 background-color:var.$soft-grey;
                                 // border: 0.02rem solid var.$black;
                             }
 
-                            &.label_autre{
-                                display: none;
-                            }
+                            // &.label_autre{
+                            //     display: none;
+                            // }
                         }
                     }
 
@@ -140,13 +148,28 @@ body {
                 }
 
                 fieldset{
-                    display: block;
+                    display: flex;
+                    flex-direction: column;
                     min-inline-size: min-content;
                     margin-inline: 0px;
                     border-width: 0px;
                     border-style: none;
                     padding-block: 0em 0em;
                     padding-inline: 0em;
+
+                    .label_autre{
+                        display: none;
+                    }
+                    // legend{
+                    //     display: block;
+                    // }
+
+                    .legend1{
+                        font-size: x-large;
+                        font-weight: 600;
+                        margin-bottom: 2rem;
+                        padding-top: 4rem;
+                    }
 
                     #oui, #non{
                         margin-top: 0.5rem;
@@ -155,9 +178,13 @@ body {
                     #oui{
                         margin-right: 0.5rem;
                     }
-                    
-                    .ascenseur_radio{
 
+                    &.fieldset1{
+                        // background-color: var.$grey;
+
+                        input{
+                            background-color: var.$white;
+                        }
                     }
                 }
             }
