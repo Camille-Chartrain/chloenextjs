@@ -186,7 +186,7 @@ body {
                     .checkbox_choices input[type="checkbox"]:checked + label {
                         background-color: var.$anthracite;
                         color: white;
-                        border-color: var.$grey;
+                        border-color: var.$anthracite;
                     }
     
                     .checkbox_choices input[type="checkbox"]:active + label {
@@ -242,7 +242,7 @@ body {
                     .radio-group input[type="radio"]:checked + label {
                         background-color: var.$anthracite;
                         color: white;
-                        border-color: var.$grey;
+                        border-color: var.$anthracite;
                         
                     }
                 }
