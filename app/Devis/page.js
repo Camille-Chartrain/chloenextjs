@@ -29,7 +29,7 @@ const Devis = () => {
 
                         <fieldset>
                             <legend>Ascenseur :</legend>
-                            <div className='ascenseur_radio'>
+                            <div className='radio-group'>
                                 <input type="radio" name="ascenseur" id="oui" />
                                 <label htmlFor="oui">Oui</label>
 
@@ -40,8 +40,8 @@ const Devis = () => {
 
                         <fieldset>
                             <legend>Parking :</legend>
-                            <div className='ascenseur_radio'>
-                                <input type="radio" name="parking" id="grauit" />
+                            <div className='radio-group'>
+                                <input type="radio" name="parking" id="gratuit" />
                                 <label htmlFor="gratuit">Gratuit</label>
 
                                 <input type="radio" name="parking" id="payant" />
@@ -49,7 +49,7 @@ const Devis = () => {
                             </div>
                         </fieldset>
 
-                        <label htmlFor="date">Date souhaitée du projet</label>
+                        <label htmlFor="date">Date souhaitée du projet :</label>
                         <input type="text" name="date" id="date" />
                     </div>
 
@@ -58,40 +58,29 @@ const Devis = () => {
                         <fieldset className='fieldset1'>
                             <legend className='legend1'>MURS</legend>
 
-                            <label htmlFor="surface_mur">Surface des murs (hauteur x Largeur en mètres)</label>
+                            <label htmlFor="surface_mur">Surface des murs (hauteur x Largeur en mètres) :</label>
                             <input type="text" name="surface_mur" id="surface_mur" />
                             <fieldset>
-                                <legend>Type de support:</legend>
+                                <legend className='legend2'>Type de support :</legend>
 
-                                <div className="checkbox_choices">
-                                    <div class="checkbox-label ">
+                                <div class="checkbox_choices">
 
-                                        <label htmlFor="carrelage">Carrelage
-                                        </label>
+                                    <input type="checkbox" id="carrelage" />
+                                    <label for="carrelage">Carrelage</label>
 
-                                        <label htmlFor="placo">Placo
-                                        </label>
+                                    <input type="checkbox" id="placo" />
+                                    <label for="placo">Placo</label>
 
-                                        <label htmlFor="mur pierre">Mur en pierre
-                                        </label>
+                                    <input type="checkbox" id="mur_pierre" />
+                                    <label for="mur_pierre">Mur en pierre</label>
 
-                                        <label htmlFor="chape anhydrite">Chape anhydrite
-                                        </label>
+                                    <input type="checkbox" id="beton_cellulaire" />
+                                    <label for="beton_cellulaire">Béton cellulaire</label>
 
-                                        <label htmlFor="chape ciment">Chape ciment
-                                        </label>
-
-
-                                    </div>
-
-                                    <div className="box">
-                                        <input type="checkbox" name="support" id="carrelage" />
-                                        <input type="checkbox" name="support" id="placo" />
-                                        <input type="checkbox" name="support" id="mur en pierre" />
-                                        <input type="checkbox" name="support" id="chape anhydrite" />
-                                        <input type="checkbox" name="support" id="chape ciment" />
-                                    </div>
+                                    <input type="checkbox" id="chape_ciment" />
+                                    <label for="chape_ciment">Chape ciment</label>
                                 </div>
+
 
                                 <label htmlFor="autre_support" className='label_autre'>Autre
                                 </label>
@@ -105,11 +94,11 @@ const Devis = () => {
                         <fieldset className='fieldset1'>
                             <legend className='legend1'>SOLS</legend>
 
-                            <label htmlFor="surface_sol">Surface des sols (longueur x Largeur en mètres)</label>
+                            <label htmlFor="surface_sol">Surface des sols (longueur x Largeur en mètres) :</label>
                             <input type="text" name="surface_sol" id="surface_sol" />
 
                             <fieldset>
-                                <legend>Type de support:</legend>
+                                <legend className='legend2'>Type de support :</legend>
 
                                 <div className="checkbox_choices">
                                     <div class="checkbox-label ">
@@ -120,13 +109,13 @@ const Devis = () => {
                                         <label htmlFor="placo">Placo
                                         </label>
 
-                                        <label htmlFor="mur pierre">Mur en pierre
+                                        <label htmlFor="mur_pierre">Mur en pierre
                                         </label>
 
-                                        <label htmlFor="chape anhydrite">Chape anhydrite
+                                        <label htmlFor="chape_anhydrite">Chape anhydrite
                                         </label>
 
-                                        <label htmlFor="chape ciment">Chape ciment
+                                        <label htmlFor="chape_ciment">Chape ciment
                                         </label>
                                     </div>
                                     {/* <label htmlFor="autre_support" className='label_autre'>Autre
@@ -139,9 +128,9 @@ const Devis = () => {
                                     <div className="box">
                                         <input type="checkbox" name="support" id="carrelage" />
                                         <input type="checkbox" name="support" id="placo" />
-                                        <input type="checkbox" name="support" id="mur en pierre" />
-                                        <input type="checkbox" name="support" id="chape anhydrite" />
-                                        <input type="checkbox" name="support" id="chape ciment" />
+                                        <input type="checkbox" name="support" id="mur_pierre" />
+                                        <input type="checkbox" name="support" id="chape_anhydrite" />
+                                        <input type="checkbox" name="support" id="chape_ciment" />
                                         {/* <input type="text" name="support" id="support" /> */}
                                     </div>
                                 </div>
@@ -154,18 +143,18 @@ const Devis = () => {
                             </fieldset>
                         </fieldset>
 
-                        <fieldset className='fieldset1'>
+                        <fieldset className='fieldset1 last-fieldset'>
 
                             <legend className='legend1'>PLAFONDS</legend>
 
-                            <label htmlFor="surface_plafond">Surface des plafonds (longueur x Largeur en mètres)</label>
+                            <label htmlFor="surface_plafond">Surface des plafonds (longueur x Largeur en mètres) :</label>
                             <input type="text" name="surface_plafond" id="surface_plafond" />
 
                         </fieldset>
                     </div>
 
                     <div className='segment'>
-                        <label htmlFor="element">Précisez si vous avez des éléments à décorer (exemple: meuble vasque, niche, banquette, etc)</label>
+                        <label htmlFor="element">Précisez si vous avez des éléments à décorer (ex: meuble vasque, niche, banquette, etc) :</label>
                         <input type="text" name="element" id="element" />
 
                         <label htmlFor="message">Message</label>
