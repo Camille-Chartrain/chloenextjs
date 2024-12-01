@@ -101,43 +101,26 @@ const Devis = () => {
                                 <legend className='legend2'>Type de support :</legend>
 
                                 <div className="checkbox_choices">
-                                    <div class="checkbox-label ">
 
-                                        <label htmlFor="carrelage">Carrelage
-                                        </label>
+                                    <input type="checkbox" name="support" id="carrelage2" />
+                                    <label htmlFor="carrelage2">Carrelage </label>
 
-                                        <label htmlFor="placo">Placo
-                                        </label>
+                                    <input type="checkbox" name="support" id="placo2" />
+                                    <label htmlFor="placo2">Placo</label>
 
-                                        <label htmlFor="mur_pierre">Mur en pierre
-                                        </label>
+                                    <input type="checkbox" name="support" id="mur_pierre2" />
+                                    <label htmlFor="mur_pierre2">Mur en pierre</label>
 
-                                        <label htmlFor="chape_anhydrite">Chape anhydrite
-                                        </label>
+                                    <input type="checkbox" name="support" id="chape_anhydrite2" />
+                                    <label htmlFor="chape_anhydrite2">Chape anhydrite</label>
 
-                                        <label htmlFor="chape_ciment">Chape ciment
-                                        </label>
-                                    </div>
-                                    {/* <label htmlFor="autre_support" className='label_autre'>Autre
-                                    </label>
-                                    <input type="text" placeholder="Autre:"
-                                        className="support" name="autre_support" id="autre_support" >
-                                    </input> */}
-
-
-                                    <div className="box">
-                                        <input type="checkbox" name="support" id="carrelage" />
-                                        <input type="checkbox" name="support" id="placo" />
-                                        <input type="checkbox" name="support" id="mur_pierre" />
-                                        <input type="checkbox" name="support" id="chape_anhydrite" />
-                                        <input type="checkbox" name="support" id="chape_ciment" />
-                                        {/* <input type="text" name="support" id="support" /> */}
-                                    </div>
+                                    <input type="checkbox" name="support" id="chape_ciment2" />
+                                    <label htmlFor="chape_ciment2">Chape ciment </label>
                                 </div>
 
-                                <label htmlFor="autre_support" className='label_autre'>Autre</label>
+                                <label htmlFor="autre_support2" className='label_autre'>Autre</label>
                                 <input type="text" placeholder="Autre:"
-                                    className="support" name="autre_support" id="autre_support" >
+                                    className="support" name="autre_support" id="autre_support2" >
                                 </input>
 
                             </fieldset>
