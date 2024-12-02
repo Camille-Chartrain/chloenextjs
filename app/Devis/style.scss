@@ -2,7 +2,6 @@
 @use '../style/var';
 
 body {
-    // background-image: url(../public/background_chloe.jpg);
     background-image: url(../public/IMG_3684.jpg);
     background-size: cover;
     background-position: center;  
@@ -105,45 +104,6 @@ body {
                         border-radius: 4px;
                     }
                 }
-                
-                // .checkbox_choices{
-                //     display: flex;
-                //     flex-direction: row;
-                //     flex-wrap: wrap;
-
-                //     input{
-                //         display: none;
-                //     }
-
-                //     label{
-                //         display: flex;
-                //         // centre le texte du label verticalement dans son background blanc
-                //         align-items: center;
-                //         margin: 0.1rem 1rem 0.5rem 0rem;
-                //         padding: 0.4rem 0.9rem;
-                //         border: 1px solid var.$grey;
-                //         border-radius: 4px;
-                //         background-color:var.$white;
-                //         cursor: pointer;
-                //         transition: background-color 0.2s ease;
-                    
-                //         &:hover{
-                //             background-color: var.$grey;
-                //             color: white;
-                //             border-color: var.$grey;
-                //         }
-                //     }
-                // }
-
-                // .checkbox_choices input[type="checkbox"]:checked + label {
-                //     background-color: var.$anthracite;
-                //     color: white;
-                //     border-color: var.$grey;
-                // }
-
-                // .checkbox_choices input[type="checkbox"]:active + label {
-                //     background-color: var.$soft-grey; /* Couleur temporaire pendant le clic */
-                // }
 
                 fieldset{
                     display: flex;
@@ -201,7 +161,8 @@ body {
                         font-size: x-large;
                         font-weight: 600;
                         margin-bottom: 1.6rem;
-                        padding-top: 5rem;
+                        // padding-top: 5rem;
+                       
                     }
 
                     .legend2{
@@ -232,19 +193,47 @@ body {
                         background-color: var.$white;
                         cursor: pointer;
                         transition: background-color 0.1s ease;
-
-                        // &:active{
-                        //     background-color: var.$deep-anthracite;
-                        // }
                     }
                     
                     /* Style lorsque le radio est sélectionné (lié via :checked) */
                     .radio-group input[type="radio"]:checked + label {
                         background-color: var.$anthracite;
                         color: white;
-                        border-color: var.$anthracite;
-                        
+                        border-color: var.$anthracite;                       
                     }
+
+                    .open_menu {
+
+                        .label_menu_toggle{
+                            display: flex;
+                            
+                            legend{
+                                margin: auto auto 1rem 0;
+                                padding: 0.5rem 1rem;
+                                border-radius: 3px;
+                                border: 1px solid var.$anthracite;
+
+                                &:hover{
+                                    background-color: var.$anthracite;
+                                    color:var.$white;
+                                }
+                            }
+                        }
+
+                        input[type="checkbox"] {
+                            display: none; // Facultatif pour masquer la case à cocher
+                        }
+                    
+                        input[type="checkbox"]:checked ~ .menu_murs {
+                            display: none; // La section est masquée si la case est cochée
+                        }
+                    
+                        .menu_murs {
+                            display: flex; // Par défaut, elle est visible
+                            flex-direction: column; 
+                        }
+                    }
+
                 }
             }
 
