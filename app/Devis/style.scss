@@ -175,10 +175,6 @@ body {
                         border-radius: 4px;
                     }
 
-                    &.last-fieldset{
-                        margin-bottom: 5rem;
-                    }
-
                     .radio-group input[type="radio"] {
                         display: none;
                     }
@@ -225,12 +221,14 @@ body {
                         }
                     
                         input[type="checkbox"]:checked ~ .menu_murs {
-                            display: none; // La section est masquée si la case est cochée
+                            display: flex; // lorsque cochée, section visible
+                            flex-direction: column; 
+                            margin-bottom: 6rem;
+                            margin-top: 2rem;
                         }
                     
                         .menu_murs {
-                            display: flex; // Par défaut, elle est visible
-                            flex-direction: column; 
+                            display: none; // Par défaut, les sections sont cachées
                         }
                     }
 

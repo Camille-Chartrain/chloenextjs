@@ -12,19 +12,19 @@ const Devis = () => {
                 <form method="POST">
 
                     <div className="segment segment1">
-                        <label htmlFor="lastname">Nom </label>
+                        <label htmlFor="lastname">Nom - Prénom * </label>
                         <input type="text" name="lastname" id="lastname" />
 
 
-                        <label htmlFor="firstname">Prénom </label>
-                        <input type="text" name="firstname" id="firstname" />
+                        <label htmlFor="email">Email * </label>
+                        <input type="email" name="email" id="email" required multiple />
 
 
                         <label htmlFor="adresse">Adresse </label>
                         <input type="text" name="adresse" id="adresse" />
 
                         <label htmlFor="etage">Etage</label>
-                        <input type="text" name="etage" id="etage" />
+                        <input type="number" name="etage" id="etage" placeholder="ex: 2" />
 
 
                         <fieldset>
@@ -39,7 +39,7 @@ const Devis = () => {
                         </fieldset>
 
                         <fieldset>
-                            <legend>Possibilité de parking gratuit :</legend>
+                            <legend>Possibilité de parking gratuit : *</legend>
                             <div className='radio-group'>
                                 <input type="radio" name="parking" id="gratuit" />
                                 <label htmlFor="gratuit">Oui</label>
@@ -50,11 +50,11 @@ const Devis = () => {
                         </fieldset>
 
                         <label htmlFor="date">Date souhaitée du projet :</label>
-                        <input type="text" name="date" id="date" />
+                        <input type="date" name="date" id="date" />
                     </div>
 
                     <div className='segment'>
-                        <p>Cliquez sur les éléments correspondants à votre projet pour remplir les infos allez hop</p>
+                        <p>Eléments concernées par votre projet : *</p>
 
                         <fieldset className='fieldset1'>
                             <div className='open_menu'>
@@ -65,10 +65,10 @@ const Devis = () => {
                                 </label>
 
                                 <div className='menu_murs'>
-                                    <label htmlFor="surface_mur">Surface des murs (hauteur x Largeur en mètres) :</label>
+                                    <label htmlFor="surface_mur">Surface des murs (hauteur x Largeur en mètres) : *</label>
                                     <input type="text" name="surface_mur" id="surface_mur" />
                                     <fieldset>
-                                        <legend className='legend2'>Type de support :</legend>
+                                        <legend className='legend2'>Type de support : *</legend>
 
                                         <div className="checkbox_choices">
 
@@ -100,7 +100,7 @@ const Devis = () => {
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation souhaitée :</legend>
+                                        <legend className='legend2'>Prestation souhaitée : *</legend>
 
                                         <div className="checkbox_choices">
 
@@ -140,11 +140,11 @@ const Devis = () => {
                                 </label>
 
                                 <div className='menu_murs'>
-                                    <label htmlFor="surface_sol">Surface des sols (longueur x Largeur en mètres) :</label>
+                                    <label htmlFor="surface_sol">Surface des sols (longueur x Largeur en mètres) : *</label>
                                     <input type="text" name="surface_sol" id="surface_sol" />
 
                                     <fieldset>
-                                        <legend className='legend2'>Type de support :</legend>
+                                        <legend className='legend2'>Type de support : *</legend>
 
                                         <div className="checkbox_choices">
 
@@ -175,7 +175,7 @@ const Devis = () => {
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation souhaitée :</legend>
+                                        <legend className='legend2'>Prestation souhaitée : *</legend>
 
                                         <div className="checkbox_choices">
 
@@ -216,11 +216,11 @@ const Devis = () => {
 
                                 <div className='menu_murs'>
 
-                                    <label htmlFor="surface_plafond">Surface des plafonds (longueur x Largeur en mètres) :</label>
+                                    <label htmlFor="surface_plafond">Surface des plafonds (longueur x Largeur en mètres) : *</label>
                                     <input type="text" name="surface_plafond" id="surface_plafond" />
 
                                     <fieldset>
-                                        <legend className='legend2'>Type de support :</legend>
+                                        <legend className='legend2'>Type de support : *</legend>
 
                                         <div className="checkbox_choices">
 
@@ -240,7 +240,7 @@ const Devis = () => {
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation souhaitée :</legend>
+                                        <legend className='legend2'>Prestation souhaitée : *</legend>
 
                                         <div className="checkbox_choices">
 
@@ -257,7 +257,7 @@ const Devis = () => {
 
                                 <input type='checkbox' id="menu_toggle_mobilier"></input>
                                 <label htmlFor='menu_toggle_mobilier' className='label_menu_toggle'>
-                                    <legend className='legend1 '>MOBILIER</legend>
+                                    <legend className='legend1 '>MOBILIER - ELEMENTS</legend>
                                 </label>
 
                                 <div className='menu_murs'>
@@ -275,7 +275,7 @@ const Devis = () => {
                     <div className='segment'>
 
 
-                        <label htmlFor="message">Message (facultatif) :</label>
+                        <label htmlFor="message">Message :</label>
                         <textarea name="message" id="message" rows="12" cols="50"></textarea>
                         {/* cols ne sert pas puisque la width est indiquée en scss, il sert de valeur de secours pour des environnements très simples. */}
                     </div>
