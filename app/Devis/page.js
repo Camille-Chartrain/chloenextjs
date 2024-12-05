@@ -54,7 +54,7 @@ const Devis = () => {
                     </div>
 
                     <div className='segment'>
-                        <p>Eléments concernées par votre projet : <span className='etoile'>*</span></p>
+                        <p className='titre_segment'>Eléments concernés par votre projet : <span className='etoile'>*</span></p>
 
                         <fieldset className='fieldset1'>
                             <div className='open_menu'>

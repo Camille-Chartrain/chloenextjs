@@ -46,6 +46,10 @@ body {
                 .etoile{
                     color: rgb(185, 42, 42);
                 }
+                .titre_segment{
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                }
     
                 input{   
                     // border-radius: 4px;
@@ -80,10 +84,10 @@ body {
                         }
                     }
 
-                   &#surface_mur, &#surface_sol{
-                        border: 1px solid var.$grey;
-                        border-radius: 3px;
-                    }
+                    // &#surface_mur, &#surface_sol{
+                    //     border: 1px solid var.$grey;
+                    //     border-radius: 3px;
+                    // }
                 }
     
                 input::placeholder {
@@ -216,7 +220,7 @@ body {
                             border: 1px solid var.$anthracite;
 
                             &:hover{
-                                background-color: var.$black;
+                                background-color: var.$anthracite;
                                 color:var.$white;
                             }
                         }
@@ -230,7 +234,7 @@ body {
                             flex-direction: column; 
                             margin-bottom: 6rem;
                             margin-top: 1rem;
-                            background-color: white;
+                            background-color: var.$form_sections;
                             border:1px solid var.$anthracite;
                             border-radius: 3px;
                             padding: 1.5rem;
@@ -241,9 +245,14 @@ body {
                         }
 
                         input[type="checkbox"]:checked + label {
-                            background-color: var.$anthracite;
+                            background-color: var.$black;
                             color: var.$white;
-                            border-color: var.$anthracite;
+                            border-color: var.$black;
+
+                            &:hover{
+                                background-color: var.$anthracite;
+                                color:var.$white;
+                            }
                         }
                     
                         .menu_murs {
