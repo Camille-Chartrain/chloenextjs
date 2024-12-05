@@ -21,44 +21,13 @@ const BurgerMenu = () => {
 
     return (
         <div>
-            {/* Icône burger */}
-            <div
-                className="burgerIcon"
-                onClick={toggleMenu}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
-                {/* Affiche les lignes de l'icône burger conditionnellement */}
-                {isOpen && (
-                    <>
-                        <div className="line line1"></div>
-                        <div className="line line2"></div>
-                        <div className="line line3"></div>
-                    </>
-                )}
-                {!isOpen && (
-                    <>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                    </>
-                )}
-            </div>
 
             {/* Menu déroulant */}
             <nav className={`menu ${isOpen ? "open" : ""}`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <div className="croix_logo">
-                    <div>
-                        <p>X</p>
-                        {/* <div className="line line1"></div>
-                        <div className="line line2"></div>
-                        <div className="line line3"></div> */}
-                    </div>
-                    <Link href="/">CHLOE CHARTRAIN</Link>
-                </div>
+
                 <ul>
                     <li><Link href="/Devis">DEVIS-CONTACT</Link></li>
                     <li><Link href="/Prestations">TYPES DE PRESTATIONS</Link></li>
@@ -66,7 +35,36 @@ const BurgerMenu = () => {
                     <li><Link href="/Partenaires">PARTENAIRES</Link></li>
                 </ul>
             </nav >
-        </div >
+
+            <header className="burger_logo">
+                {/* Icône burger */}
+                <div
+                    className="burgerIcon"
+                    onClick={toggleMenu}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    {/* Affiche les lignes de l'icône burger conditionnellement */}
+                    {isOpen && (
+                        <>
+                            <div className="line line1"></div>
+                            <div className="line line2"></div>
+                            <div className="line line3"></div>
+                        </>
+                    )}
+                    {!isOpen && (
+                        <>
+                            <div className="line"></div>
+                            <div className="line"></div>
+                            <div className="line"></div>
+                        </>
+                    )}
+                </div>
+                <h1>
+                    <Link href="/" className='logo' aria-label="Retour à l'accueil">CHLOE CHARTRAIN</Link>
+                </h1>
+            </ header>
+        </div>
     );
 };
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import "./style.scss";
 // import "./devis.module.scss";
-import Burger_logo from '../Components/Burger_logo';
+import BurgerMenu from '../Components/BurgerMenu';
 
 const Devis = () => {
     return (
         <div className='devis'>
             <div className='burger_logo'>
-                <Burger_logo />
+                <BurgerMenu />
             </div>
             <main className="main">
                 <h2>DEVIS - CONTACT</h2>
