@@ -1,11 +1,14 @@
-import React from 'react'
-import "./style.scss"
+import React from 'react';
+import "./style.scss";
+// import "./devis.module.scss";
 import Burger_logo from '../Components/Burger_logo';
 
 const Devis = () => {
     return (
-        <>
-            <Burger_logo />
+        <div className='devis'>
+            <div className='burger_logo'>
+                <Burger_logo />
+            </div>
             <main className="main">
                 <h2>DEVIS - CONTACT</h2>
 
@@ -283,7 +286,7 @@ const Devis = () => {
                     <button type="button" name="valider">Envoyer ma demande de devis</button>
                 </form >
             </main >
-        </>
+        </div>
     )
 };
 

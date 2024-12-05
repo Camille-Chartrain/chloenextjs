@@ -1,0 +1,19 @@
+@use '../style/mixin';
+@use '../style/var';
+
+.realisations{
+    display: flex;
+    flex-direction: column;
+
+    .photos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        img{
+            width: 400px;
+            height: 500px;
+            padding: 1rem;
+        }
+    }
+}
