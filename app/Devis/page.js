@@ -12,11 +12,11 @@ const Devis = () => {
                 <form method="POST">
 
                     <div className="segment segment1">
-                        <label htmlFor="lastname">Nom - Prénom * </label>
+                        <label htmlFor="lastname">Nom - Prénom <span className='etoile'>*</span> </label>
                         <input type="text" name="lastname" id="lastname" />
 
 
-                        <label htmlFor="email">Email * </label>
+                        <label htmlFor="email">Email <span className='etoile'>*</span> </label>
                         <input type="email" name="email" id="email" required multiple />
 
 
@@ -39,7 +39,7 @@ const Devis = () => {
                         </fieldset>
 
                         <fieldset>
-                            <legend>Possibilité de parking gratuit : *</legend>
+                            <legend>Possibilité de parking gratuit : <span className='etoile'>*</span></legend>
                             <div className='radio-group'>
                                 <input type="radio" name="parking" id="gratuit" />
                                 <label htmlFor="gratuit">Oui</label>
@@ -54,7 +54,7 @@ const Devis = () => {
                     </div>
 
                     <div className='segment'>
-                        <p>Eléments concernées par votre projet : *</p>
+                        <p>Eléments concernées par votre projet : <span className='etoile'>*</span></p>
 
                         <fieldset className='fieldset1'>
                             <div className='open_menu'>
@@ -65,10 +65,10 @@ const Devis = () => {
                                 </label>
 
                                 <div className='menu_murs'>
-                                    <label htmlFor="surface_mur">Surface des murs (hauteur x Largeur en mètres) : *</label>
+                                    <label htmlFor="surface_mur" className='label_surface'>Surface des murs (hauteur x Largeur en mètres) : <span className='etoile'>*</span></label>
                                     <input type="text" name="surface_mur" id="surface_mur" />
                                     <fieldset>
-                                        <legend className='legend2'>Type de support : *</legend>
+                                        <legend className='legend2'>Type de support : <span className='etoile'>*</span></legend>
 
                                         <div className="checkbox_choices">
 
@@ -100,7 +100,7 @@ const Devis = () => {
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation souhaitée : *</legend>
+                                        <legend className='legend2'>Prestation souhaitée : <span className='etoile'>*</span></legend>
 
                                         <div className="checkbox_choices">
 
@@ -140,11 +140,11 @@ const Devis = () => {
                                 </label>
 
                                 <div className='menu_murs'>
-                                    <label htmlFor="surface_sol">Surface des sols (longueur x Largeur en mètres) : *</label>
+                                    <label htmlFor="surface_sol" className='label_surface'>Surface des sols (longueur x Largeur en mètres) : <span className='etoile'>*</span></label>
                                     <input type="text" name="surface_sol" id="surface_sol" />
 
                                     <fieldset>
-                                        <legend className='legend2'>Type de support : *</legend>
+                                        <legend className='legend2'>Type de support : <span className='etoile'>*</span></legend>
 
                                         <div className="checkbox_choices">
 
@@ -175,7 +175,7 @@ const Devis = () => {
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation souhaitée : *</legend>
+                                        <legend className='legend2'>Prestation souhaitée : <span className='etoile'>*</span></legend>
 
                                         <div className="checkbox_choices">
 
@@ -216,11 +216,11 @@ const Devis = () => {
 
                                 <div className='menu_murs'>
 
-                                    <label htmlFor="surface_plafond">Surface des plafonds (longueur x Largeur en mètres) : *</label>
+                                    <label htmlFor="surface_plafond" className='label_surface'>Surface des plafonds (longueur x Largeur en mètres) : <span className='etoile'>*</span></label>
                                     <input type="text" name="surface_plafond" id="surface_plafond" />
 
                                     <fieldset>
-                                        <legend className='legend2'>Type de support : *</legend>
+                                        <legend className='legend2'>Type de support : <span className='etoile'>*</span></legend>
 
                                         <div className="checkbox_choices">
 
@@ -240,7 +240,7 @@ const Devis = () => {
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation souhaitée : *</legend>
+                                        <legend className='legend2'>Prestation :</legend>
 
                                         <div className="checkbox_choices">
 
@@ -264,7 +264,7 @@ const Devis = () => {
 
                                     <p>Il est possible d'enduire vos meubles </p>
 
-                                    <label htmlFor="element">Précisez vos éléments à enduire (ex: meuble vasque,  table, niche, banquette, etc) :</label>
+                                    <label htmlFor="element">Précisez vos éléments à enduire (ex: meuble vasque,  table, niche, banquette, etc) : <span className='etoile'>*</span></label>
                                     <input type="text" name="element" id="element" />
                                 </div>
                             </div>
