@@ -3,32 +3,55 @@ import React from 'react';
 
 const DevisForm = () => {
 
+
     async function handleSubmit(event) {
         event.preventDefault();
 
-        // Récupérer les données du formulaire
         const formData = new FormData(event.target);
         // FormData est un objet spécialisé qui stocke les données du formulaire, mais son accès est limité (par exemple, avec .get() ou .entries()).
 
-        const prestations = formData.getAll('prestation_souhaitee_sols[]'); // Tableau des valeurs cochées
-        console.log(prestations);
+        // Liste des catégories
+        const categories = ["murs", "plafonds", "sols"];
 
-        // Convertir en objet pour un traitement plus simple
-        const data = Object.fromEntries(formData);
+        // Structure des données
+        const prestations = {};
+
+        categories.forEach((category) => {
+            prestations[category] = {
+                support: formData.getAll(`type_support_${category}[]`), // Récupérer les supports cochés
+                prestation: formData.getAll(`prestation_souhaitee_${category}[]`), // Récupérer les prestations cochées
+            };
+        });
+
+        console.log("Données structurées :", prestations);
+
+        // Convertir en objet pour les autres données
         // Object.fromEntries(formData) transforme les données en un objet JavaScript classique pour un traitement plus facile et plus flexible, notamment lorsqu'il s'agit de manipuler ou d'envoyer les données dans un format comme JSON.
-        console.log("data", data);
+        //     console.log("data", data);
+        const otherData = Object.fromEntries(formData);
+        delete otherData["type_support_murs[]"];
+        delete otherData["prestation_souhaitee_murs[]"];
+        delete otherData["type_support_plafonds[]"];
+        delete otherData["prestation_souhaitee_plafonds[]"];
+        delete otherData["type_support_sols[]"];
+        delete otherData["prestation_souhaitee_sols[]"];
 
-        // Envoyer les données à l'API Next.js
-        const response = await fetch('/api/send-email', {
+        // Inclure les prestations dans les données globales
+        const data = { ...otherData, prestations };
+
+        console.log("Données complètes :", data);
+
+        // Envoyer les données au serveur
+        const response = await fetch('/api/send_mail', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
         });
 
         if (response.ok) {
-            console.log('Email envoyé avec succès !');
+            console.log('Email envoyé avec succès');
         } else {
-            console.error('Échec de l\'envoi de l\'email.');
+            console.error('Erreur lors de la soumission du formulaire');
         }
     }
 
@@ -272,7 +295,7 @@ const DevisForm = () => {
 
                                 <div className="checkbox_choices">
 
-                                    <input type="checkbox" id="beton_cire_plafonds" name='prestation_plafonds' value='beton_cire_plafonds' />
+                                    <input type="checkbox" id="beton_cire_plafonds" name='prestation_souhaitee_plafonds[]' value='beton_cire_plafonds' />
                                     <label htmlFor="beton_cire_plafonds">Béton ciré</label>
                                 </div>
                             </fieldset>
