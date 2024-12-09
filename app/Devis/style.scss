@@ -13,6 +13,7 @@
         background-color: var.$white;
         padding-bottom: 0.5rem;
     }
+    
     main{
         display: flex;
         flex-direction: column;
@@ -87,11 +88,6 @@
                             background-color: var.$soft-white;
                         }
                     }
-
-                    // &#surface_mur, &#surface_sol{
-                    //     border: 1px solid var.$grey;
-                    //     border-radius: 3px;
-                    // }
                 }
     
                 input::placeholder {
