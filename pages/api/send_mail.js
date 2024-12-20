@@ -82,8 +82,8 @@ export default async function handler(req, res) {
 
 
             await transporter.sendMail({
-                from: 'camille.chartrain@gmail.com',
-                to: otherData.email,
+                from: process.env.EMAIL_USER,
+                to: process.env.EMAIL_USER,
                 subject: 'Demande de devis',
                 html: emailContent,
             });

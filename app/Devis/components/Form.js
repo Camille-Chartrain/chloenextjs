@@ -74,12 +74,12 @@ const DevisForm = () => {
                 <label htmlFor="adresse">Adresse </label>
                 <input type="text" name="adresse" id="adresse" />
 
-                <label htmlFor="etage">Etage</label>
+                <label htmlFor="etage">Etage <span className='etoile'>*</span></label>
                 <input type="number" name="etage" id="etage" placeholder="ex: 2" />
 
 
                 <fieldset>
-                    <legend>Ascenseur :</legend>
+                    <legend>Ascenseur : <span className='etoile'>*</span></legend>
                     <div className='radio-group'>
                         <input type="radio" name="ascenseur" id="oui" value="oui" />
                         <label htmlFor="oui">Oui</label>
@@ -112,7 +112,7 @@ const DevisForm = () => {
 
                         <input type='checkbox' id="menu_toggle_murs"></input>
                         <label htmlFor='menu_toggle_murs' className='label_menu_toggle'>
-                            <legend className='legend1 '>MURS</legend>
+                            <legend className='legend1 '>Murs</legend>
                         </label>
 
                         <div className='menu_murs'>
@@ -187,7 +187,7 @@ const DevisForm = () => {
 
                         <input type='checkbox' id="menu_toggle_sols"></input>
                         <label htmlFor='menu_toggle_sols' className='label_menu_toggle'>
-                            <legend className='legend1 '>SOLS</legend>
+                            <legend className='legend1 '>Sols</legend>
                         </label>
 
                         <div className='menu_murs'>
@@ -262,7 +262,7 @@ const DevisForm = () => {
 
                         <input type='checkbox' id="menu_toggle_plafonds"></input>
                         <label htmlFor='menu_toggle_plafonds' className='label_menu_toggle'>
-                            <legend className='legend1 '>PLAFONDS</legend>
+                            <legend className='legend1 '>Plafonds</legend>
                         </label>
 
                         <div className='menu_murs'>
@@ -308,14 +308,14 @@ const DevisForm = () => {
 
                         <input type='checkbox' id="menu_toggle_mobilier"></input>
                         <label htmlFor='menu_toggle_mobilier' className='label_menu_toggle'>
-                            <legend className='legend1 '>MOBILIER - ELEMENTS</legend>
+                            <legend className='legend1 '>Mobiliers - éléments</legend>
                         </label>
 
                         <div className='menu_murs'>
 
-                            <p>Il est possible d'enduire vos meubles </p>
+                            <p>Il est possible d'enduire votre mobilier de béton ciré. </p>
 
-                            <label htmlFor="element">Précisez vos éléments à enduire (ex: meuble vasque,  table, niche, banquette, etc) : <span className='etoile'>*</span></label>
+                            <label htmlFor="element">Précisez vos éléments à enduire (ex: meuble vasque,  table, niche, banquette...) ainsi que leur matériau :</label>
                             <input type="text" name="element" id="element" />
                         </div>
                     </div>
