@@ -61,7 +61,7 @@ const BurgerMenu = () => {
                     )}
                 </div>
                 <h1>
-                    <Link href="/" className='logo' aria-label="Retour à l'accueil">CHLOE CHARTRAIN</Link>
+                    <Link href="/" className='logo' aria-label="Retour à l'accueil">CHLOÉ CHARTRAIN</Link>
                 </h1>
             </ header>
         </div>

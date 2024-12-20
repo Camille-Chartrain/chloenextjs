@@ -16,7 +16,7 @@ body{
   width: 100%;
 
     background-color: #fff;
-    font-family: PortherasThin,ZH-Sans,Arial,Lucida Sans Unicode,"sans-serif";
+    font-family: "PortherasThin" , "ZH-Sans" ,Arial,Lucida Sans Unicode,"sans-serif";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
@@ -30,16 +30,21 @@ body{
       color: black;
     }
 
-    h1, h2 {
+    h1{
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: normal;    
+    }
+
+    h2 {
       font-weight: 400;
       font-size: 1.4rem;
+      line-height: normal;    
     }
-    
-
 }
 @font-face {
   font-family: 'PortherasThin'; /* Nom personnalisé pour votre police */
-  src: url('../fonts/PortherasTest-Thin.otf') format('otf'); /* Chemin vers le fichier */
+  src: url('/polices/Portheras_test/PortherasTest-Light.otf') format('opentype'); /* Chemin vers le fichier */
   /* font-weight: normal; /* Optionnel, défini pour les variantes */
   /* font-style: normal; Optionnel */ 
 }
