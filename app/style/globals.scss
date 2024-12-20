@@ -32,8 +32,12 @@ body{
 
     h1{
       font-weight: 400;
-      font-size: 3rem;
-      line-height: normal;    
+      font-size: 1.8rem;
+      line-height: normal; 
+
+      @include mixin.medium {
+        font-size: 3rem;
+    }
     }
 
     h2 {
