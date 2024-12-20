@@ -7,9 +7,10 @@
     align-items: center;
     margin: auto;
     overflow-y: scroll; /* Permet le défilement vertical */
-        scroll-snap-type: y mandatory; /* Active l'accrochage vertical obligatoire */
-        // scroll-behavior: smooth; /* Ajoute une animation fluide au défilement */
-height:100vh;
+    scroll-snap-type: y mandatory; /* Active l'accrochage vertical obligatoire */
+    // scroll-behavior: smooth; /* Ajoute une animation fluide au défilement */
+    height:100vh;
+    scrollbar-width: none; /* Cacher la barre de défilement sur Firefox */
 
     .photos{
         display: flex;
