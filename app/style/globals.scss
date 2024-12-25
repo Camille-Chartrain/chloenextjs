@@ -77,6 +77,21 @@ body{
       text-align: center;
     }
 
+    input:-webkit-autofill {
+      appearance: none; /* Supprime l'apparence native */
+      background-color: var.$white !important; /* Remplace le fond par transparent ou une autre couleur */
+      color: inherit !important; /* Conserve la couleur du texte définie */
+      border: 1px solid #ccc; /* Exemple de style de bordure */
+      box-shadow: 0 0 0px 1000px white inset; /* Hack pour changer complètement le fond */
+      transition: background-color 5000s ease-in-out 0s; /* Contourne le changement de couleur */
+    }
+    
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      border: 1px solid #000; /* Style au survol ou lorsque le champ est en focus */
+    }
+      
+
 }
 @font-face {
   font-family: 'PortherasThin'; /* Nom personnalisé pour votre police */
