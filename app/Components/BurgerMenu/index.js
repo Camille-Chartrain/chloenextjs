@@ -20,7 +20,7 @@ const BurgerMenu = () => {
     };
 
     return (
-        <div>
+        <div className="burgerMenu">
 
             {/* Menu déroulant */}
             <nav className={`menu ${isOpen ? "open" : ""}`}
@@ -29,7 +29,7 @@ const BurgerMenu = () => {
             >
 
                 <ul>
-                    <li><Link href="/Devis">DEVIS-CONTACT</Link></li>
+                    <li><Link href="/Devis">DEMANDE DE DEVIS</Link></li>
                     <li><Link href="/Prestations">TYPES DE PRESTATIONS</Link></li>
                     <li><Link href="/Realisations">RÉALISATIONS</Link></li>
                     <li><Link href="/Partenaires">PARTENAIRES</Link></li>
@@ -64,7 +64,7 @@ const BurgerMenu = () => {
                     <Link href="/" className='logo' aria-label="Retour à l'accueil">CHLOÉ CHARTRAIN</Link>
                 </h1>
             </ header>
-        </div>
+        </div >
     );
 };
 

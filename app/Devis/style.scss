@@ -6,11 +6,12 @@
     background-size: cover;
     background-position: center;  
     background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: "PortherasThin","ZH-Sans",Arial,"Lucida Sans Unicode",sans-serif;
     width: 100%;
 
     .burger_logo{
-        background-color: var.$white;
+        // background-color: var.$white;
         padding-bottom: 0.5rem;
     }
     
@@ -20,7 +21,7 @@
         align-items: center;
 
         h2{
-            margin-top: 3rem;
+            margin-top: 5rem;
             margin-bottom: 2rem;
         }
 
@@ -58,6 +59,9 @@
     
                 input{   
                     // border-radius: 4px;
+                    font-family: "PortherasThin","ZH-Sans",Arial,"Lucida Sans Unicode",sans-serif;
+                    width: 100%;
+
                     border-style: none;
                     border-bottom: 0.02rem solid var.$black;
                     padding: 12px 0px 12px 12px; /*hauteur de la bande blanche*/
@@ -92,7 +96,7 @@
     
                 input::placeholder {
                         color: var.$black;
-                        font-family: Arial, Helvetica, sans-serif;
+                        font-family: PortherasThin, Arial, Helvetica, sans-serif;
                         font-weight: 400;
                         font-size: 1.1em;
                         letter-spacing: .02rem;
@@ -101,6 +105,7 @@
                 
 
                 textarea {
+                    font-family: PortherasThin, Arial, Helvetica, sans-serif;
                     border: 0px solid var.$anthracite;
                     border-bottom: 1px solid var.$black;
                     background-color: var.$white;
@@ -204,9 +209,9 @@
                     
                     /* Style lorsque le radio est sélectionné (lié via :checked) */
                     .radio-group input[type="radio"]:checked + label {
-                        background-color: var.$anthracite;
+                        background-color: var.$black;
                         color: white;
-                        border-color: var.$anthracite;                       
+                        border-color: var.$black;                       
                     }
 
                     .open_menu {

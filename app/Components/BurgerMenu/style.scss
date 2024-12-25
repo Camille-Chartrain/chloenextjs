@@ -1,17 +1,26 @@
-@use '../style/mixin';
-@use '../style/var';
+@use '../../style/mixin';
+@use '../../style/var';
+
+.burgerMenu{
+  z-index: 2;
+  font-family: PortherasRegular;
 
 
 /* Styles pour l'icône burger */
 .burgerIcon {
-    width: 20px;
-    height: 15px;
+    width: 30px;
+    height: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
     // margin-top: 15px;
     margin-left: 15px;
+
+    @include mixin.medium {
+      width: 20px;
+      height: 15px;
+    }
   }
   
   .line {
@@ -51,22 +60,24 @@
     align-items: center;
     padding-top: 3rem;
     // padding-left: 20px;
-    max-height: 50px;
+    max-height: 3rem;
     // max-width: fit-content;
     // position: fixed;
+
+    @include mixin.medium {
+      padding-top: 3rem;
+    }
 
     .burger{
         // padding-top: 5px;
         height: auto;
     }
 
-    // h1{
-    //     font-size: 1.8rem;
-    // }
     .logo{
         margin-left: 10px;
         // padding-bottom: 10px;
-        height: auto;
+        // height: auto;
+        // padding-top: 2rem;
     }
 }
   /* Styles pour le menu */
@@ -92,7 +103,9 @@
   }
   
   .menu.open {
+    position: fixed;
     left: 0;
+    top: 0;
   }
   
   .menu ul {
@@ -106,4 +119,4 @@
     // font-size: 1.5rem;
     font-size: 18px;
   }
-  
+}

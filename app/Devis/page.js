@@ -13,7 +13,7 @@ const Devis = () => {
                 <BurgerMenu />
             </div>
             <main className="main">
-                <h2>DEVIS - CONTACT</h2>
+                <h2>DEMANDE DE DEVIS</h2>
                 <DevisForm />
             </main >
         </div>
