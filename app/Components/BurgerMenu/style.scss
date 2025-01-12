@@ -75,11 +75,11 @@
           width: 20px;
           height: 15px;
           // Le burger disparaît quand le menu est ouvert
-          // .menu.open + header & {
-          //   width: 0;
-          //   margin: 0;
-          //   overflow: hidden;
-          // }
+          .menu.open & {
+            width: 0;
+            opacity: 0;
+            height: 0;
+          }
         }
 
         .line {
@@ -110,7 +110,7 @@
 
         // @include mixin.medium {
         //   // Le logo se décale quand le menu est ouvert
-        //   .menu.open + header & {
+        //   .menu.open & {
         //     margin-left: 0;
         //   }
         // }
