@@ -63,7 +63,7 @@ const BurgerMenu = () => {
                     )}
                 </div>
                 <h1>
-                    <Link href="/" className='logo' aria-label="Retour à l'accueil">CHLOÉ CHARTRAIN</Link>
+                    <Link href="/" className='logo' aria-label="Retour à l'accueil"><img src="/cc_black.png" alt="logo chloé chartrain" className="img_CC"></img>CHLOÉ CHARTRAIN</Link>
                 </h1>
             </ header>
         </div >

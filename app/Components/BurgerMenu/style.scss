@@ -39,6 +39,7 @@
   .menu ul {
     list-style-type: none;
     margin: 20px;
+    margin-top: 7rem;
   }
   
   header{
@@ -57,7 +58,12 @@
       max-height: 3rem;
 
       @include mixin.medium {
-        padding-top: 2rem;
+        padding-top: 4.5rem;
+      }
+
+      .img_CC{
+        width: 5rem;
+        height: auto;
       }
 
       /* Styles pour l'icône burger */
@@ -68,7 +74,7 @@
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
-        margin-left: 15px;
+        margin-left: 2rem;
         // transition: width 0.3s ease-in-out;
 
         @include mixin.medium {
@@ -104,9 +110,17 @@
         }
       }
 
+      h1{
+        width: 100%;
+      }
       .logo{
-        margin-left: 10px;
+        margin-left: 2rem;
         transition: margin-left 0.3s ease-in-out;
+        display: flex; /* Active Flexbox */
+        align-items: center; /* Aligne verticalement le contenu */
+        justify-content: space-between;
+        width: 370px;
+        
 
         // @include mixin.medium {
         //   // Le logo se décale quand le menu est ouvert
@@ -114,6 +128,6 @@
         //     margin-left: 0;
         //   }
         // }
-      }
+      } 
     }
 }
