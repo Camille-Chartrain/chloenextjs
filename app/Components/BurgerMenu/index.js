@@ -29,20 +29,22 @@ const BurgerMenu = () => {
             >
 
                 <ul>
-                    <li><Link href="/Devis">DEMANDE DE DEVIS</Link></li>
                     <li><Link href="/Prestations">TYPES DE PRESTATIONS</Link></li>
                     <li><Link href="/Realisations">RÉALISATIONS</Link></li>
                     <li><Link href="/Partenaires">PARTENAIRES</Link></li>
+                    <li><Link href="/Devis">DEMANDE DE DEVIS</Link></li>
                 </ul>
             </nav >
 
-            <header className="burger_logo">
-                {/* Icône burger */}
+            <header className="burger_logo"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+
                 <div
                     className="burgerIcon"
                     onClick={toggleMenu}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
+
                 >
                     {/* Affiche les lignes de l'icône burger conditionnellement */}
                     {isOpen && (

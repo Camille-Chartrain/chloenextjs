@@ -40,10 +40,6 @@ body{
       line-height:normal; 
       width: auto;
       height: auto;
-
-      @include mixin.medium {
-        font-size: 3rem;
-    }
     }
 
     h2 {
@@ -72,9 +68,8 @@ body{
     
     .background-video .content {
       position: relative;
-      z-index: 1; /* Au-dessus de la vidéo */
-      color: white; /* Contraste avec le fond */
-      text-align: center;
+      z-index: 2; /* Au-dessus de la vidéo */
+      // color: white; /* Contraste avec le fond */
     }
 
     input:-webkit-autofill {
