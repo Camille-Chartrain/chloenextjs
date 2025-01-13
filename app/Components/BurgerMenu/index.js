@@ -37,11 +37,13 @@ const BurgerMenu = () => {
             </nav >
 
             <header className="burger_logo"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
             >
 
                 <div
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                     className="burgerIcon"
                     onClick={toggleMenu}
 
@@ -63,7 +65,18 @@ const BurgerMenu = () => {
                     )}
                 </div>
                 <h1>
-                    <Link href="/" className='logo' aria-label="Retour à l'accueil"><img src="/cc_black.png" alt="logo chloé chartrain" className="img_CC"></img>CHLOÉ CHARTRAIN</Link>
+                    <Link
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        href="/"
+                        className='logo'
+                        aria-label="Retour à l'accueil">
+                        <img src="/cc_black.png"
+                            alt="logo chloé chartrain"
+                            className="img_CC">
+                        </img>
+                        CHLOÉ CHARTRAIN
+                    </Link>
                 </h1>
             </ header>
         </div >
