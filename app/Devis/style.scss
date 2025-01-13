@@ -64,6 +64,7 @@
                     background-color: var.$white;
                 }
                 
+                // valable pour tout input avant rêgle + spécifique
                 input{   
                     // border-radius: 4px;
                     font-family: "PortherasThin","ZH-Sans",Arial,"Lucida Sans Unicode",sans-serif;
@@ -79,7 +80,7 @@
                     outline: none; /* Supprime le contour par défaut */
 
                     &:focus {
-                        border: 1px solid var.$anthracite; /* Bordure appliquée au focus */
+                        border: 1px solid var.$black; /* Bordure appliquée au focus */
                         transition: border-color 0.3s ease; 
                     }
 
@@ -89,18 +90,19 @@
                         background-color: var.$white;
                     }
 
+                    // case "autre support"
                     &.support{
                     
                         &:checked{
                             background-color:rgb(231, 231, 221);
-                            border: 0.15rem solid var.$anthracite;
+                            border: 0.15rem solid var.$black;
                         }
-                        &:hover{
-                            background-color:var.$soft-grey;
-                            // border: 0.02rem solid var.$black;
-                        }
+                        // &:hover{
+                        //     background-color:var.$soft-grey;
+                        //     // border: 0.02rem solid var.$black;
+                        // }
                         &:focus {
-                            border: 1px solid var.$anthracite; /* Bordure appliquée au focus */
+                            border: 1px solid var.$black; /* Bordure appliquée au focus */
                             transition: border-color 0.3s ease; 
                             background-color: var.$soft-white;
                         }
@@ -131,7 +133,7 @@
                     margin-top: 0.4rem;
                 
                     &:focus {
-                        border: 1px solid var.$anthracite; ;
+                        border: 1px solid var.$black; ;
                         border-radius: 4px;
                     }
                 }
@@ -146,6 +148,7 @@
                     padding-block: 0em 0em;
                     padding-inline: 0em;
 
+                    // choix multiples: carrelage marbre etc
                     .checkbox_choices{
                         display: flex;
                         flex-direction: row;
@@ -168,30 +171,34 @@
                             transition: background-color 0.1s ease;
                         
                             &:hover{
-                                background-color: var.$soft-grey;
-                                border-color: var.$grey;
+                                // background-color: var.$black;
+                                background-color: var.$anthracite;
+                                border-color: var.$anthracite;
+                                color: var.$white;
+                            }
+
+                            &:active {
+                                background-color: var.$soft-grey; /* Couleur temporaire pendant le clic */
                             }
                         }
                     }
     
-                    .checkbox_choices input[type="checkbox"]:checked + label {
-                        background-color: var.$anthracite;
-                        color: white;
-                        border-color: var.$anthracite;
-                    }
+                    // couleeur de survol des checkbox cochées
+                    // .checkbox_choices input[type="checkbox"]:checked + label {
+                        // &:hover{
+                        //     background-color: var.$anthracite;
+                        //     color: white;
+                        //     border-color: var.$anthracite;
+                        // }
+                    // }
     
-                    .checkbox_choices input[type="checkbox"]:active + label {
-                        background-color: var.$soft-grey; /* Couleur temporaire pendant le clic */
-                    }
+                    // .checkbox_choices input[type="checkbox"]:active + label {
+                    //     background-color: var.$soft-grey; /* Couleur temporaire pendant le clic */
+                    // }
 
                     .label_autre{
                         display: none;
                     }
-                    
-                    // .legend1{
-                    //     font-size: x-large;
-                    //     font-weight: 600;
-                    // }
 
                     .legend2{
                         padding-top: 1.1rem;
@@ -230,7 +237,8 @@
                     .open_menu {
                         display: flex;
                         flex-direction: column;
-                        
+
+                         // les grandes catégories murs sols plafonds elements
                         .label_menu_toggle{
                             margin: auto auto 1rem 0;
                             padding: 0.5rem 1rem;
@@ -242,7 +250,7 @@
                                 color:var.$white;
                             }
                         }
-
+                        
                         input[type="checkbox"] {
                             display: none; // Facultatif pour masquer la case à cocher
                         }
@@ -253,6 +261,7 @@
                             margin-bottom: 6rem;
                             margin-top: 1rem;
                             background-color: var.$form_sections;
+                            // background-color: var.$black;
                             border:1px solid var.$anthracite;
                             border-radius: 3px;
                             padding: 1.5rem;
@@ -267,10 +276,10 @@
                             color: var.$white;
                             border-color: var.$black;
 
-                            &:hover{
-                                background-color: var.$anthracite;
-                                color:var.$white;
-                            }
+                            // &:hover{
+                            //     background-color: var.$anthracite;
+                            //     color:var.$white;
+                            // }
                         }
                     
                         .menu_murs {
