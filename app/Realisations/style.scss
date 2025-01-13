@@ -15,12 +15,8 @@
     .photos{
         display: flex;
         flex-direction: column;
-        // width: 100vw;
         width: 100%;
-        // height: 100vh;
         
-
-
         .row, .full-width {
             scroll-snap-align: start; /* Chaque section s'accroche au début */
         }
@@ -33,11 +29,21 @@
         .image {
             // flex: 1; /* Chaque image dans la rangée partage l'espace disponible à parts égales */
             // height: 50vw; /* Garde les proportions */
-            width: 50%; height: 100vh; object-fit: cover;
+            width: 50%; 
+            height: 50vh; 
+            object-fit: cover;
+
+            @include mixin.medium {
+                height: 100vh; 
+            }
         }
 
         .full-width {
             width: 100%; /* La troisième image occupe toute la largeur */
+            
+            @include mixin.medium {
+                height: 100vh; 
+            }
         }
     }
 }
