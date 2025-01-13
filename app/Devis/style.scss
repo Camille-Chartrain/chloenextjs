@@ -9,6 +9,13 @@
     background-attachment: fixed;
     font-family: "PortherasThin","ZH-Sans",Arial,"Lucida Sans Unicode",sans-serif;
     width: 100%;
+    overflow: hidden; // Empêche le défilement du conteneur principal
+    min-height: 100vh; // Au lieu de height: 100%
+    position: fixed; // Pour empêcher le défilement du fond
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
     .burger_logo{
         // background-color: var.$white;
@@ -19,6 +26,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto; // Permet le défilement uniquement dans le main
+        padding-bottom: 2rem; // Ajoute un peu d'espace en bas
 
         h2{
             margin-top: 5rem;

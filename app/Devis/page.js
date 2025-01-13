@@ -2,7 +2,7 @@ import React from 'react';
 import "./style.scss";
 // import "./devis.module.scss";
 import BurgerMenu from '../Components/BurgerMenu';
-import DevisForm from './components/Form';
+import DevisForm from './components/DevisForm';
 
 
 const Devis = () => {
