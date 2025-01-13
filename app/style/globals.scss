@@ -36,10 +36,14 @@ body{
     h1{
       font-family: PortherasThin;
       font-weight: 400;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       line-height:normal; 
       width: auto;
       height: auto;
+      
+      @include mixin.medium {
+        font-size: 1.5rem;
+      }
     }
 
     h2 {
