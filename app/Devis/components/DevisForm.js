@@ -5,10 +5,11 @@ import { useState } from "react";
 const DevisForm = () => {
 
     const [isSubmitted, setIsSubmitted] = useState(false); // État pour gérer l'affichage du formulaire
-
+    const [loading, setLoading] = useState(false);
 
     async function handleSubmit(event) {
         event.preventDefault();
+        setLoading(true);
 
         const formData = new FormData(event.target);
         // FormData est un objet spécialisé qui stocke les données du formulaire, mais son accès est limité (par exemple, avec .get() ou .entries()).
@@ -53,6 +54,7 @@ const DevisForm = () => {
 
         if (response.ok) {
             console.log('Email envoyé avec succès');
+            setLoading(false);
             setIsSubmitted(true); // Passer l'état à true pour afficher message de validation
         } else {
             console.error('Erreur lors de la soumission du formulaire');
@@ -62,13 +64,15 @@ const DevisForm = () => {
     return (
 
         <>
-            {isSubmitted ? (
-                // Contenu à afficher après la soumission réussie
+            {loading && <p className="loading">chargement...</p>}
+            {!loading && isSubmitted && (
                 <div className="success-message">
-                    <h3>Merci pour votre soumission !</h3>
+                    <h3>Merci pour votre soumission !</h3>
                     <p>Nous avons bien reçu vos informations. Nous vous contacterons sous peu.</p>
                 </div>
-            ) : (
+            )}
+
+            {!loading && !isSubmitted && (
                 <form method="POST" onSubmit={handleSubmit}>
 
                     <div className="segment segment1">
