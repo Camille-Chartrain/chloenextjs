@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-console.log("on est dans le controller de semd_mail");
+console.log("on est dans le controller de send_mail");
 
 
 const transporter = nodemailer.createTransport({
