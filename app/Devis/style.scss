@@ -35,7 +35,7 @@
         padding-bottom: 2rem; // Ajoute un peu d'espace en bas
 
         h2{
-            margin-top: 5rem;
+            margin-top: 7rem;
             margin-bottom: 2rem;
         }
 
@@ -48,6 +48,7 @@
             width: 90%;
             background-color: var.$soft-white-transparent;
             border-radius: 0.2rem;
+            // z-index: 1000;
 
             @include mixin.medium {
                 width: 50%;

@@ -18,6 +18,7 @@
     flex-direction: column;
     transition: left 0.3s ease-in-out;
     padding-top: 6rem;
+    z-index: 1000;
 
     a{
       color: rgb(0, 0, 0);
@@ -48,6 +49,11 @@
     left: 0;
     width: 100%;
     z-index: 1000; /* Assure que le header est au-dessus */
+    
+    // &.menu.open {
+    //   background-color: grey;
+    //   z-index: 1003;
+    // }
   }
 
     .burger_logo{
@@ -126,11 +132,11 @@
         transition: margin-left 0.3s ease-in-out;
         display: flex; 
         align-items: center; /* Aligne verticalement le contenu */
+        width: fit-content;
         
         @include mixin.medium {
           margin-left: 2rem;
           justify-content: space-between;
-          width: 370px;
         }
         
 
