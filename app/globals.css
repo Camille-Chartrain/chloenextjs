@@ -15,7 +15,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: #fff;
-  font-family: PortherasThin, "ZH-Sans", Arial,Lucida Sans Unicode,"sans-serif";
+  font-family: "PortherasThin", "ZH-Sans", Arial,Lucida Sans Unicode,"sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
