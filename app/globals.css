@@ -26,6 +26,16 @@ body {
 
 }
 
+h1{
+  font-family: PortherasThin;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height:normal; 
+  width: auto;
+  height: auto;
+
+}
+
 
 * {
   box-sizing: border-box;
