@@ -1,0 +1,17 @@
+<script>start("c:\\Users\\Mi-PC\\Desktop\\chloenextjs\\public\\polices\\Portheras_Test\\");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("PortherasTest-Black.otf","PortherasTest-Black.otf",0,13172,"12.9 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-BlackItalic.otf","PortherasTest-BlackItalic.otf",0,13760,"13.4 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-Bold.otf","PortherasTest-Bold.otf",0,13028,"12.7 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-BoldItalic.otf","PortherasTest-BoldItalic.otf",0,13488,"13.2 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-ExtraBold.otf","PortherasTest-ExtraBold.otf",0,13268,"13.0 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-ExtraBoldItalic.otf","PortherasTest-ExtraBoldItalic.otf",0,13800,"13.5 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-ExtraLight.otf","PortherasTest-ExtraLight.otf",0,13144,"12.8 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-ExtraLightItalic.otf","PortherasTest-ExtraLightItalic.otf",0,13544,"13.2 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-Light.otf","PortherasTest-Light.otf",0,13036,"12.7 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-LightItalic.otf","PortherasTest-LightItalic.otf",0,13468,"13.2 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-Medium.otf","PortherasTest-Medium.otf",0,12904,"12.6 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-MediumItalic.otf","PortherasTest-MediumItalic.otf",0,13400,"13.1 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-Regular.otf","PortherasTest-Regular.otf",0,12912,"12.6 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-RegularItalic.otf","PortherasTest-RegularItalic.otf",0,13360,"13.0 kB",1740845541,"01/03/2025 17:12:21");</script>
+<script>addRow("PortherasTest-ThinItalic.otf","PortherasTest-ThinItalic.otf",0,13424,"13.1 kB",1740845541,"01/03/2025 17:12:21");</script>
