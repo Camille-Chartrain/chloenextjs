@@ -56,8 +56,17 @@ const DevisForm = () => {
             console.log('Email envoyé avec succès');
             setLoading(false);
             setIsSubmitted(true); // Passer l'état à true pour afficher message de validation
-        } else {
+        }
+        else {
             console.error('Erreur lors de la soumission du formulaire');
+            setLoading(false);
+
+            // Envoyer les données au serveur
+            const response = await fetch('/api/error_mail', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
         }
     }
 
