@@ -61,3 +61,16 @@ a {
   width: 32px;
   height: 32px;
 }
+
+
+@font-face {
+  font-family: 'PortherasThin'; /* Nom personnalisé pour votre police */
+  src: url('/polices/Portheras_test/PortherasTest-Light.otf') format('opentype'); /* Chemin vers le fichier */
+  /* font-weight: normal; /* Optionnel, défini pour les variantes */
+  /* font-style: normal; Optionnel */ 
+}
+
+@font-face {
+  font-family: 'PortherasRegular'; /* Nom personnalisé pour votre police */
+  src: url('/polices/Portheras_test/PortherasTest-Regular.otf') format('opentype'); /* Chemin vers le fichier */
+}
