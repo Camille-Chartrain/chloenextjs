@@ -40,3 +40,21 @@ a {
     color-scheme: dark;
   }
 }
+
+.message{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+
+}
+.icon_insta{
+  width: 32px;
+  height: 32px;
+}
