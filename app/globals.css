@@ -65,11 +65,14 @@ a {
 .logo{
   display: flex;
   justify-content: center;
-
 }
+
+
 .icon_insta{
   width: 32px;
   height: 32px;
+  /* box-shadow:2px 2px 5px #0a0a0a;
+  border-radius: 3px; */
 }
 
 

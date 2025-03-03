@@ -9,7 +9,8 @@ export default function Home() {
         </a>
       </p>
       <p className="logo">
-        <a href="https://www.instagram.com/chloechartrain__/" target="_blank"> <img src="/logo_instagram.png" alt="lien page instagram" class="icon_insta" />
+        <a href="https://www.instagram.com/chloechartrain__/" target="_blank">
+          <img src="/icons8-instagram(1).gif" alt="lien page instagram" class="icon_insta" />
         </a>
       </p>
 
