@@ -72,7 +72,11 @@ a {
   width: 32px;
   height: 32px;
   /* box-shadow:2px 2px 5px #0a0a0a;
-  border-radius: 3px; */
+  border-radius: 8px; */
+}
+
+.insta{
+  text-decoration: underline;
 }
 
 
