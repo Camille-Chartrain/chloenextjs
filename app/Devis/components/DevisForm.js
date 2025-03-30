@@ -45,30 +45,64 @@ const DevisForm = () => {
 
         console.log("Données complètes :", data);
 
-        // Envoyer les données au serveur
-        const response = await fetch('/api/send_mail', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data),
-        });
-
-        if (response.ok) {
-            console.log('Email envoyé avec succès');
-            setLoading(false);
-            setIsSubmitted(true); // Passer l'état à true pour afficher message de validation
-        }
-        else {
-            console.error('Erreur lors de la soumission du formulaire');
-            console.log('erreur, dans le else du fetch');
-            setLoading(false);
+        try {
 
             // Envoyer les données au serveur
-            const response = await fetch('/api/error_mail', {
-                method: 'POST',
+            const response = await fetch('/api/send_mail', {
+                method: 'POS',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
             });
+
+            const responseBody = await response.json(); // Extraire la réponse
+
+            if (response.ok) {
+                console.log('Email envoyé avec succès');
+                setLoading(false);
+                setIsSubmitted(true); // Passer l'état à true pour afficher message de validation
+            }
+            else {
+                console.error('Erreur lors de la soumission du formulaire');
+                console.log('erreur, dans le else du fetch');
+                console.log('response', response);
+                console.log('responseBody', responseBody);
+
+                setLoading(false);
+
+                // Envoyer les données d'erreur au serveur
+                const errorResponse = await fetch('/api/error_mail', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        error: 'Erreur lors de l’envoi de l’email',
+                        originalData: data,
+                        responseStatus: response.status,
+                        responseBody: responseBody,
+                    }),
+                });
+                console.log('Response de /api/error_mail sans .json:', errorResponse);
+                console.log('Response de /api/error_mail avaec .json:', await errorResponse.json());
+            }
         }
+        catch (error) {
+            console.error('Erreur inattendue:', error);
+
+            // Envoi de l'erreur critique
+            await fetch('/api/error_mail', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    error: 'Exception dans handleSubmit',
+                    originalData: data,
+                    exception: error.message,
+                }),
+            });
+        }
+
+        setLoading(false);
+
+
+
     }
 
     return (
@@ -100,12 +134,12 @@ const DevisForm = () => {
                         <label htmlFor="adresse">Adresse </label>
                         <input type="text" name="adresse" id="adresse" />
 
-                        <label htmlFor="etage">Etage <span className='etoile'>*</span></label>
+                        <label htmlFor="etage">Etage <span className='etoile'></span></label>
                         <input type="number" name="etage" id="etage" placeholder="ex: 2" />
 
 
                         <fieldset>
-                            <legend>Ascenseur : <span className='etoile'>*</span></legend>
+                            <legend>Ascenseur : <span className='etoile'></span></legend>
                             <div className='radio-group'>
                                 <input type="radio" name="ascenseur" id="oui" value="oui" />
                                 <label htmlFor="oui">Oui</label>
@@ -116,7 +150,7 @@ const DevisForm = () => {
                         </fieldset>
 
                         <fieldset>
-                            <legend>Possibilité de parking gratuit : <span className='etoile'>*</span></legend>
+                            <legend>Possibilité de parking gratuit : <span className='etoile'></span></legend>
                             <div className='radio-group'>
                                 <input type="radio" name="parking" id="gratuit" value="gratuit" />
                                 <label htmlFor="gratuit">Oui</label>
@@ -131,7 +165,7 @@ const DevisForm = () => {
                     </div>
 
                     <div className='segment'>
-                        <p className='titre_segment'>Eléments concernés par votre projet : <span className='etoile'>*</span></p>
+                        <p className='titre_segment'>Eléments concernés par votre projet : <span className='etoile'></span></p>
 
                         <fieldset className='fieldset1'>
                             <div className='open_menu'>
@@ -142,10 +176,10 @@ const DevisForm = () => {
                                 </label>
 
                                 <div className='menu_murs'>
-                                    <label htmlFor="surface_mur" className='label_surface'>Surface des murs (hauteur x Largeur en mètres) : <span className='etoile'>*</span></label>
+                                    <label htmlFor="surface_mur" className='label_surface'>Surface des murs (hauteur x Largeur en mètres) : <span className='etoile'></span></label>
                                     <input type="text" name="surface_mur" id="surface_mur" />
                                     <fieldset>
-                                        <legend className='legend2'>Type de support : <span className='etoile'>*</span></legend>
+                                        <legend className='legend2'>Type de support : <span className='etoile'></span></legend>
 
                                         <div className="checkbox_choices">
 
@@ -177,7 +211,7 @@ const DevisForm = () => {
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation souhaitée : <span className='etoile'>*</span></legend>
+                                        <legend className='legend2'>Prestation souhaitée : <span className='etoile'></span></legend>
 
                                         <div className="checkbox_choices">
 
@@ -217,11 +251,11 @@ const DevisForm = () => {
                                 </label>
 
                                 <div className='menu_murs'>
-                                    <label htmlFor="surface_sol" className='label_surface'>Surface des sols (longueur x Largeur en mètres) : <span className='etoile'>*</span></label>
+                                    <label htmlFor="surface_sol" className='label_surface'>Surface des sols (longueur x Largeur en mètres) : <span className='etoile'></span></label>
                                     <input type="text" name="surface_sol" id="surface_sol" />
 
                                     <fieldset>
-                                        <legend className='legend2'>Type de support : <span className='etoile'>*</span></legend>
+                                        <legend className='legend2'>Type de support : <span className='etoile'></span></legend>
 
                                         <div className="checkbox_choices">
 
@@ -252,7 +286,7 @@ const DevisForm = () => {
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation souhaitée : <span className='etoile'>*</span></legend>
+                                        <legend className='legend2'>Prestation souhaitée : <span className='etoile'></span></legend>
 
                                         <div className="checkbox_choices">
 
@@ -293,11 +327,11 @@ const DevisForm = () => {
 
                                 <div className='menu_murs'>
 
-                                    <label htmlFor="surface_plafond" className='label_surface'>Surface des plafonds (longueur x Largeur en mètres) : <span className='etoile'>*</span></label>
+                                    <label htmlFor="surface_plafond" className='label_surface'>Surface des plafonds (longueur x Largeur en mètres) : <span className='etoile'></span></label>
                                     <input type="text" name="surface_plafond" id="surface_plafond" />
 
                                     <fieldset>
-                                        <legend className='legend2'>Type de support : <span className='etoile'>*</span></legend>
+                                        <legend className='legend2'>Type de support : <span className='etoile'></span></legend>
 
                                         <div className="checkbox_choices">
 
