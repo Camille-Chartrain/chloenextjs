@@ -59,6 +59,7 @@ const DevisForm = () => {
         }
         else {
             console.error('Erreur lors de la soumission du formulaire');
+            console.log('erreur, dans le else du fetch');
             setLoading(false);
 
             // Envoyer les données au serveur
@@ -76,8 +77,8 @@ const DevisForm = () => {
             {loading && <p className="loading">chargement...</p>}
             {!loading && isSubmitted && (
                 <div className="success-message">
-                    <h3>Merci pour votre soumission !</h3>
-                    <p>Nous avons bien reçu vos informations. Nous vous contacterons sous peu.</p>
+                    <h3>Merci pour votre message !</h3>
+                    <p>Votre demande a bien été envoyée. Je vous contacterai sous peu.</p>
                 </div>
             )}
 
