@@ -49,7 +49,7 @@ const DevisForm = () => {
 
             // Envoyer les données au serveur
             const response = await fetch('/api/send_mail', {
-                method: 'POS',
+                method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
             });
@@ -179,63 +179,34 @@ const DevisForm = () => {
                                     <label htmlFor="surface_mur" className='label_surface'>Surface des murs (hauteur x Largeur en mètres) : <span className='etoile'></span></label>
                                     <input type="text" name="surface_mur" id="surface_mur" />
                                     <fieldset>
-                                        <legend className='legend2'>Type de support : <span className='etoile'></span></legend>
+                                        <label htmlFor="type_support_mur" className='legend2'>Type de support : <span className='etoile'></span></label>
+                                        <select id="type_support_mur" name="type_support_mur" className="checkbox_choices">
 
-                                        <div className="checkbox_choices">
+                                            <option value="carrelage_mur">Carrelage</option>
+                                            <option value="placo_mur">Plaque de plâtre</option>
+                                            <option value="pierre_brique_mur">Pierre- brique</option>
+                                            <option value="beton_cellulaire_mur">Béton céllulaire</option>
+                                            <option value="Parpaing_mur">Parpaing</option>
+                                            <option value="plaque_ciment_mur">Plaque de ciment</option>
+                                            <option value="autres">Autre</option>
 
-                                            <input type="checkbox" id="carrelage" name='type_support_murs[]' value='carrelage_mur' />
-                                            <label htmlFor="carrelage">Carrelage</label>
-
-                                            <input type="checkbox" id="placo" name='type_support_murs[]' value='placo' />
-                                            <label htmlFor="placo">Plaque de plâtre</label>
-
-                                            <input type="checkbox" id="mur_pierre" name='type_support_murs[]' value='pierre_brique_murs' />
-                                            <label htmlFor="mur_pierre">Pierre - brique</label>
-
-                                            <input type="checkbox" id="beton_cellulaire" name='type_support_murs[]' value='beton_cellulaire_murs' />
-                                            <label htmlFor="beton_cellulaire">Béton cellulaire</label>
-
-                                            <input type="checkbox" id="parpaing" name='type_support_murs[]' value='parpaing_murs' />
-                                            <label htmlFor="parpaing">Parpaing</label>
-
-                                            <input type="checkbox" id="plaque_ciment" name='type_support_murs[]' value='plaque_ciment_murs' />
-                                            <label htmlFor="plaque_ciment">Plaque de ciment</label>
-                                        </div>
-
-
-                                        <label htmlFor="autre_support_murs" className='label_autre'>Autre
-                                        </label>
-                                        <input type="text" placeholder="Autre:"
-                                            className="support" name="autre_support_murs" id="autre_support_murs" >
-                                        </input>
+                                        </select>
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation souhaitée : <span className='etoile'></span></legend>
+                                        <label htmlFor='prestation_souhaitee_mur' className='legend2'>Prestation souhaitée : <span className='etoile'></span></label>
+                                        <select id="prestation_souhaitee_mur" name="prestation_souhaitee_mur" className="checkbox_choices">
 
-                                        <div className="checkbox_choices">
+                                            <option value="beton_cire">Béton ciré</option>
+                                            <option value="placobeton_texture">Plaque de Béton texture</option>
+                                            <option value="chaux_brossee">Chaux brossée</option>
+                                            <option value="beton_cellulaire">Béton céllulaire</option>
+                                            <option value="chaux_lissee">Chaux lissée</option>
+                                            <option value="chaux_ferree">Chaux ferrée</option>
+                                            <option value="enduit_chaux">Enduit de chaux</option>
+                                            <option value="besoin_conseil">Besoin de conseil</option>
 
-                                            <input type="checkbox" id="beton_cire" name='prestation_souhaitee_murs[]' value='beton_cire_murs' />
-                                            <label htmlFor="beton_cire">Béton ciré</label>
-
-                                            <input type="checkbox" id="beton_texture" name='prestation_souhaitee_murs[]' value='beton_texture_murs' />
-                                            <label htmlFor="beton_texture">Béton texture</label>
-
-                                            <input type="checkbox" id="chaux_brossee" name='prestation_souhaitee_murs[]' value='chaux_brossee_murs' />
-                                            <label htmlFor="chaux_brossee">Chaux brossée</label>
-
-                                            <input type="checkbox" id="chaux_lissee" name='prestation_souhaitee_murs[]' value='chaux_lissee_murs' />
-                                            <label htmlFor="chaux_lissee">Chaux lissée</label>
-
-                                            <input type="checkbox" id="chaux_ferree" name='prestation_souhaitee_murs[]' value='chaux_ferre_murs' />
-                                            <label htmlFor="chaux_ferree">Chaux ferrée</label>
-
-                                            <input type="checkbox" id="enduit_de_chaux" name='prestation_souhaitee_murs[]' value='enduit_de_chaux_murs' />
-                                            <label htmlFor="enduit_de_chaux">Enduit de chaux</label>
-
-                                            <input type="checkbox" id="besoin_conseil_murs" name='prestation_souhaitee_murs[]' value='besoin_conseil_murs' />
-                                            <label htmlFor="besoin_conseil_murs">Besoin de conseil</label>
-                                        </div>
+                                        </select>
                                     </fieldset>
                                 </div>
                             </div>
@@ -255,64 +226,36 @@ const DevisForm = () => {
                                     <input type="text" name="surface_sol" id="surface_sol" />
 
                                     <fieldset>
-                                        <legend className='legend2'>Type de support : <span className='etoile'></span></legend>
+                                        <label htmlFor="type_support_sol" className='legend2'>Type de support : <span className='etoile'></span></label>
+                                        <select id="type_support_sol" name="type_support_sol" className="checkbox_choices">
 
-                                        <div className="checkbox_choices">
+                                            <option value="carrelage_sol">Carrelage</option>
+                                            <option value="marbre">Marbre</option>
+                                            <option value="ancien_beton_cire">Ancien béton ciré</option>
+                                            <option value="chape_anhydrite">Chape anhydrite</option>
+                                            <option value="chape_ciment">Chape ciment</option>
+                                            <option value="calle_beton">Dalle béton</option>
+                                            <option value="autres">Autre</option>
 
-                                            <input type="checkbox" name='type_support_sols[]' value=" carrelage_sols" id="carrelage_sols" />
-                                            <label htmlFor="carrelage_sols">Carrelage </label>
-
-                                            <input type="checkbox" name='type_support_sols[]' value="marbre_sols" id="marbre_sols" />
-                                            <label htmlFor="marbre_sols">Marbre</label>
-
-                                            <input type="checkbox" name='type_support_sols[]' value="ancien_beton_cire_sols" id="ancien_beton_cire_sols" />
-                                            <label htmlFor="ancien_beton_cire_sols">Ancien béton ciré</label>
-
-                                            <input type="checkbox" name='type_support_sols[]' value="chape_anhydrite_sols" id="chape_anhydrite_sols" />
-                                            <label htmlFor="chape_anhydrite_sols">Chape anhydrite</label>
-
-                                            <input type="checkbox" name='type_support_sols[]' value="chape_ciment_sols" id="chape_ciment_sols" />
-                                            <label htmlFor="chape_ciment_sols">Chape ciment </label>
-
-                                            <input type="checkbox" name='type_support_sols[]' value="dalle_beton_sols" id="dalle_beton_sols" />
-                                            <label htmlFor="dalle_beton_sols">Dalle béton </label>
-                                        </div>
-
-                                        <label htmlFor="autre_support_sols" className='label_autre'>Autre</label>
-                                        <input type="text" placeholder="Autre:"
-                                            className="support" name="autre_support_sols" id="autre_support_sols" >
-                                        </input>
-
+                                        </select>
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation souhaitée : <span className='etoile'></span></legend>
+                                        <label htmlFor='prestation_souhaitee_sol' className='legend2'>Prestation souhaitée : <span className='etoile'></span></label>
+                                        <select id="prestation_souhaitee_sol" name="prestation_souhaitee_sol" className="checkbox_choices">
 
-                                        <div className="checkbox_choices">
+                                            <option value="beton_cire">Béton ciré</option>
+                                            <option value="placobeton_texture">Béton texture</option>
+                                            <option value="chaux_brossee">Chaux brossée</option>
+                                            <option value="beton_cellulaire">Béton céllulaire</option>
+                                            <option value="chaux_lissee">Chaux lissée</option>
+                                            <option value="chaux_ferree">Chaux ferrée</option>
+                                            <option value="enduit_chaux">Enduit de chaux</option>
+                                            <option value="besoin_conseil">Besoin de conseil</option>
 
-                                            <input type="checkbox" name='prestation_souhaitee_sols[]' value='beton_cire_sols' id="beton_cire_sols" />
-                                            <label htmlFor="beton_cire_sols">Béton ciré</label>
-
-                                            <input type="checkbox" name='prestation_souhaitee_sols[]' value='beton_texture_sols' id="beton_texture_sols" />
-                                            <label htmlFor="beton_texture_sols">Béton texture</label>
-
-                                            <input type="checkbox" name='prestation_souhaitee_sols[]' value='chaux_brossee_sols' id="chaux_brossee_sols" />
-                                            <label htmlFor="chaux_brossee_sols">Chaux brossée</label>
-
-                                            <input type="checkbox" name='prestation_souhaitee_sols[]' value='chaux_lissee_sols' id="chaux_lissee_sols" />
-                                            <label htmlFor="chaux_lissee_sols">Chaux lissée</label>
-
-                                            <input type="checkbox" name='prestation_souhaitee_sols[]' value='chaux_ferree_sols' id="chaux_ferree_sols" />
-                                            <label htmlFor="chape_cichaux_ferree_solsment">Chaux ferrée</label>
-
-                                            <input type="checkbox" name='prestation_souhaitee_sols[]' value='enduit_chaux_sols' id="enduit_chaux_sols" />
-                                            <label htmlFor="enduit_chaux_sols">Enduit de chaux</label>
-
-                                            <input type="checkbox" name='prestation_souhaitee_sols[]' value='besoin_conseil_sols' id="besoin_conseil_sols" />
-                                            <label htmlFor="besoin_conseil_sols">Besoin de conseil</label>
-                                        </div>
-
+                                        </select>
                                     </fieldset>
+
                                 </div>
                             </div>
                         </fieldset>
@@ -331,33 +274,24 @@ const DevisForm = () => {
                                     <input type="text" name="surface_plafond" id="surface_plafond" />
 
                                     <fieldset>
-                                        <legend className='legend2'>Type de support : <span className='etoile'></span></legend>
+                                        <label htmlFor='type_support_plafond' className='legend2'>Type de support : <span className='etoile'></span></label>
+                                        <select id="type_support_plafond" name="type_support_plafond" className="checkbox_choices">
 
-                                        <div className="checkbox_choices">
+                                            <option value="plaque_platre_plafonds">Plaque de plâtre</option>
+                                            <option value="beton_brut_plafonds">Béton brut</option>
+                                            <option value="autres">Autre</option>
 
-                                            <input type="checkbox" name='type_support_plafonds[]' value="plaque_platre_plafonds" id="plaque_platre_plafonds" />
-                                            <label htmlFor="plaque_platre_plafonds">Plaque de plâtre</label>
-
-                                            <input type="checkbox" name='type_support_plafonds[]' value="beton_brut_plafonds" id="beton_brut_plafonds" />
-                                            <label htmlFor="beton_brut_plafonds">Béton brut</label>
-
-                                        </div>
-
-                                        <label htmlFor="autre_support_plafonds" className='label_autre'>Autre</label>
-                                        <input type="text" placeholder="Autre:"
-                                            className="support" name="autre_support_plafonds" id="autre_support_plafonds" >
-                                        </input>
+                                        </select>
 
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend className='legend2'>Prestation :</legend>
+                                        <label htmlFor='prestation_souhaitee_plafonds' className='legend2'>Prestation :</label>
+                                        <select id="prestation_souhaitee_plafonds" name="prestation_souhaitee_plafonds" className="checkbox_choices">
 
-                                        <div className="checkbox_choices">
+                                            <option value="beton_cire_plafonds">Béton ciré</option>
 
-                                            <input type="checkbox" id="beton_cire_plafonds" name='prestation_souhaitee_plafonds[]' value='beton_cire_plafonds' />
-                                            <label htmlFor="beton_cire_plafonds">Béton ciré</label>
-                                        </div>
+                                        </select>
                                     </fieldset>
                                 </div>
                             </div>

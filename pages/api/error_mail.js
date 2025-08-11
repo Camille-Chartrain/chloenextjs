@@ -15,20 +15,22 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
 
         const { prestations, ...otherData } = req.body.originalData;
-        // console.log(otherData)
-        // console.log("otherData.email", otherData.email)
-        // console.log("req.body", req.body)
-        // console.log('avant le try transporter send mail');
+        console.log(otherData)
+        console.log("otherData.type_support", otherData.type_support);
 
-        function formatResults(object) {
-            return Object.entries(object)
-                .map(([key, value]) => `<p><strong>${key} :</strong> ${value.join(', ')}</p>`)
-                .join(''); // Convertir en une seule chaîne
-        }
+        console.log("otherData.email", otherData.email)
+        console.log("req.body", req.body)
+        console.log('avant le try transporter send mail');
 
-        const mursResults = formatResults(prestations.murs);
-        const solsResults = formatResults(prestations.sols);
-        const plafondsResults = formatResults(prestations.plafonds);
+        // function formatResults(object) {
+        //     return Object.entries(object)
+        //         .map(([key, value]) => `<p><strong>${key} :</strong> ${value.join(', ')}</p>`)
+        //         .join(''); // Convertir en une seule chaîne
+        // }
+
+        // const mursResults = formatResults(prestations.murs);
+        // const solsResults = formatResults(prestations.sols);
+        // const plafondsResults = formatResults(prestations.plafonds);
 
         try {
             // console.log('dans le try');
@@ -50,23 +52,23 @@ export default async function handler(req, res) {
             <br>
 
             <h2> MURS</h2>
-            <p><strong>Surface murs : ${otherData.surface_mur}</strong></p>
-            ${mursResults}
-            <p><strong>Autre support mur:</strong> ${otherData.autre_support_murs} </p>
+            <p><strong>Surface murs : /strong>${otherData.surface_mur}<</p>
+            <p><strong>Type de support: :</strong> ${otherData.type_support_mur} </p>
+            <p><strong>Prestation choisie :</strong> ${otherData.prestation_souhaitee_mur} </p>
 
             <br>
 
             <h2> SOLS</h2>   
             <p><strong>Surface sols : ${otherData.surface_sol}</strong></p>      
-            ${solsResults}   
-            <p><strong>Autre support sols:</strong> ${otherData.autre_support_sols} </p>
+            <p><strong>Type de support: : ${otherData.type_support_sol} </strong></p>
+            <p><strong>Prestation choisie : ${otherData.prestation_souhaitee_sol} </strong></p>
 
             <br>
 
             <h2> PLAFONDS</h2>
             <p><strong>Surface plafonds : ${otherData.surface_plafond}</strong></p>
-            ${plafondsResults}
-            <p><strong>Autre support plafonds:</strong> ${otherData.autre_support_plafonds} </p>
+            <p><strong>Type de support: : ${otherData.type_support_plafond} </strong></p>
+            <p><strong>Prestation choisie : ${otherData.prestation_souhaitee_plafond} </strong></p>
 
             <br>
 
