@@ -1,25 +1,48 @@
 import React from 'react';
 import BurgerMenu from '../Components/BurgerMenu';
+import "./style.scss";
+import Link from 'next/link';
 
 const prestations = () => {
     return (
         <>
             <BurgerMenu />
-            <div>Prestations</div>
-            <h2>Les bétons</h2>
-            <ul>
-                <li>Béton ciré</li>
-                <li>Béton mural</li>
-                <li>Béton texture</li>
-            </ul>
+            <h2>PRESTATIONS</h2>
 
-            <h2>Les chaux</h2>
-            <ul>
-                <li>Chaux lissée</li>
-                <li>Chaux brossée</li>
-                <li>Chaux ferrée</li>
-                <li>Enduit de chaux</li>
-            </ul>
+            <div className='both_sections'>
+
+                <Link href="/Prestations/Betons/">
+                    <div className='duo_img'>
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de béton ciré'}
+                            className='image'
+                        />
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de béton ciré'}
+                            className='image'
+                        />
+                    </div>
+                    <h3>LES BETONS CIRES</h3>
+                </Link>
+
+                <Link href="/Prestations/Revetements/">
+                    <div className='duo_img'>
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de revêtement muraux'}
+                            className='image'
+                        />
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de revêtement muraux'}
+                            className='image'
+                        />
+                    </div>
+                    <h3>LES REVETEMENTS MURAUX</h3>
+                </Link>
+            </div>
         </>
     )
 }

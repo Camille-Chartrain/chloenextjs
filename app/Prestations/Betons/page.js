@@ -1,0 +1,87 @@
+import React from 'react';
+import BurgerMenu from '../../Components/BurgerMenu';
+import "./style.scss";
+
+const betons = () => {
+    return (
+        <>
+            <BurgerMenu />
+            <h2>BETONS CIRES</h2>
+            <p>
+                Vous recherchez une finition unique, moderne et intemporelle pour vos intérieurs ?
+                Avec son aspect lisse et raffiné, le béton ciré s’intègre parfaitement dans tous les styles, qu’il s’agisse d’une maison contemporaine, d’un loft industriel ou d’un espace haut de gamme.
+                Durable, esthétique et facile d’entretien, il est idéal pour tous vos lieux de vie :
+                Sols, murs et plafonds
+                Salles de bains
+                Escaliers
+                Mobiliers sur mesures
+                Cuisines
+
+                Voici ces différentes déclinaisons :
+            </p>
+            <div className='both_sections'>
+
+                <div>
+                    <div className='duo_img'>
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de béton ciré'}
+                            className='image'
+                        />
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de béton ciré'}
+                            className='image'
+                        />
+                    </div>
+                    <h3>BETONS CIRES "CLASSIC"</h3>
+                    <p>
+                        Conseillée pour tous vos éléments, la finition « lissée » est légèrement nuancée. C’est l’une des plus réputées, notamment dans les intérieurs contemporains. Elle offre un rendu élégant.
+                        Les nuances sont légères ou affirmées selon le choix de la teinte.
+                    </p>
+                </div>
+
+                <div>
+                    <div className='duo_img'>
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de revêtement muraux'}
+                            className='image'
+                        />
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de revêtement muraux'}
+                            className='image'
+                        />
+                    </div>
+                    <h3>BETON CIRE MINERAL</h3>
+                    <p>
+                        Un effet pierre qui laisse les pores du béton ciré ouvert.  Il est conseillé pour les murs et les plafonds et présente un rendu doux et nuageux..
+                    </p>
+                </div>
+
+            </div>
+
+            <div>
+                <div className='duo_img'>
+                    <img
+                        src={'/IMG_3684.jpg'}
+                        alt={'illustration de béton ciré'}
+                        className='image'
+                    />
+                    <img
+                        src={'/IMG_3684.jpg'}
+                        alt={'illustration de béton ciré'}
+                        className='image'
+                    />
+                </div>
+                <h3>BETONS CIRES FERRE</h3>
+                <p>
+                    Des reflets marbrés donneront à votre matériau toute son authenticité. Selon l’outil utilisé, cet effet peut être plus ou moins accentué (effet réalisable sur murs, sols, plafonds, escaliers et mobiliers.)
+                </p>
+            </div>
+        </>
+    )
+}
+
+export default betons

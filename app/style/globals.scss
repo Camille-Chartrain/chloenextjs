@@ -49,9 +49,17 @@ body{
 
     h2 {
       font-family: PortherasRegular;
-      font-weight: 400;
+      font-weight: 600;
       font-size: 1.4rem;
       line-height: normal;    
+    }
+
+    h3 {
+      font-family: PortherasRegular;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: normal;   
+      text-align: center; 
     }
     .background-video {
       position: relative;
