@@ -7,7 +7,7 @@ const betons = () => {
         <>
             <BurgerMenu />
             <h2>BETONS CIRES</h2>
-            <p>
+            <p className='intro_beton'>
                 Vous recherchez une finition unique, moderne et intemporelle pour vos intérieurs ?
                 Avec son aspect lisse et raffiné, le béton ciré s’intègre parfaitement dans tous les styles, qu’il s’agisse d’une maison contemporaine, d’un loft industriel ou d’un espace haut de gamme.
                 Durable, esthétique et facile d’entretien, il est idéal pour tous vos lieux de vie :
@@ -19,9 +19,9 @@ const betons = () => {
 
                 Voici ces différentes déclinaisons :
             </p>
-            <div className='both_sections'>
+            <div className='all_sections'>
 
-                <div>
+                <div className='section'>
                     <div className='duo_img'>
                         <img
                             src={'/IMG_3684.jpg'}
@@ -41,7 +41,7 @@ const betons = () => {
                     </p>
                 </div>
 
-                <div>
+                <div className='section'>
                     <div className='duo_img'>
                         <img
                             src={'/IMG_3684.jpg'}
@@ -60,25 +60,25 @@ const betons = () => {
                     </p>
                 </div>
 
-            </div>
-
-            <div>
-                <div className='duo_img'>
-                    <img
-                        src={'/IMG_3684.jpg'}
-                        alt={'illustration de béton ciré'}
-                        className='image'
-                    />
-                    <img
-                        src={'/IMG_3684.jpg'}
-                        alt={'illustration de béton ciré'}
-                        className='image'
-                    />
+                <div className='section'>
+                    <div className='duo_img'>
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de béton ciré'}
+                            className='image'
+                        />
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de béton ciré'}
+                            className='image'
+                        />
+                    </div>
+                    <h3>BETONS CIRES FERRE</h3>
+                    <p>
+                        Des reflets marbrés donneront à votre matériau toute son authenticité. Selon l’outil utilisé, cet effet peut être plus ou moins accentué (effet réalisable sur murs, sols, plafonds, escaliers et mobiliers.)
+                    </p>
                 </div>
-                <h3>BETONS CIRES FERRE</h3>
-                <p>
-                    Des reflets marbrés donneront à votre matériau toute son authenticité. Selon l’outil utilisé, cet effet peut être plus ou moins accentué (effet réalisable sur murs, sols, plafonds, escaliers et mobiliers.)
-                </p>
+
             </div>
         </>
     )

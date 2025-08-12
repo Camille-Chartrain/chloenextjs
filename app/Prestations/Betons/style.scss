@@ -2,20 +2,35 @@
 @use '../../style/var';
 
 h2{
-    margin: 9rem auto auto auto;
+    margin: 7rem auto auto auto;
     text-align: center;
     
 }
 
-.both_sections{
+.intro_beton{
+            width: 95%;
+            margin: 2rem auto 4rem auto;
+        }
+
+.all_sections{
     @include mixin.medium {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             }
+
+    .section{
+        margin-bottom: 4rem;
+        @include mixin.medium {
+        width: 48.5%;
+        margin-bottom: 3rem;
+        }
+    }
 
     .duo_img{
         display: flex;
         justify-content: space-evenly;
-        margin-top: 3rem;
+        // margin-top: 3rem;
         margin-bottom: 0.6rem;
 
         @include mixin.medium {
@@ -29,39 +44,40 @@ h2{
     // }
 
         .image{
-            width: 48.5%;
+            width: 49%;
 
             @include mixin.medium {
-            width: 46%; // exemple : largeur quand l’écran ≥ 60rem
+            width: 49%; // exemple : largeur quand l’écran ≥ 60rem
             margin-right: 0.3rem;
             }
         }
     }     
 }
 
-.duo_img{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 3rem;
-        margin-bottom: 0.6rem;
+// .duo_img{
+//         display: flex;
+//         justify-content: space-evenly;
+//         margin-top: 3rem;
+//         margin-bottom: 0.6rem;
 
-        @include mixin.medium {
-            justify-content: center;
-            margin-top: 5rem;
-            }
+//         @include mixin.medium {
+//             justify-content: center;
+//             margin-top: 5rem;
+//             }
 
-    // h3{
-    //     text-align: center;
-        // déjà dans le global scss
-    // }
+//     // h3{
+//     //     text-align: center;
+//         // déjà dans le global scss
+//     // }
 
-        .image{
-            width: 48.5%;
+//         .image{
+//             width: 48.5%;
 
-            @include mixin.medium {
-            width: 46%; // exemple : largeur quand l’écran ≥ 60rem
-            margin-right: 0.3rem;
-            }
-        }
-    }     
+//             @include mixin.medium {
+//             width: 46%; // exemple : largeur quand l’écran ≥ 60rem
+//             margin-right: 0.3rem;
+//             margin-left: 0.3rem;
+//             }
+//         }
+//     }     
 
