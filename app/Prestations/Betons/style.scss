@@ -25,7 +25,7 @@ h2{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            width: 90%;
+            width: 97%;
             margin: auto;
     }
 
@@ -66,6 +66,7 @@ h2{
 
         .image{
             width: 47%;
+            // height: 550px;
 
             @include mixin.medium {
             width: 45%; // exemple : largeur quand l’écran ≥ 60rem

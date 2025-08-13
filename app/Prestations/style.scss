@@ -2,7 +2,7 @@
 @use '../style/var';
 
 h2{
-    margin: 9rem auto auto auto;
+    margin: 9rem auto 5rem auto;
     text-align: center;
     
 }
@@ -37,5 +37,20 @@ h2{
             }
         }
     }     
+}
+
+.durabilite{
+    width: 90%;
+    text-align: justify;
+    margin: 7rem auto 5rem auto;
+
+    .title{
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .text{
+        margin-bottom: 1rem;
+    }
 }
 
