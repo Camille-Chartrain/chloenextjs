@@ -51,8 +51,12 @@ body{
     h2 {
       font-family: PortherasRegular;
       font-weight: 600;
-      font-size: 1.4rem;
-      line-height: normal;    
+      font-size: 1.1rem;
+      line-height: normal;   
+      
+    @include mixin.medium {
+        font-size: 1.4rem;
+      }  
     }
 
     h3 {

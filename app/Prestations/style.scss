@@ -39,10 +39,35 @@ h2{
     }     
 }
 
+.note{
+    width: 95%;
+    font-size: 0.95rem;
+    margin: 7rem auto auto auto;
+    letter-spacing: .0rem;
+    // text-align: justify;
+
+    @include mixin.medium {
+        // font-size: 1rem;
+        text-align: center;
+        letter-spacing: .01rem;
+        margin: 9rem auto auto auto;
+    }
+}
+
 .durabilite{
     width: 90%;
     text-align: justify;
     margin: 7rem auto 5rem auto;
+    font-size: 0.95rem;
+    
+    @include mixin.medium {
+        font-size: 1rem;
+        width: 60%;
+        margin: 9rem auto 5rem auto;
+    }
+    @include mixin.big {
+        width: 50%;
+    }
 
     .title{
         font-weight: bold;

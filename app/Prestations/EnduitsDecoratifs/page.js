@@ -1,24 +1,14 @@
 import React from 'react';
 import BurgerMenu from '../../Components/BurgerMenu';
 import "./style.scss";
+import Link from 'next/link';
 
-const betons = () => {
+const EnduitsDecoratifs = () => {
     return (
         <>
             <BurgerMenu />
-            <h2>BETONS CIRES</h2>
-            <p className='intro_beton'>
-                Vous recherchez une finition unique, moderne et intemporelle pour vos intérieurs ?
-                Avec son aspect lisse et raffiné, le béton ciré s’intègre parfaitement dans tous les styles, qu’il s’agisse d’une maison contemporaine, d’un loft industriel ou d’un espace haut de gamme.
-                Durable, esthétique et facile d’entretien, il est idéal pour tous vos lieux de vie :
-                Sols, murs et plafonds
-                Salles de bains
-                Escaliers
-                Mobiliers sur mesures
-                Cuisines
+            <h2>ENDUITS DECORATIFS</h2>
 
-                Voici ces différentes déclinaisons :
-            </p>
             <div className='all_sections'>
 
                 <div className='section'>
@@ -34,10 +24,10 @@ const betons = () => {
                             className='image'
                         />
                     </div>
-                    <h3>BETON CIRE "CLASSIC"</h3>
+                    <h3>BETON MURAL "CLASSIC"</h3>
                     <p>
-                        Conseillée pour tous vos éléments, la finition « lissée » est légèrement nuancée. C’est l’une des plus réputées, notamment dans les intérieurs contemporains. Elle offre un rendu élégant.
-                        Les nuances sont légères ou affirmées selon le choix de la teinte.
+                        Cet enduit est plus fin que le béton ciré. Il est uniquement décoratif. <span className='commentaires'>(ca veut dire quoi)</span>
+                        Doux au toucher, il offre un rendu lisse et nuageux. Son effet patiné et chic lui apporte toute son élégance.
                     </p>
                 </div>
 
@@ -54,9 +44,9 @@ const betons = () => {
                             className='image'
                         />
                     </div>
-                    <h3>BETON CIRE MINERAL</h3>
+                    <h3>BETON MURAL "TEXTURE"</h3>
                     <p>
-                        Un effet pierre qui laisse les pores du béton ciré ouvert.  Il est conseillé pour les murs et les plafonds et présente un rendu doux et nuageux..
+                        Son rendu industriel, brut, texturé et pleins de petites cavités saura vous ravir pour vos créations à l’esthétique brutaliste. Il est uniquement destiné pour des projets décoratifs.<span className='commentaires'>idem</span>
                     </p>
                 </div>
 
@@ -73,15 +63,39 @@ const betons = () => {
                             className='image'
                         />
                     </div>
-                    <h3>BETON CIRE FERRE</h3>
+                    <h3>ENDUIT DE CHAUX MARMORINO</h3>
                     <p>
-                        Des reflets marbrés donneront à votre matériau toute son authenticité. Selon l’outil utilisé, cet effet peut être plus ou moins accentué (effet réalisable sur murs, sols, plafonds, escaliers et mobiliers.)
+                        Naturel et écologique, sans solvant, ni composés organiques volatiles.
+                        Aspect élégant, souvent marbré ou nuagé, il a la capacité d’offrir une finition minérale haut de gamme.
                     </p>
                 </div>
 
-            </div>
+
+                <Link href="/Prestations/EnduitsDecoratifs/ChauxFine" className='section'>
+                    <div className='duo_img'>
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de béton ciré'}
+                            className='image'
+                        />
+                        <img
+                            src={'/IMG_3684.jpg'}
+                            alt={'illustration de béton ciré'}
+                            className='image'
+                        />
+                    </div>
+                    <h3>ENDUIT DE CHAUX FINE</h3>
+                    <p>
+                        Très onctueuse et souple. Elle se décline en 3 finitions.
+                    </p>
+                    <p className='link'>
+                        Voir plus
+                    </p>
+                </Link>
+
+            </div >
         </>
     )
 }
 
-export default betons
+export default EnduitsDecoratifs

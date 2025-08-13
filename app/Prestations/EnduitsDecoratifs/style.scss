@@ -2,23 +2,14 @@
 @use '../../style/var';
 
 h2{
-    margin: 5rem auto auto auto;
+    margin: 5rem auto 4rem auto;
     text-align: center;
     
 }
 
-.intro_beton{
-            width: 95%;
-            margin: 4rem auto 4rem auto;
-            letter-spacing: .01rem;
-            line-height: 1.6rem;
-
-            @include mixin.medium {
-            width: 50%;
-            margin: 4rem auto 4rem auto;
-            text-align: justify;
-            }
-        }
+.commentaires{
+    color: rgb(255, 13, 182);
+}
 
 .all_sections{
     @include mixin.medium {
@@ -31,6 +22,8 @@ h2{
 
     .section{
         margin-bottom: 4rem;
+        // width: 95%;
+
         @include mixin.medium {
             width: 50%;
             margin-bottom: 5rem;
@@ -42,6 +35,10 @@ h2{
             text-align: justify;
             font-size: 1rem;
             letter-spacing: .0rem;
+
+            @include mixin.medium {
+                width: 90%;
+            }
         }
 
         h3{
@@ -50,7 +47,15 @@ h2{
             margin-bottom: 1rem;
             font-weight: bold;
 
-    }
+        }
+
+        .link{
+            display: block;        /* ou inline-block */
+            margin-left: auto;     /* pousse à droite */
+            margin-right: 1rem;
+            width: fit-content; 
+            margin-bottom: 5rem;
+        }
     }
 
     .duo_img{

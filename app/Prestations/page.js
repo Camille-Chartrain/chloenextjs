@@ -27,7 +27,7 @@ const prestations = () => {
                     <h3>LES BETONS CIRES</h3>
                 </Link>
 
-                <Link href="/Prestations/Revetements/">
+                <Link href="/Prestations/EnduitsDecoratifs/">
                     <div className='duo_img'>
                         <img
                             src={'/IMG_3684.jpg'}
@@ -40,10 +40,13 @@ const prestations = () => {
                             className='image'
                         />
                     </div>
-                    <h3>LES REVETEMENTS MURAUX</h3>
+                    <h3>LES ENDUITS DECORATIFS</h3>
                 </Link>
             </div>
-            <p className='durabilite'>
+            <aside className='note'>
+                TOUS NOS MATIERES SONT DISPONIBLES DANS DE NOMBREUSES TEINTES.
+            </aside>
+            <section className='durabilite'>
                 <p className='title'>
                     DURABILITE
                 </p>
@@ -57,7 +60,7 @@ const prestations = () => {
                     La prévention passe par une préparation rigoureuse du support et l’utilisation de produits de qualité. Néanmoins, envisager la possibilité de fissuration fait partie d’une approche réaliste et responsable. Un béton ciré bien posé et bien entretenu reste un revêtement durable, esthétique et unique qui évolue avec votre habitat.
                 </p>
 
-            </p>
+            </section>
         </>
     )
 }
