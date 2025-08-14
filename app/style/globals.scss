@@ -91,10 +91,40 @@ body{
     }
 
     .intro{
-      width: 80%;
+      width: 90%;
       text-align:justify;
-      margin:   6rem auto 6rem auto
+      margin:   6rem auto 6rem auto;
+      font-size: 0.9rem;
+      letter-spacing: .0rem;
+
+      @include mixin.medium {
+        width: 60%;
+        font-size: 1rem;
+      }  
+      
+      @include mixin.big {
+        width: 50%;
     }
+
+      .intro_text{
+        margin-bottom: 1rem;
+      }
+    }
+
+    .logo_partenaires {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      gap: 1rem;
+      margin: auto;
+      justify-content: space-between; /* espace régulier */
+
+      img {
+        width: 200px;     /* largeur fixe */
+        height: 200px;    /* hauteur fixe */
+        object-fit: contain; /* garde le logo entier */
+      }
+}
 
     input:-webkit-autofill {
       appearance: none; /* Supprime l'apparence native */

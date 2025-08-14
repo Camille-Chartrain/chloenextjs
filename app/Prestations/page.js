@@ -43,9 +43,11 @@ const prestations = () => {
                     <h3>LES ENDUITS DECORATIFS</h3>
                 </Link>
             </div>
+
             <aside className='note'>
                 TOUS NOS MATIERES SONT DISPONIBLES DANS DE NOMBREUSES TEINTES.
             </aside>
+
             <section className='durabilite'>
                 <p className='title'>
                     DURABILITE

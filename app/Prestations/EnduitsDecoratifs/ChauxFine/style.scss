@@ -1,5 +1,5 @@
-@use '../../style/mixin';
-@use '../../style/var';
+@use '../../../style/mixin';
+@use '../../../style/var';
 
 h2{
     margin: 5rem auto 4rem auto;
@@ -67,11 +67,11 @@ h2{
             }
 
         .image{
-            width: 47%;
+            width: 90%;
             // height: 550px;
 
             @include mixin.medium {
-            width: 45%; // exemple : largeur quand l’écran ≥ 60rem
+            width: 90%; // exemple : largeur quand l’écran ≥ 60rem
             margin-right: 0.3rem;
             }
         }

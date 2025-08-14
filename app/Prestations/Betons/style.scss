@@ -37,11 +37,20 @@ h2{
         }
 
         p{
-            width: 95%;
+            // width: 95%;
+            // margin: auto;
+            // text-align: justify;
+            // font-size: 1rem;
+            // letter-spacing: .0rem;
+            width: 90%;
             margin: auto;
             text-align: justify;
             font-size: 1rem;
             letter-spacing: .0rem;
+
+            @include mixin.medium {
+                width: 91%;
+            }
         }
 
         h3{
