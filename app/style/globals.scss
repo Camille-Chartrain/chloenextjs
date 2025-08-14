@@ -123,7 +123,12 @@ body{
         width: 200px;     /* largeur fixe */
         height: 200px;    /* hauteur fixe */
         object-fit: contain; /* garde le logo entier */
+        margin: auto;
       }
+}
+
+.commentaires{
+  color: #dd10c2;
 }
 
     input:-webkit-autofill {

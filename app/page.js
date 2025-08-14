@@ -67,13 +67,13 @@ export default function Home() {
         />
 
         <img
-          src={'/festool.png'}
+          src={'/intuition.jpg'}
           alt={'illustration de revêtement muraux'}
           className='image'
         />
 
         <img
-          src={'/intuition.jpg'}
+          src={'/festool.png'}
           alt={'illustration de revêtement muraux'}
           className='image'
         />

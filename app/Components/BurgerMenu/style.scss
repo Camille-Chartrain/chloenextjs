@@ -75,13 +75,14 @@
       }
 
       .img_CC{
-        width: 4rem;
+        width: 2rem;
         height: auto;
-        margin-right: 1rem;
+        margin-right: 0.6rem;
 
         @include mixin.medium {
           width: 5rem;
           height: auto;
+          margin-right: 1rem;
         }
       }
 
@@ -141,10 +142,13 @@
         display: flex; 
         align-items: center; /* Aligne verticalement le contenu */
         width: fit-content;
-        
+        font-size: 0.9rem;
+
         @include mixin.medium {
           margin-left: 2rem;
           justify-content: space-between;
+          font-size: 1.3rem;
+          margin-left: 1rem;
         }
         
 

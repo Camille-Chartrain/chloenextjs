@@ -2,7 +2,7 @@
 @use '../style/var';
 
 h2{
-    margin: 9rem auto 5rem auto;
+    margin: 5rem auto 4rem auto;
     text-align: center;
     
 }
@@ -15,12 +15,12 @@ h2{
     .duo_img{
         display: flex;
         justify-content: space-evenly;
-        margin-top: 3rem;
+        // margin-top: 3rem;
         margin-bottom: 0.6rem;
 
         @include mixin.medium {
             justify-content: center;
-            margin-top: 5rem;
+            // margin-top: 5rem;
             }
 
     // h3{
