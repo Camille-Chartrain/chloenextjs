@@ -1,145 +1,150 @@
-@use '../../style/mixin';
-@use '../../style/var';
+@use "../../style/mixin";
+@use "../../style/var";
 
-.burgerMenu{
-  z-index: 1001;
+.burgerMenu {
+  border: 1px solid blue;
+  z-index: 1000;
   font-family: PortherasRegular;
+  display: flex;
 
-  /* Styles pour le menu glissant*/
+  /*
+   * Styles pour le menu glissant
+   *
+   */
+
+  .menu_closer {
+    border: 1px solid rebeccapurple;
+
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+
+    &.open {
+      display: block;
+    }
+  }
   .menu {
+    border: 1px solid red;
+
     position: absolute;
     top: 0;
     left: -100%;
     height: 100vh;
-    width: 400px;
+    width: 450px;
     background-color: #ffffff;
     color: rgb(5, 5, 5);
     display: flex;
     flex-direction: column;
     transition: left 0.3s ease-in-out;
     padding-top: 6rem;
-    z-index: 1000;
+    z-index: -1;
 
-    a{
+    a {
       color: rgb(0, 0, 0);
       text-decoration: none;
       font-size: 18px;
 
-      &:hover{
+      &:hover {
         color: rgb(117, 117, 117);
       }
     }
+
+    &.open {
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 20px;
+      margin-top: 7rem;
+    }
   }
 
-  // ne fonctionne pas
-  // .open{
-  //   .burgerIcon{
-  //     display: none;
-  //   }
-  // }
-
-  .menu.open {
-    position: fixed;
-    left: 0;
-    top: 0;
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    margin: 20px;
-    margin-top: 7rem;
-  }
-  
-  header{
+  .burger_logo {
+    border: 1px solid green;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Assure que le header est au-dessus */
-    
-    // &.menu.open {
-    //   background-color: grey;
-    //   z-index: 1003;
-    // }
-  }
+    // z-index: 1000; /* Assure que le header est au-dessus */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 1rem;
 
-    .burger_logo{
+    @include mixin.medium {
+      padding-top: 1rem;
+    }
+
+    /*
+     * Styles pour l'icône burger
+     *
+     */
+
+    .burgerIcon {
+      border: 1px solid yellow;
+      width: 30px;
+      height: 24px;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding-top: 3.5rem;
-      max-height: 3rem;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      margin-left: 2rem;
+      // transition: width 0.3s ease-in-out;
 
       @include mixin.medium {
-        padding-top: 4.5rem;
-      }
+        width: 20px;
+        height: 15px;
 
-      .img_CC{
-        width: 2rem;
-        height: auto;
-        margin-right: 0.6rem;
-
-        @include mixin.medium {
-          width: 5rem;
-          height: auto;
-          margin-right: 1rem;
-        }
-      }
-
-  
-      /* Styles pour l'icône burger */
-      .burgerIcon {
-        width: 30px;
-        height: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-        margin-left: 2rem;
-        // transition: width 0.3s ease-in-out;
-
-        @include mixin.medium {
-          width: 20px;
-          height: 15px;
-
-          // Le burger disparaît quand le menu est ouvert
-          .menu.open & {
-            width: 0;
-            opacity: 0;
-            height: 0;
-          }
-        }
-
-        .line {
-          width: 1.5rem;
-          height: 2px;
-          background-color: #000000;
-          transition: 0.3s ease-in-out;
-          position: relative;
-          transform-origin: 0% 50%;
-        }
-        
-        .line1 {
-          transform: rotate(45deg) translateY(50%);
-        }
-        
-        .line2 {
+        // Le burger disparaît quand le menu est ouvert
+        .menu.open & {
+          width: 0;
           opacity: 0;
-        }
-        
-        .line3 {
-          transform: rotate(-45deg) translateY(-50%);
+          height: 0;
         }
       }
 
-      h1{
-        width: 100%;
+      .line {
+        width: 1.5rem;
+        height: 2px;
+        background-color: #000000;
+        transition: 0.3s ease-in-out;
+        position: relative;
+        transform-origin: 0% 50%;
       }
 
-      .logo{
+      .line1 {
+        transform: rotate(45deg) translateY(50%);
+      }
+
+      .line2 {
+        opacity: 0;
+      }
+
+      .line3 {
+        transform: rotate(-45deg) translateY(-50%);
+      }
+    }
+
+    /*
+     * Style pour le titre et le logo
+     *
+     */
+
+    .menuTitle {
+      border: 1px solid magenta;
+
+      .logo {
+        border: 1px solid blueviolet;
         margin-left: 1rem;
         transition: margin-left 0.3s ease-in-out;
-        display: flex; 
+        display: flex;
         align-items: center; /* Aligne verticalement le contenu */
         width: fit-content;
         font-size: 0.9rem;
@@ -150,14 +155,19 @@
           font-size: 1.3rem;
           margin-left: 1rem;
         }
-        
 
-        // @include mixin.medium {
-        //   // Le logo se décale quand le menu est ouvert
-        //   .menu.open & {
-        //     margin-left: 0;
-        //   }
-        // }
-      } 
+        .img_CC {
+          width: 2rem;
+          height: auto;
+          margin-right: 0.6rem;
+
+          @include mixin.medium {
+            width: 5rem;
+            height: auto;
+            margin-right: 1rem;
+          }
+        }
+      }
     }
+  }
 }
