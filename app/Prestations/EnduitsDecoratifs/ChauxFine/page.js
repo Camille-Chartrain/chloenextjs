@@ -7,7 +7,7 @@ const ChauxFine = () => {
     return (
         <>
             <BurgerMenu />
-            <h2>ENDUITS DECORATIFS</h2>
+            <h2>DECLINAISONS CHAUX FINE</h2>
 
             <div className='all_sections'>
 

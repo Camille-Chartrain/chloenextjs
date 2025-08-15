@@ -33,11 +33,13 @@ h2{
             width: 90%;
             margin: auto;
             text-align: justify;
-            font-size: 1rem;
-            letter-spacing: .0rem;
+            font-size: 0.9rem;
+            letter-spacing: 0rem;
+            line-height: 1.6rem;
 
             @include mixin.medium {
                 width: 91%;
+                font-size: 1rem;
             }
         }
 

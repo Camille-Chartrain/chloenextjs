@@ -25,10 +25,10 @@ const EnduitsDecoratifs = () => {
                         />
                     </div>
                     <h3>BETON MURAL "CLASSIC"</h3>
-                    <p>
+                    {/* <p>
                         Cet enduit est plus fin que le béton ciré. Il est uniquement décoratif. <span className='commentaires'>(ca veut dire quoi)</span>
                         Doux au toucher, il offre un rendu lisse et nuageux. Son effet patiné et chic lui apporte toute son élégance.
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className='section'>
@@ -45,9 +45,9 @@ const EnduitsDecoratifs = () => {
                         />
                     </div>
                     <h3>BETON MURAL "TEXTURE"</h3>
-                    <p>
+                    {/* <p>
                         Son rendu industriel, brut, texturé et pleins de petites cavités saura vous ravir pour vos créations à l’esthétique brutaliste. Il est uniquement destiné pour des projets décoratifs.<span className='commentaires'>idem</span>
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className='section'>
@@ -64,10 +64,10 @@ const EnduitsDecoratifs = () => {
                         />
                     </div>
                     <h3>ENDUIT DE CHAUX MARMORINO</h3>
-                    <p>
+                    {/* <p>
                         Naturel et écologique, sans solvant, ni composés organiques volatiles.
                         Aspect élégant, souvent marbré ou nuagé, il a la capacité d’offrir une finition minérale haut de gamme.
-                    </p>
+                    </p> */}
                 </div>
 
 
@@ -85,12 +85,12 @@ const EnduitsDecoratifs = () => {
                         />
                     </div>
                     <h3>ENDUIT DE CHAUX FINE</h3>
-                    <p>
+                    {/* <p>
                         Très onctueuse et souple. Elle se décline en 3 finitions.
-                    </p>
-                    <p className='link'>
+                    </p> */}
+                    {/* <p className='link'>
                         Voir plus
-                    </p>
+                    </p> */}
                 </Link>
 
             </div >

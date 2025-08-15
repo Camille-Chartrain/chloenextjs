@@ -35,10 +35,10 @@ const betons = () => {
                         />
                     </div>
                     <h3>BETON CIRE "CLASSIC"</h3>
-                    <p>
+                    {/* <p>
                         Conseillée pour tous vos éléments, la finition « lissée » est légèrement nuancée. C’est l’une des plus réputées, notamment dans les intérieurs contemporains. Elle offre un rendu élégant.
                         Les nuances sont légères ou affirmées selon le choix de la teinte.
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className='section'>
@@ -55,9 +55,9 @@ const betons = () => {
                         />
                     </div>
                     <h3>BETON CIRE MINERAL</h3>
-                    <p>
+                    {/* <p>
                         Un effet pierre qui laisse les pores du béton ciré ouvert.  Il est conseillé pour les murs et les plafonds et présente un rendu doux et nuageux..
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className='section'>
@@ -74,9 +74,9 @@ const betons = () => {
                         />
                     </div>
                     <h3>BETON CIRE FERRE</h3>
-                    <p>
+                    {/* <p>
                         Des reflets marbrés donneront à votre matériau toute son authenticité. Selon l’outil utilisé, cet effet peut être plus ou moins accentué (effet réalisable sur murs, sols, plafonds, escaliers et mobiliers.)
-                    </p>
+                    </p> */}
                 </div>
 
             </div>
