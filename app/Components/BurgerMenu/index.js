@@ -11,11 +11,11 @@ const BurgerMenu = () => {
     console.log("isOpen", isOpen);
   };
 
-  const handleMouseEnter = () => {
+  const showNav = () => {
     setIsOpen(true);
   };
 
-  const handleMouseLeave = () => {
+  const hideNav = () => {
     setIsOpen(false);
   };
 
@@ -24,8 +24,8 @@ const BurgerMenu = () => {
       {/* Menu déroulant */}
       <nav
         className={`menu ${isOpen ? "open" : ""}`}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={showNav}
+        onMouseLeave={hideNav}
       >
         <ul>
           <li>
@@ -45,12 +45,12 @@ const BurgerMenu = () => {
 
       <header
         className="burger_logo"
-        // onMouseEnter={handleMouseEnter}
-        // onMouseLeave={handleMouseLeave}
+        // onMouseEnter={showNav}
+        // onMouseLeave={hideNav}
       >
         <div
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={showNav}
+          onMouseLeave={hideNav}
           className="burgerIcon"
           onClick={toggleMenu}
         >
@@ -72,8 +72,8 @@ const BurgerMenu = () => {
         </div>
         <h1>
           <Link
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={showNav}
+            onMouseLeave={hideNav}
             href="/"
             className="logo"
             aria-label="Retour à l'accueil"
