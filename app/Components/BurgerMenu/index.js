@@ -43,11 +43,7 @@ const BurgerMenu = () => {
         </ul>
       </nav>
 
-      <header
-        className="burger_logo"
-        // onMouseEnter={showNav}
-        // onMouseLeave={hideNav}
-      >
+      <header className="burger_logo">
         <div
           onMouseEnter={showNav}
           onMouseLeave={hideNav}
@@ -70,6 +66,7 @@ const BurgerMenu = () => {
             </>
           )}
         </div>
+
         <h1>
           <Link
             onMouseEnter={showNav}
