@@ -2,11 +2,36 @@
 @use "../../style/var";
 
 .burgerMenu {
-  z-index: 1001;
+  border: 1px solid blue;
+  z-index: 1000;
   font-family: PortherasRegular;
+  display: flex;
 
-  /* Styles pour le menu glissant*/
+  /*
+   * Styles pour le menu glissant
+   *
+   */
+
+  .menu_closer {
+    border: 1px solid rebeccapurple;
+    background-color: rebeccapurple;
+
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+    &.open {
+      display: block;
+    }
+  }
+
   .menu {
+    border: 1px solid red;
+
     position: absolute;
     top: 0;
     left: -100%;
@@ -18,7 +43,7 @@
     flex-direction: column;
     transition: left 0.3s ease-in-out;
     padding-top: 6rem;
-    z-index: 1000;
+    // z-index: -1;
 
     a {
       color: rgb(0, 0, 0);
@@ -43,12 +68,13 @@
     }
   }
 
-  header.burger_logo {
+  .burger_logo {
+    border: 1px solid green;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Assure que le header est au-dessus */
+    // z-index: 1000; /* Assure que le header est au-dessus */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -59,20 +85,13 @@
       padding-top: 4.5rem;
     }
 
-    .img_CC {
-      width: 2rem;
-      height: auto;
-      margin-right: 0.6rem;
+    /*
+     * Styles pour l'icône burger
+     *
+     */
 
-      @include mixin.medium {
-        width: 5rem;
-        height: auto;
-        margin-right: 1rem;
-      }
-    }
-
-    /* Styles pour l'icône burger */
     .burgerIcon {
+      border: 1px solid yellow;
       width: 30px;
       height: 24px;
       display: flex;
@@ -116,23 +135,42 @@
       }
     }
 
-    h1 {
+    /*
+     * Style pour le titre et le logo
+     *
+     */
+
+    .menuTitle {
+      border: 1px solid magenta;
       width: 100%;
-    }
 
-    .logo {
-      margin-left: 1rem;
-      transition: margin-left 0.3s ease-in-out;
-      display: flex;
-      align-items: center; /* Aligne verticalement le contenu */
-      width: fit-content;
-      font-size: 0.9rem;
-
-      @include mixin.medium {
-        margin-left: 2rem;
-        justify-content: space-between;
-        font-size: 1.3rem;
+      .logo {
+        border: 1px solid blueviolet;
         margin-left: 1rem;
+        transition: margin-left 0.3s ease-in-out;
+        display: flex;
+        align-items: center; /* Aligne verticalement le contenu */
+        width: fit-content;
+        font-size: 0.9rem;
+
+        @include mixin.medium {
+          margin-left: 2rem;
+          justify-content: space-between;
+          font-size: 1.3rem;
+          margin-left: 1rem;
+        }
+
+        .img_CC {
+          width: 2rem;
+          height: auto;
+          margin-right: 0.6rem;
+
+          @include mixin.medium {
+            width: 5rem;
+            height: auto;
+            margin-right: 1rem;
+          }
+        }
       }
     }
   }

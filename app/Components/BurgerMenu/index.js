@@ -1,8 +1,9 @@
 "use client";
+
 import { useState } from "react";
-// import styles from "./BurgerMenu.module.css"; // Import du fichier CSS
 import Link from "next/link";
 import "./style.scss";
+
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,11 +22,10 @@ const BurgerMenu = () => {
 
   return (
     <div className="burgerMenu">
-      {/* Menu déroulant */}
       <nav
         className={`menu ${isOpen ? "open" : ""}`}
         onMouseEnter={showNav}
-        onMouseLeave={hideNav}
+        // onMouseLeave={hideNav}
       >
         <ul>
           <li>
@@ -42,12 +42,16 @@ const BurgerMenu = () => {
           </li>
         </ul>
       </nav>
+      <div
+        className={`menu_closer ${isOpen ? "open" : ""}`}
+        onMouseEnter={hideNav}
+      ></div>
 
       <header className="burger_logo">
         <div
-          onMouseEnter={showNav}
-          onMouseLeave={hideNav}
           className="burgerIcon"
+          onMouseEnter={showNav}
+          //   onMouseLeave={hideNav}
           onClick={toggleMenu}
         >
           {/* Affiche les lignes de l'icône burger conditionnellement */}
@@ -67,10 +71,10 @@ const BurgerMenu = () => {
           )}
         </div>
 
-        <h1>
+        <h1 className="menuTitle">
           <Link
             onMouseEnter={showNav}
-            onMouseLeave={hideNav}
+            // onMouseLeave={hideNav}
             href="/"
             className="logo"
             aria-label="Retour à l'accueil"
