@@ -22,38 +22,29 @@ const BurgerMenu = () => {
 
   return (
     <div className="burgerMenu">
-      <nav
-        className={`menu ${isOpen ? "open" : ""}`}
-        onMouseEnter={showNav}
-        // onMouseLeave={hideNav}
-      >
-        <ul>
-          <li>
-            <Link href="/Prestations">TYPES DE PRESTATIONS</Link>
-          </li>
-          <li>
-            <Link href="/Realisations">RÉALISATIONS</Link>
-          </li>
-          <li>
-            <Link href="/Partenaires">PARTENAIRES</Link>
-          </li>
-          <li>
-            <Link href="/Devis">DEMANDE DE DEVIS</Link>
-          </li>
-        </ul>
-      </nav>
-      <div
-        className={`menu_closer ${isOpen ? "open" : ""}`}
-        onMouseEnter={hideNav}
-      ></div>
-
       <header className="burger_logo">
+        <nav className={`menu ${isOpen ? "open" : ""}`} onMouseEnter={showNav}>
+          <ul>
+            <li>
+              <Link href="/Prestations">TYPES DE PRESTATIONS</Link>
+            </li>
+            <li>
+              <Link href="/Realisations">RÉALISATIONS</Link>
+            </li>
+            <li>
+              <Link href="/Partenaires">PARTENAIRES</Link>
+            </li>
+            <li>
+              <Link href="/Devis">DEMANDE DE DEVIS</Link>
+            </li>
+          </ul>
+        </nav>
         <div
-          className="burgerIcon"
-          onMouseEnter={showNav}
-          //   onMouseLeave={hideNav}
-          onClick={toggleMenu}
-        >
+          className={`menu_closer ${isOpen ? "open" : ""}`}
+          onMouseEnter={hideNav}
+        ></div>
+
+        <div className="burgerIcon" onMouseEnter={showNav} onClick={toggleMenu}>
           {/* Affiche les lignes de l'icône burger conditionnellement */}
           {isOpen && (
             <>
@@ -71,14 +62,8 @@ const BurgerMenu = () => {
           )}
         </div>
 
-        <h1 className="menuTitle">
-          <Link
-            onMouseEnter={showNav}
-            // onMouseLeave={hideNav}
-            href="/"
-            className="logo"
-            aria-label="Retour à l'accueil"
-          >
+        <h1 className="menuTitle" onMouseEnter={showNav}>
+          <Link href="/" className="logo" aria-label="Retour à l'accueil">
             <img
               src="/cc_black.png"
               alt="logo chloé chartrain"
