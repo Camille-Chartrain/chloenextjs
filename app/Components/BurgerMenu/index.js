@@ -44,7 +44,10 @@ const BurgerMenu = () => {
           onMouseEnter={hideNav}
         ></div>
 
-        {/* 1 */}
+        {/* 
+        {
+          // 1 }
+        }
         <div
           className={`burgerIcon ${isOpen ? "open" : ""}`}
           onMouseEnter={showNav}
@@ -55,7 +58,9 @@ const BurgerMenu = () => {
           <div className={`line line3 ${isOpen ? "open" : ""}`}></div>
         </div>
 
-        {/* 2 */}
+        {
+          // 2 }
+        }
         <div
           className={`burgerIcon ${isOpen ? "open" : ""}`}
           onMouseEnter={showNav}
@@ -65,8 +70,11 @@ const BurgerMenu = () => {
           <div className={`line_2 line2 ${isOpen ? "open" : ""}`}></div>
           <div className={`line_2 line3 ${isOpen ? "open" : ""}`}></div>
         </div>
+        */}
 
-        {/* 3 */}
+        {
+          // 3
+        }
         <div
           className={`burgerIcon ${isOpen ? "open" : ""}`}
           onMouseEnter={showNav}
@@ -77,7 +85,10 @@ const BurgerMenu = () => {
           <div className={`line_3 line3 ${isOpen ? "open" : ""}`}></div>
         </div>
 
-        {/* 3.2 */}
+        {/* 
+        {
+          // 3.2
+        }
         <div
           className={`burgerIcon ${isOpen ? "open" : ""}`}
           onMouseEnter={showNav}
@@ -88,7 +99,9 @@ const BurgerMenu = () => {
           <div className={`line_32 line3 ${isOpen ? "open" : ""}`}></div>
         </div>
 
-        {/* 4 */}
+        {
+          // 4
+        }
         <div
           className={`burgerIcon ${isOpen ? "open" : ""}`}
           onMouseEnter={showNav}
@@ -101,7 +114,9 @@ const BurgerMenu = () => {
           <div className={`line_4 crox2 ${isOpen ? "open" : ""}`}></div>
         </div>
 
-        {/* 5 */}
+        {
+          // 5
+        }
         <div
           className={`burgerIcon ${isOpen ? "open" : ""}`}
           onMouseEnter={showNav}
@@ -111,6 +126,7 @@ const BurgerMenu = () => {
           <div className={`line_5 line2 ${isOpen ? "open" : ""}`}></div>
           <div className={`line_5 line3 ${isOpen ? "open" : ""}`}></div>
         </div>
+        */}
 
         <h1 className="menuTitle" onMouseEnter={showNav}>
           <Link href="/" className="logo" aria-label="Retour à l'accueil">
