@@ -100,6 +100,19 @@ const BurgerMenu = () => {
         </div>
 
         {
+          // 3.3
+        }
+        <div
+          className={`burgerIcon ${isOpen ? "open" : ""}`}
+          onMouseEnter={showNav}
+          onClick={toggleMenu}
+        >
+          <div className={`line_33 line1 ${isOpen ? "open" : ""}`}></div>
+          <div className={`line_33 line2 ${isOpen ? "open" : ""}`}></div>
+          <div className={`line_33 line3 ${isOpen ? "open" : ""}`}></div>
+        </div>
+
+        {
           // 4
         }
         <div

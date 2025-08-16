@@ -93,12 +93,17 @@
       // border: 1px solid brown;
 
       // burger dimensions
-      --burger_width: 26px;
-      --burger_line_height: 2px;
-      --burger_box_height: 24px;
+      // small
+      --small-burger_width: 26px;
+      --small-burger_line_height: 2px;
+      --small-burger_box_height: 24px;
+      // medium & big
+      --medium-burger_width: 26px;
+      --medium-burger_line_height: 2px;
+      --medium-burger_box_height: 24px;
 
-      width: var(--burger_width);
-      height: var(--burger_box_height);
+      width: var(--small-burger_width);
+      height: var(--small-burger_box_height);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -107,7 +112,7 @@
       position: relative;
 
       @include mixin.medium {
-        height: 15px;
+        height: var(--medium-burger_box_height);
 
         // Le burger disparaît quand le menu est ouvert
         .menu.open & {
@@ -119,7 +124,7 @@
 
       // .line {
       //   width: 100%;
-      //   height: var(--burger_line_height);
+      //   height: var(--small-burger_line_height);
       //   background-color: #000000;
       //   position: relative;
       //   transition: 0.5s ease-in-out;
@@ -152,7 +157,7 @@
 
       // .line_2 {
       //   width: 100%;
-      //   height: var(--burger_line_height);
+      //   height: var(--small-burger_line_height);
       //   background-color: #000000;
       //   position: relative;
       //   transition: 0.5s ease-in-out;
@@ -185,34 +190,33 @@
 
       .line_3 {
         width: 100%;
-        height: var(--burger_line_height);
+        height: var(--small-burger_line_height);
         background-color: #000000;
         position: relative;
-        // transition: 0.5s ease-in-out;
         transition:
-            // top
+          // ->
           top 0.5s ease-in-out,
-          // bottom
+          // ->
           bottom 0.5s ease-in-out,
-          // opacity 0s duration, 0.5s delay
+          // ->
           opacity 0.5s,
-          // translate
+          // ->
           translate 0.5s ease-in-out,
-          // rotate
+          // ->
           rotate 0s;
         transform-origin: 50% 50%;
 
         &.open {
           transition:
-            // top
+            // ->
             top 0.5s ease-in-out,
-            // bottom
+            // ->
             bottom 0.5s ease-in-out,
-            // opacity 0s duration, 0.5s delay
+            // ->
             opacity 0s,
-            // translate
+            // ->
             translate 0.5s ease-in-out,
-            // rotate
+            // ->
             rotate 0.5s ease-in-out;
         }
 
@@ -243,7 +247,7 @@
 
       // .line_32 {
       //   width: 100%;
-      //   height: var(--burger_line_height);
+      //   height: var(--small-burger_line_height);
       //   background-color: #000000;
       //   position: relative;
       //   // transition: 0.5s ease-in-out;
@@ -299,9 +303,60 @@
       //   }
       // }
 
+      // .line_33 {
+      //   width: 100%;
+      //   height: var(--small-burger_line_height);
+      //   background-color: #000000;
+      //   position: relative;
+      //   transition:
+      //     // ->
+      //     top 0.5s ease-in-out,
+      //     // ->
+      //     bottom 0.5s ease-in-out,
+      //     // ->
+      //     opacity 0.5s,
+      //     // ->
+      //     translate 0.5s ease-in-out,
+      //     // ->
+      //     rotate 0s;
+      //   transform-origin: 50% 50%;
+      //
+      //   &.open {
+      //     transition:
+      //       // ->
+      //       opacity 0s,
+      //       // ->
+      //       rotate 0.5s ease-in-out;
+      //   }
+      //
+      //   &.line1 {
+      //     top: 0%;
+      //     &.open {
+      //       top: 50%;
+      //       translate: 0 -50%;
+      //       rotate: -45deg;
+      //     }
+      //   }
+      //
+      //   &.line2 {
+      //     &.open {
+      //       opacity: 0;
+      //     }
+      //   }
+      //
+      //   &.line3 {
+      //     bottom: 0%;
+      //     &.open {
+      //       bottom: 50%;
+      //       translate: 0 50%;
+      //       rotate: 45deg;
+      //     }
+      //   }
+      // }
+
       // .line_4 {
       //   width: 100%;
-      //   height: var(--burger_line_height);
+      //   height: var(--small-burger_line_height);
       //   background-color: #000000;
       //   position: relative;
       //   transition: 0.5s ease-in-out;
@@ -348,7 +403,7 @@
 
       // .line_5 {
       //   width: 100%;
-      //   height: var(--burger_line_height);
+      //   height: var(--small-burger_line_height);
       //   background-color: #000000;
       //   position: relative;
       //   transition: 0s;
