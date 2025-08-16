@@ -113,13 +113,6 @@
 
       @include mixin.medium {
         height: var(--medium-burger_box_height);
-
-        // Le burger disparaît quand le menu est ouvert
-        .menu.open & {
-          width: 0;
-          opacity: 0;
-          height: 0;
-        }
       }
 
       // .line {
