@@ -92,15 +92,19 @@
     .burgerIcon {
       // border: 1px solid brown;
 
-      width: var.$burger_width;
-      height: var.$burger_box_height;
+      // burger dimensions
+      --burger_width: 26px;
+      --burger_line_height: 2px;
+      --burger_box_height: 24px;
+
+      width: var(--burger_width);
+      height: var(--burger_box_height);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       cursor: pointer;
       margin-left: 2rem;
       position: relative;
-      // transition: width 0.3s ease-in-out;
 
       @include mixin.medium {
         height: 15px;
@@ -115,7 +119,7 @@
 
       .line {
         width: 100%;
-        height: var.$burger_line_height;
+        height: var(--burger_line_height);
         background-color: #000000;
         position: relative;
         transition: 0.5s ease-in-out;
@@ -148,7 +152,7 @@
 
       .line_2 {
         width: 100%;
-        height: var.$burger_line_height;
+        height: var(--burger_line_height);
         background-color: #000000;
         position: relative;
         transition: 0.5s ease-in-out;
@@ -181,7 +185,7 @@
 
       .line_3 {
         width: 100%;
-        height: var.$burger_line_height;
+        height: var(--burger_line_height);
         background-color: #000000;
         position: relative;
         // transition: 0.5s ease-in-out;
@@ -239,7 +243,7 @@
 
       .line_32 {
         width: 100%;
-        height: var.$burger_line_height;
+        height: var(--burger_line_height);
         background-color: #000000;
         position: relative;
         // transition: 0.5s ease-in-out;
@@ -297,7 +301,7 @@
 
       .line_4 {
         width: 100%;
-        height: var.$burger_line_height;
+        height: var(--burger_line_height);
         background-color: #000000;
         position: relative;
         transition: 0.5s ease-in-out;
@@ -344,7 +348,7 @@
 
       .line_5 {
         width: 100%;
-        height: var.$burger_line_height;
+        height: var(--burger_line_height);
         background-color: #000000;
         position: relative;
         transition: 0s;
