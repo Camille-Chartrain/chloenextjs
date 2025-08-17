@@ -1,0 +1,37 @@
+@use "mixin";
+@use "var";
+
+/*
+ * Style pour le titre et le logo
+ *
+ */
+
+.menuTitle {
+  .logo {
+    margin-left: 1rem;
+    transition: margin-left 0.3s ease-in-out;
+    display: flex;
+    align-items: center; /* Aligne verticalement le contenu */
+    width: fit-content;
+    font-size: 0.9rem;
+
+    @include mixin.medium {
+      margin-left: 2rem;
+      justify-content: space-between;
+      font-size: 1.3rem;
+      margin-left: 1rem;
+    }
+
+    .img_CC {
+      width: 2rem;
+      height: auto;
+      margin-right: 0.6rem;
+
+      @include mixin.medium {
+        width: 5rem;
+        height: auto;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

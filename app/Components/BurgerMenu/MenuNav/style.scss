@@ -1,0 +1,58 @@
+@use "mixin";
+@use "var";
+
+/*
+ * Styles pour le menu glissant
+ *
+ */
+
+.menu_closer {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+
+  &.open {
+    display: block;
+  }
+}
+.menu {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 450px;
+  max-width: 100vw;
+  background-color: #ffffff;
+  color: rgb(5, 5, 5);
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s ease-in-out;
+  padding-top: 6rem;
+  z-index: -1;
+
+  a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+
+    &:hover {
+      color: rgb(117, 117, 117);
+    }
+  }
+
+  &.open {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 20px;
+    margin-top: 7rem;
+  }
+}

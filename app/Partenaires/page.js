@@ -1,13 +1,13 @@
-import React from 'react'
-import BurgerMenu from '../Components/BurgerMenu'
+import React from "react";
+import BurgerMenu from "@/app/components/BurgerMenu";
 
 const Partenaires = () => {
-    return (
-        <>
-            <BurgerMenu />
-            <div>Partenaires</div>
-        </>
-    )
-}
+  return (
+    <>
+      <BurgerMenu />
+      <div>Partenaires</div>
+    </>
+  );
+};
 
-export default Partenaires
+export default Partenaires;
