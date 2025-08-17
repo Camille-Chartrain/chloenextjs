@@ -2,8 +2,6 @@
 @use "../../style/var";
 
 .burgerMenu {
-  // border: 1px solid blue;
-
   z-index: 1000;
   font-family: PortherasRegular;
   display: flex;
@@ -14,8 +12,6 @@
    */
 
   .menu_closer {
-    // border: 1px solid rebeccapurple;
-
     display: none;
     position: absolute;
     top: 0;
@@ -29,13 +25,12 @@
     }
   }
   .menu {
-    // border: 1px solid red;
-
     position: absolute;
     top: 0;
     left: -100%;
     height: 100vh;
     width: 450px;
+    max-width: 100vw;
     background-color: #ffffff;
     color: rgb(5, 5, 5);
     display: flex;
@@ -68,8 +63,6 @@
   }
 
   .burger_logo {
-    // border: 1px solid green;
-
     position: fixed;
     top: 0;
     left: 0;
@@ -90,8 +83,6 @@
      */
 
     .burgerIcon {
-      // border: 1px solid brown;
-
       // burger dimensions
       // small
       --small-burger_width: 26px;
@@ -113,13 +104,6 @@
 
       @include mixin.medium {
         height: var(--medium-burger_box_height);
-
-        // Le burger disparaît quand le menu est ouvert
-        .menu.open & {
-          width: 0;
-          opacity: 0;
-          height: 0;
-        }
       }
 
       .line {
@@ -155,284 +139,284 @@
         }
       }
 
-      .line_2 {
-        width: 100%;
-        height: var(--small-burger_line_height);
-        background-color: #000000;
-        position: relative;
-        transition: 0.5s ease-in-out;
-        transform-origin: 50% 50%;
+      // .line_2 {
+      //   width: 100%;
+      //   height: var(--small-burger_line_height);
+      //   background-color: #000000;
+      //   position: relative;
+      //   transition: 0.5s ease-in-out;
+      //   transform-origin: 50% 50%;
+      //
+      //   &.line1 {
+      //     top: 0%;
+      //     &.open {
+      //       top: 50%;
+      //       translate: 0 -50%;
+      //       rotate: -135deg;
+      //     }
+      //   }
+      //
+      //   &.line2 {
+      //     &.open {
+      //       opacity: 0;
+      //     }
+      //   }
+      //
+      //   &.line3 {
+      //     bottom: 0%;
+      //     &.open {
+      //       bottom: 50%;
+      //       translate: 0 50%;
+      //       rotate: 135deg;
+      //     }
+      //   }
+      // }
 
-        &.line1 {
-          top: 0%;
-          &.open {
-            top: 50%;
-            translate: 0 -50%;
-            rotate: -135deg;
-          }
-        }
+      // .line_3 {
+      //   width: 100%;
+      //   height: var(--small-burger_line_height);
+      //   background-color: #000000;
+      //   position: relative;
+      //   transition:
+      //     // ->
+      //     top 0.5s ease-in-out,
+      //     // ->
+      //     bottom 0.5s ease-in-out,
+      //     // ->
+      //     opacity 0.5s,
+      //     // ->
+      //     translate 0.5s ease-in-out,
+      //     // ->
+      //     rotate 0s;
+      //   transform-origin: 50% 50%;
+      //
+      //   &.open {
+      //     transition:
+      //       // ->
+      //       top 0.5s ease-in-out,
+      //       // ->
+      //       bottom 0.5s ease-in-out,
+      //       // ->
+      //       opacity 0s,
+      //       // ->
+      //       translate 0.5s ease-in-out,
+      //       // ->
+      //       rotate 0.5s ease-in-out;
+      //   }
+      //
+      //   &.line1 {
+      //     top: 0%;
+      //     &.open {
+      //       top: 50%;
+      //       translate: 0 -50%;
+      //       rotate: -45deg;
+      //     }
+      //   }
+      //
+      //   &.line2 {
+      //     &.open {
+      //       opacity: 0;
+      //     }
+      //   }
+      //
+      //   &.line3 {
+      //     bottom: 0%;
+      //     &.open {
+      //       bottom: 50%;
+      //       translate: 0 50%;
+      //       rotate: 45deg;
+      //     }
+      //   }
+      // }
 
-        &.line2 {
-          &.open {
-            opacity: 0;
-          }
-        }
+      // .line_32 {
+      //   width: 100%;
+      //   height: var(--small-burger_line_height);
+      //   background-color: #000000;
+      //   position: relative;
+      //   // transition: 0.5s ease-in-out;
+      //   transition:
+      //       // top
+      //     top 0.5s ease-in-out,
+      //     // bottom
+      //     bottom 0.5s ease-in-out,
+      //     // opacity 0s duration, 0.5s delay
+      //     opacity 0.5s,
+      //     // translate
+      //     translate 0.5s ease-in-out,
+      //     // rotate
+      //     rotate 0s;
+      //   transform-origin: 50% 50%;
+      //
+      //   &.open {
+      //     transition:
+      //       // top
+      //       top 0.5s ease-in-out,
+      //       // bottom
+      //       bottom 0.5s ease-in-out,
+      //       // opacity 0s duration, 0.5s delay
+      //       opacity 0s,
+      //       // translate
+      //       translate 0.5s ease-in-out,
+      //       // rotate
+      //       rotate 0.5s ease-in-out;
+      //   }
+      //
+      //   &.line1 {
+      //     top: 0%;
+      //     &.open {
+      //       top: 50%;
+      //       translate: 0 -50%;
+      //       rotate: -225deg;
+      //     }
+      //   }
+      //
+      //   &.line2 {
+      //     &.open {
+      //       opacity: 0;
+      //     }
+      //   }
+      //
+      //   &.line3 {
+      //     bottom: 0%;
+      //     &.open {
+      //       bottom: 50%;
+      //       translate: 0 50%;
+      //       rotate: 225deg;
+      //     }
+      //   }
+      // }
 
-        &.line3 {
-          bottom: 0%;
-          &.open {
-            bottom: 50%;
-            translate: 0 50%;
-            rotate: 135deg;
-          }
-        }
-      }
+      // .line_33 {
+      //   width: 100%;
+      //   height: var(--small-burger_line_height);
+      //   background-color: #000000;
+      //   position: relative;
+      //   transition:
+      //     // ->
+      //     top 0.5s ease-in-out,
+      //     // ->
+      //     bottom 0.5s ease-in-out,
+      //     // ->
+      //     opacity 0.5s,
+      //     // ->
+      //     translate 0.5s ease-in-out,
+      //     // ->
+      //     rotate 0s;
+      //   transform-origin: 50% 50%;
+      //
+      //   &.open {
+      //     transition:
+      //       // ->
+      //       opacity 0s,
+      //       // ->
+      //       rotate 0.5s ease-in-out;
+      //   }
+      //
+      //   &.line1 {
+      //     top: 0%;
+      //     &.open {
+      //       top: 50%;
+      //       translate: 0 -50%;
+      //       rotate: -45deg;
+      //     }
+      //   }
+      //
+      //   &.line2 {
+      //     &.open {
+      //       opacity: 0;
+      //     }
+      //   }
+      //
+      //   &.line3 {
+      //     bottom: 0%;
+      //     &.open {
+      //       bottom: 50%;
+      //       translate: 0 50%;
+      //       rotate: 45deg;
+      //     }
+      //   }
+      // }
 
-      .line_3 {
-        width: 100%;
-        height: var(--small-burger_line_height);
-        background-color: #000000;
-        position: relative;
-        transition:
-          // ->
-          top 0.5s ease-in-out,
-          // ->
-          bottom 0.5s ease-in-out,
-          // ->
-          opacity 0.5s,
-          // ->
-          translate 0.5s ease-in-out,
-          // ->
-          rotate 0s;
-        transform-origin: 50% 50%;
+      // .line_4 {
+      //   width: 100%;
+      //   height: var(--small-burger_line_height);
+      //   background-color: #000000;
+      //   position: relative;
+      //   transition: 0.5s ease-in-out;
+      //   // transition: top 0.5s ease-in-out, bottom 0.5s ease-in-out,
+      //   //   transform 0.5s ease-in-out, opacity 0s; /* 0s duration, 0.5s delay */
+      //   transform-origin: 50% 50%;
+      //
+      //   &.line1 {
+      //     &.open {
+      //       opacity: 0;
+      //     }
+      //   }
+      //
+      //   &.line2 {
+      //     &.open {
+      //       opacity: 0;
+      //     }
+      //   }
+      //
+      //   &.line3 {
+      //     &.open {
+      //       opacity: 0;
+      //     }
+      //   }
+      //
+      //   &.crox1 {
+      //     position: absolute;
+      //     top: 50%;
+      //     translate: 0 -50%;
+      //     &.open {
+      //       rotate: 45deg;
+      //     }
+      //   }
+      //
+      //   &.crox2 {
+      //     position: absolute;
+      //     top: 50%;
+      //     translate: 0 -50%;
+      //     &.open {
+      //       rotate: -45deg;
+      //     }
+      //   }
+      // }
 
-        &.open {
-          transition:
-            // ->
-            top 0.5s ease-in-out,
-            // ->
-            bottom 0.5s ease-in-out,
-            // ->
-            opacity 0s,
-            // ->
-            translate 0.5s ease-in-out,
-            // ->
-            rotate 0.5s ease-in-out;
-        }
-
-        &.line1 {
-          top: 0%;
-          &.open {
-            top: 50%;
-            translate: 0 -50%;
-            rotate: -45deg;
-          }
-        }
-
-        &.line2 {
-          &.open {
-            opacity: 0;
-          }
-        }
-
-        &.line3 {
-          bottom: 0%;
-          &.open {
-            bottom: 50%;
-            translate: 0 50%;
-            rotate: 45deg;
-          }
-        }
-      }
-
-      .line_32 {
-        width: 100%;
-        height: var(--small-burger_line_height);
-        background-color: #000000;
-        position: relative;
-        // transition: 0.5s ease-in-out;
-        transition:
-            // top
-          top 0.5s ease-in-out,
-          // bottom
-          bottom 0.5s ease-in-out,
-          // opacity 0s duration, 0.5s delay
-          opacity 0.5s,
-          // translate
-          translate 0.5s ease-in-out,
-          // rotate
-          rotate 0s;
-        transform-origin: 50% 50%;
-
-        &.open {
-          transition:
-            // top
-            top 0.5s ease-in-out,
-            // bottom
-            bottom 0.5s ease-in-out,
-            // opacity 0s duration, 0.5s delay
-            opacity 0s,
-            // translate
-            translate 0.5s ease-in-out,
-            // rotate
-            rotate 0.5s ease-in-out;
-        }
-
-        &.line1 {
-          top: 0%;
-          &.open {
-            top: 50%;
-            translate: 0 -50%;
-            rotate: -225deg;
-          }
-        }
-
-        &.line2 {
-          &.open {
-            opacity: 0;
-          }
-        }
-
-        &.line3 {
-          bottom: 0%;
-          &.open {
-            bottom: 50%;
-            translate: 0 50%;
-            rotate: 225deg;
-          }
-        }
-      }
-
-      .line_33 {
-        width: 100%;
-        height: var(--small-burger_line_height);
-        background-color: #000000;
-        position: relative;
-        transition:
-          // ->
-          top 0.5s ease-in-out,
-          // ->
-          bottom 0.5s ease-in-out,
-          // ->
-          opacity 0.5s,
-          // ->
-          translate 0.5s ease-in-out,
-          // ->
-          rotate 0s;
-        transform-origin: 50% 50%;
-
-        &.open {
-          transition:
-            // ->
-            opacity 0s,
-            // ->
-            rotate 0.5s ease-in-out;
-        }
-
-        &.line1 {
-          top: 0%;
-          &.open {
-            top: 50%;
-            translate: 0 -50%;
-            rotate: -45deg;
-          }
-        }
-
-        &.line2 {
-          &.open {
-            opacity: 0;
-          }
-        }
-
-        &.line3 {
-          bottom: 0%;
-          &.open {
-            bottom: 50%;
-            translate: 0 50%;
-            rotate: 45deg;
-          }
-        }
-      }
-
-      .line_4 {
-        width: 100%;
-        height: var(--small-burger_line_height);
-        background-color: #000000;
-        position: relative;
-        transition: 0.5s ease-in-out;
-        // transition: top 0.5s ease-in-out, bottom 0.5s ease-in-out,
-        //   transform 0.5s ease-in-out, opacity 0s; /* 0s duration, 0.5s delay */
-        transform-origin: 50% 50%;
-
-        &.line1 {
-          &.open {
-            opacity: 0;
-          }
-        }
-
-        &.line2 {
-          &.open {
-            opacity: 0;
-          }
-        }
-
-        &.line3 {
-          &.open {
-            opacity: 0;
-          }
-        }
-
-        &.crox1 {
-          position: absolute;
-          top: 50%;
-          translate: 0 -50%;
-          &.open {
-            rotate: 45deg;
-          }
-        }
-
-        &.crox2 {
-          position: absolute;
-          top: 50%;
-          translate: 0 -50%;
-          &.open {
-            rotate: -45deg;
-          }
-        }
-      }
-
-      .line_5 {
-        width: 100%;
-        height: var(--small-burger_line_height);
-        background-color: #000000;
-        position: relative;
-        transition: 0s;
-        transform-origin: 50% 50%;
-
-        &.line1 {
-          top: 0%;
-          &.open {
-            top: 50%;
-            translate: 0 -50%;
-            rotate: -45deg;
-          }
-        }
-
-        &.line2 {
-          &.open {
-            opacity: 0;
-          }
-        }
-
-        &.line3 {
-          bottom: 0%;
-          &.open {
-            bottom: 50%;
-            translate: 0 50%;
-            rotate: 45deg;
-          }
-        }
-      }
+      // .line_5 {
+      //   width: 100%;
+      //   height: var(--small-burger_line_height);
+      //   background-color: #000000;
+      //   position: relative;
+      //   transition: 0s;
+      //   transform-origin: 50% 50%;
+      //
+      //   &.line1 {
+      //     top: 0%;
+      //     &.open {
+      //       top: 50%;
+      //       translate: 0 -50%;
+      //       rotate: -45deg;
+      //     }
+      //   }
+      //
+      //   &.line2 {
+      //     &.open {
+      //       opacity: 0;
+      //     }
+      //   }
+      //
+      //   &.line3 {
+      //     bottom: 0%;
+      //     &.open {
+      //       bottom: 50%;
+      //       translate: 0 50%;
+      //       rotate: 45deg;
+      //     }
+      //   }
+      // }
     }
 
     /*
@@ -441,11 +425,7 @@
      */
 
     .menuTitle {
-      // border: 1px solid magenta;
-
       .logo {
-        // border: 1px solid blueviolet;
-
         margin-left: 1rem;
         transition: margin-left 0.3s ease-in-out;
         display: flex;

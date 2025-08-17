@@ -57,6 +57,7 @@ const BurgerMenu = () => {
           <div className={`line line3 ${isOpen ? "open" : ""}`}></div>
         </div>
 
+        {/* 
         {
           // 2 }
         }
@@ -136,6 +137,7 @@ const BurgerMenu = () => {
           <div className={`line_5 line2 ${isOpen ? "open" : ""}`}></div>
           <div className={`line_5 line3 ${isOpen ? "open" : ""}`}></div>
         </div>
+        */}
 
         <h1 className="menuTitle" onMouseEnter={showNav}>
           <Link href="/" className="logo" aria-label="Retour à l'accueil">
