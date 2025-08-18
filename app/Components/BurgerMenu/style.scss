@@ -2,16 +2,25 @@
 @use "var";
 
 .burgerMenu {
-  z-index: 1000;
+  z-index: 2;
   font-family: PortherasRegular;
   display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+
+  &.home_burgerMenu {
+    background-color: transparent;
+    position: fixed;
+  }
 
   .burger_logo {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    // z-index: 1000; /* Assure que le header est au-dessus */
     display: flex;
     flex-direction: row;
     align-items: center;

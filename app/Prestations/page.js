@@ -1,12 +1,10 @@
 import React from "react";
-import BurgerMenu from "@/app/components/BurgerMenu";
 import "./style.scss";
 import Link from "next/link";
 
 const prestations = () => {
   return (
     <>
-      <BurgerMenu />
       <h2>PRESTATIONS</h2>
 
       <div className="both_sections">

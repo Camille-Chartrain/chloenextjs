@@ -1,11 +1,9 @@
 import React from "react";
-import BurgerMenu from "@/app/components/BurgerMenu";
 import "./style.scss";
 
 const betons = () => {
   return (
     <>
-      <BurgerMenu />
       <h2>BETONS CIRES</h2>
       <p className="intro_beton">
         Vous recherchez une finition unique, moderne et intemporelle pour vos

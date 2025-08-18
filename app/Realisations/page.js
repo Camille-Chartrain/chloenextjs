@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.scss";
-import BurgerMenu from "@/app/components/BurgerMenu";
 
 const Realisations = () => {
   // Tableau des images à afficher
@@ -25,7 +24,6 @@ const Realisations = () => {
 
   return (
     <>
-      <BurgerMenu />
       <div className="realisations">
         {/* <div className='photos'> */}
         {/* Boucle sur chaque groupe d'images */}

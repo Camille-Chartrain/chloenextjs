@@ -1,12 +1,10 @@
 import React from "react";
-import BurgerMenu from "@/app/components/BurgerMenu";
 import "./style.scss";
 import Link from "next/link";
 
 const EnduitsDecoratifs = () => {
   return (
     <>
-      <BurgerMenu />
       <h2>ENDUITS DECORATIFS</h2>
 
       <div className="all_sections">

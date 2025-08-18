@@ -1,5 +1,4 @@
 import React from "react";
-import BurgerMenu from "@/app/components/BurgerMenu";
 import "./style.scss";
 
 const ChauxFine = () => {

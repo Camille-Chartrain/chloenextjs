@@ -1,9 +1,8 @@
 //  Les styles globaux de base
 
 // Ce fichier est utilisé pour les styles universels ou fondamentaux qui s'appliquent à l'ensemble de l'application.
-@use './mixin';
-@use './var';
-
+@use "./mixin";
+@use "./var";
 
 * {
   box-sizing: border-box;
@@ -12,169 +11,167 @@
 }
 
 html,
-body{
+body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: clip;
   // height: 100%;
   width: 100%;
   min-height: 100vh;
 
-    background-color: #fff;
-    font-family: "PortherasThin" , "ZH-Sans" ,Arial,Lucida Sans Unicode,"sans-serif";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 1.1em;
-    letter-spacing: .01rem;
-    line-height: 1.6rem;
+  background-color: #fff;
+  font-family: "PortherasThin", "ZH-Sans", Arial, Lucida Sans Unicode,
+    "sans-serif";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.1em;
+  letter-spacing: 0.01rem;
+  line-height: 1.6rem;
+  color: black;
+
+  a {
+    text-decoration: none;
     color: black;
+  }
 
-    a{
-      text-decoration: none;
-      color: black;
-    }
+  h1 {
+    font-family: PortherasThin;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: normal;
+    letter-spacing: 0.02rem;
+    width: auto;
+    height: auto;
 
-    h1{
-      font-family: PortherasThin;
-      font-weight: 400;
-      font-size: 1.2rem;
-      line-height:normal; 
-      letter-spacing: .02rem;
-      width: auto;
-      height: auto;
-      
-      @include mixin.medium {
-        font-size: 1.5rem;
-      }
-    }
-
-    h2 {
-      font-family: PortherasRegular;
-      font-weight: 600;
-      font-size: 1.1rem;
-      line-height: normal;   
-      
     @include mixin.medium {
-        font-size: 1.4rem;
-      }  
+      font-size: 1.5rem;
     }
+  }
 
-    h3 {
-      font-family: PortherasRegular;
-      font-weight: 400;
+  h2 {
+    font-family: PortherasRegular;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: normal;
+
+    @include mixin.medium {
+      font-size: 1.4rem;
+    }
+  }
+
+  h3 {
+    font-family: PortherasRegular;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: normal;
+    text-align: center;
+  }
+  .background-video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    overflow: hidden;
+  }
+
+  .background-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%; /* S'étire pour couvrir la largeur */
+    min-height: 100%; /* S'étire pour couvrir la hauteur */
+    object-fit: cover; /* Garde les proportions */
+    z-index: 1; /* Derrière le contenu */
+  }
+
+  .background-video .content {
+    position: relative;
+    z-index: 2; /* Au-dessus de la vidéo */
+    // color: white; /* Contraste avec le fond */
+  }
+
+  .intro {
+    width: 90%;
+    text-align: justify;
+    margin: 6rem auto 6rem auto;
+    font-size: 0.9rem;
+    letter-spacing: 0rem;
+
+    @include mixin.medium {
+      width: 60%;
       font-size: 1rem;
-      line-height: normal;   
-      text-align: center; 
-    }
-    .background-video {
-      position: relative;
-      width: 100%;
-      height: 100vh; /* Prend toute la hauteur de l'écran */
-      overflow: hidden;
-    }
-    
-    .background-video video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      min-width: 100%; /* S'étire pour couvrir la largeur */
-      min-height: 100%; /* S'étire pour couvrir la hauteur */
-      object-fit: cover; /* Garde les proportions */
-      z-index: 1; /* Derrière le contenu */
-    }
-    
-    .background-video .content {
-      position: relative;
-      z-index: 2; /* Au-dessus de la vidéo */
-      // color: white; /* Contraste avec le fond */
     }
 
-    .intro{
-      width: 90%;
-      text-align:justify;
-      margin:   6rem auto 6rem auto;
-      font-size: 0.9rem;
-      letter-spacing: .0rem;
-
-      @include mixin.medium {
-        width: 60%;
-        font-size: 1rem;
-      }  
-      
-      @include mixin.big {
-        width: 50%;
+    @include mixin.big {
+      width: 50%;
     }
 
-      .intro_text{
-        margin-bottom: 1rem;
-      }
+    .intro_text {
+      margin-bottom: 1rem;
     }
+  }
 
-    .logo_partenaires {
-      display: flex;
-      flex-wrap: wrap;
-      width: 90%;
-      gap: 1rem;
+  .logo_partenaires {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 1rem;
+    margin: auto;
+    justify-content: space-between; /* espace régulier */
+
+    img {
+      width: 200px; /* largeur fixe */
+      height: 200px; /* hauteur fixe */
+      object-fit: contain; /* garde le logo entier */
       margin: auto;
-      justify-content: space-between; /* espace régulier */
-
-      img {
-        width: 200px;     /* largeur fixe */
-        height: 200px;    /* hauteur fixe */
-        object-fit: contain; /* garde le logo entier */
-        margin: auto;
-      }
-}
-
-.commentaires{
-  color: #dd10c2;
-}
-
-    input:-webkit-autofill {
-      appearance: none; /* Supprime l'apparence native */
-      background-color: var.$white !important; /* Remplace le fond par transparent ou une autre couleur */
-      color: inherit !important; /* Conserve la couleur du texte définie */
-      border: 1px solid #ccc; /* Exemple de style de bordure */
-      box-shadow: 0 0 0px 1000px white inset; /* Hack pour changer complètement le fond */
-      transition: background-color 5000s ease-in-out 0s; /* Contourne le changement de couleur */
     }
-    
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus {
-      border: 1px solid #000; /* Style au survol ou lorsque le champ est en focus */
-    }
-      
+  }
 
+  .commentaires {
+    color: #dd10c2;
+  }
+
+  input:-webkit-autofill {
+    appearance: none; /* Supprime l'apparence native */
+    background-color: var.$white !important; /* Remplace le fond par transparent ou une autre couleur */
+    color: inherit !important; /* Conserve la couleur du texte définie */
+    border: 1px solid #ccc; /* Exemple de style de bordure */
+    box-shadow: 0 0 0px 1000px white inset; /* Hack pour changer complètement le fond */
+    transition: background-color 5000s ease-in-out 0s; /* Contourne le changement de couleur */
+  }
+
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    border: 1px solid #000; /* Style au survol ou lorsque le champ est en focus */
+  }
 }
 @font-face {
-  font-family: 'PortherasThin'; /* Nom personnalisé pour votre police */
-  src: url('/polices/Portheras_test/PortherasTest-Light.otf') format('opentype'); /* Chemin vers le fichier */
+  font-family: "PortherasThin"; /* Nom personnalisé pour votre police */
+  src: url("/polices/Portheras_test/PortherasTest-Light.otf") format("opentype"); /* Chemin vers le fichier */
   /* font-weight: normal; /* Optionnel, défini pour les variantes */
-  /* font-style: normal; Optionnel */ 
+  /* font-style: normal; Optionnel */
 }
 
 @font-face {
-  font-family: 'PortherasRegular'; /* Nom personnalisé pour votre police */
-  src: url('/polices/Portheras_test/PortherasTest-Regular.otf') format('opentype'); /* Chemin vers le fichier */
+  font-family: "PortherasRegular"; /* Nom personnalisé pour votre police */
+  src: url("/polices/Portheras_test/PortherasTest-Regular.otf")
+    format("opentype"); /* Chemin vers le fichier */
 }
 
 // .background{
 //   height: 100%;
 //   width: 100%;
 //   font-size: 1.2rem;
-  // background-image:  url("../public/style/logo/chartrain.jpg");
+// background-image:  url("../public/style/logo/chartrain.jpg");
 
-  // l'image sera fixe et le contenu defilera 
-  // par dessus: parallax.
-  // background-attachment: fixed;
+// l'image sera fixe et le contenu defilera
+// par dessus: parallax.
+// background-attachment: fixed;
 
-  // indique que l'image doit être centrée à la fois horizontalement
-  //  et verticalement dans le conteneur.
-  // background-position: center;
+// indique que l'image doit être centrée à la fois horizontalement
+//  et verticalement dans le conteneur.
+// background-position: center;
 
-  // Ajuste l'image pour qu'elle couvre tout le conteneur
-  // background-size: cover;
+// Ajuste l'image pour qu'elle couvre tout le conteneur
+// background-size: cover;
 // }
-
-

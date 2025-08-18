@@ -1,6 +1,7 @@
 import "./style/globals.scss";
 import Head from "next/head";
 import React from "react";
+import BurgerMenu from "@/app/components/BurgerMenu";
 
 export const metadata = {
   title: "Chloé Chartrain",
@@ -8,9 +9,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
-
-
   return (
     <html lang="fr">
       <Head>
@@ -25,6 +23,7 @@ export default function RootLayout({ children }) {
         {/* <!--* ne pas oublier les metadonnees--> */}
       </Head>
       <body>
+        <BurgerMenu />
         {children}
       </body>
     </html>

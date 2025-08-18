@@ -1,364 +1,341 @@
-@use '../style/mixin';
-@use '../style/var';
+@use "../style/mixin";
+@use "../style/var";
 
 .devis {
-    background-image: url(../public/IMG_3684.jpg);
-    background-size: cover;
-    background-position: center;  
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "PortherasThin","ZH-Sans",Arial,"Lucida Sans Unicode",sans-serif;
-    width: 100%;
-    overflow: hidden; // Empêche le défilement du conteneur principal
-    min-height: 100vh; // Au lieu de height: 100%
-    position: fixed; // Pour empêcher le défilement du fond
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  background-image: url(../public/IMG_3684.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "PortherasThin", "ZH-Sans", Arial, "Lucida Sans Unicode",
+    sans-serif;
+  width: 100%;
+  min-height: 100vh; // Au lieu de height: 100%
 
-    .burger_logo{
-        // background-color: var.$white;
-        padding-bottom: 0.5rem;
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 2rem; // Ajoute un peu d'espace en bas
+
+    h2 {
+      margin-top: 7rem;
+      margin-bottom: 2rem;
     }
-    
-    main{
+
+    .success-message {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem;
+      margin-top: 3rem;
+      width: 90%;
+      background-color: var.$soft-white-transparent;
+      border-radius: 0.2rem;
+
+      h3 {
+        font-weight: bold;
+        padding-bottom: 1rem;
+      }
+
+      @include mixin.medium {
+        width: 50%;
+        padding: 3rem;
+      }
+    }
+
+    .loading {
+      form {
+        display: none;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 8px;
+      margin-bottom: 6rem;
+      width: 90%;
+      background-color: var.$soft-white-transparent;
+      border-radius: 0.2rem;
+
+      @include mixin.medium {
+        width: 50%;
+      }
+
+      .segment {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow-y: auto; // Permet le défilement uniquement dans le main
-        padding-bottom: 2rem; // Ajoute un peu d'espace en bas
+        width: 90%;
+        margin-bottom: 5.5rem;
 
-        h2{
-            margin-top: 7rem;
-            margin-bottom: 2rem;
+        &.segment1 {
+          margin-top: 2rem;
         }
 
-        .success-message{
+        .etoile {
+          color: rgb(185, 42, 42);
+        }
+        .titre_segment {
+          // font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        input:-internal-autofill-selected {
+          appearance: menulist-button;
+          background-image: none !important;
+          background-color: var.$white;
+        }
+
+        // valable pour tout input avant rêgle + spécifique
+        input {
+          // border-radius: 4px;
+          font-family: "PortherasThin", "ZH-Sans", Arial, "Lucida Sans Unicode",
+            sans-serif;
+          width: 100%;
+
+          border-style: none;
+          border-bottom: 0.02rem solid var.$black;
+          padding: 12px 0px 12px 12px; /*hauteur de la bande blanche*/
+          background-color: var.$white; /* Couleur blanche avec 50% d'opacité */
+          // margin-top: 0.4rem;
+          margin-bottom: 0.7rem;
+          font-size: 1rem;
+          outline: none; /* Supprime le contour par défaut */
+
+          &:focus {
+            border: 1px solid var.$black; /* Bordure appliquée au focus */
+            transition: border-color 0.3s ease;
+          }
+
+          input:-internal-autofill-selected {
+            appearance: menulist-button;
+            background-image: none !important;
+            background-color: var.$white;
+          }
+
+          // case "autre support"
+          &.support {
+            &:checked {
+              background-color: rgb(231, 231, 221);
+              border: 0.15rem solid var.$black;
+            }
+            // &:hover{
+            //     background-color:var.$soft-grey;
+            //     // border: 0.02rem solid var.$black;
+            // }
+            &:focus {
+              border: 1px solid var.$black; /* Bordure appliquée au focus */
+              transition: border-color 0.3s ease;
+              background-color: var.$soft-white;
+            }
+          }
+        }
+
+        input::placeholder {
+          color: var.$black;
+          font-family: PortherasThin, Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          font-size: 1.1em;
+          letter-spacing: 0.02rem;
+          // line-height: 1.8rem;
+        }
+
+        textarea {
+          font-family: PortherasThin, Arial, Helvetica, sans-serif;
+          border: 0px solid var.$anthracite;
+          border-bottom: 1px solid var.$black;
+          background-color: var.$white;
+          outline: none;
+          padding: 10px;
+          font-size: 1rem;
+          color: var.$black;
+          width: 100%; /* Prend toute la largeur du parent */
+          resize: vertical; /* Permet le redimensionnement vertical uniquement */
+          margin-top: 0.4rem;
+
+          &:focus {
+            border: 1px solid var.$black;
+            border-radius: 4px;
+          }
+        }
+
+        fieldset {
+          display: flex;
+          flex-direction: column;
+          min-inline-size: min-content;
+          margin-inline: 0px;
+          border-width: 0px;
+          border-style: none;
+          padding-block: 0em 0em;
+          padding-inline: 0em;
+
+          // choix multiples: carrelage marbre etc
+          .checkbox_choices {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 2rem;
-            margin-top: 3rem;
-            width: 90%;
-            background-color: var.$soft-white-transparent;
-            border-radius: 0.2rem;
-            
-            h3{
-                font-weight: bold;
-                padding-bottom: 1rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            input {
+              display: none;
             }
 
-            @include mixin.medium {
-                width: 50%;
-                padding: 3rem;
-            }
-        }
+            label {
+              display: flex;
+              // centre le texte du label verticalement dans son background blanc
+              align-items: center;
+              margin: 0.1rem 1rem 0.5rem 0rem;
+              padding: 0.4rem 0.9rem;
+              border: 1px solid var.$grey;
+              border-radius: 3px;
+              background-color: var.$white;
+              cursor: pointer;
+              transition: background-color 0.1s ease;
 
-        .loading{
-            form{
-                display: none;
-            }
-        }
-
-        form{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 8px;
-            margin-bottom: 6rem;
-            width: 90%;
-            background-color: var.$soft-white-transparent;
-            border-radius: 0.2rem;
-
-            @include mixin.medium {
-                width: 50%;
-            }
-        
-        
-            .segment{
-                display: flex;
-                flex-direction: column;
-                width: 90%;
-                margin-bottom: 5.5rem;
-
-                &.segment1 {
-                    margin-top: 2rem;
-                }
-
-                .etoile{
-                    color: rgb(185, 42, 42);
-                }
-                .titre_segment{
-                    // font-weight: 600;
-                    margin-bottom: 1rem;
-                }
-    
-                input:-internal-autofill-selected {
-                    appearance: menulist-button;
-                    background-image: none !important;
-                    background-color: var.$white;
-                }
-                
-                // valable pour tout input avant rêgle + spécifique
-                input{   
-                    // border-radius: 4px;
-                    font-family: "PortherasThin","ZH-Sans",Arial,"Lucida Sans Unicode",sans-serif;
-                    width: 100%;
-
-                    border-style: none;
-                    border-bottom: 0.02rem solid var.$black;
-                    padding: 12px 0px 12px 12px; /*hauteur de la bande blanche*/
-                    background-color: var.$white; /* Couleur blanche avec 50% d'opacité */
-                    // margin-top: 0.4rem;
-                    margin-bottom: 0.7rem;
-                    font-size: 1rem;
-                    outline: none; /* Supprime le contour par défaut */
-
-                    &:focus {
-                        border: 1px solid var.$black; /* Bordure appliquée au focus */
-                        transition: border-color 0.3s ease; 
-                    }
-
-                    input:-internal-autofill-selected {
-                        appearance: menulist-button;
-                        background-image: none !important;
-                        background-color: var.$white;
-                    }
-
-                    // case "autre support"
-                    &.support{
-                    
-                        &:checked{
-                            background-color:rgb(231, 231, 221);
-                            border: 0.15rem solid var.$black;
-                        }
-                        // &:hover{
-                        //     background-color:var.$soft-grey;
-                        //     // border: 0.02rem solid var.$black;
-                        // }
-                        &:focus {
-                            border: 1px solid var.$black; /* Bordure appliquée au focus */
-                            transition: border-color 0.3s ease; 
-                            background-color: var.$soft-white;
-                        }
-                    }
-                }
-    
-                input::placeholder {
-                        color: var.$black;
-                        font-family: PortherasThin, Arial, Helvetica, sans-serif;
-                        font-weight: 400;
-                        font-size: 1.1em;
-                        letter-spacing: .02rem;
-                        // line-height: 1.8rem;
-                    }
-                
-
-                textarea {
-                    font-family: PortherasThin, Arial, Helvetica, sans-serif;
-                    border: 0px solid var.$anthracite;
-                    border-bottom: 1px solid var.$black;
-                    background-color: var.$white;
-                    outline: none;
-                    padding: 10px;
-                    font-size: 1rem;
-                    color: var.$black;
-                    width: 100%; /* Prend toute la largeur du parent */
-                    resize: vertical; /* Permet le redimensionnement vertical uniquement */
-                    margin-top: 0.4rem;
-                
-                    &:focus {
-                        border: 1px solid var.$black; ;
-                        border-radius: 4px;
-                    }
-                }
-
-                fieldset{
-                    display: flex;
-                    flex-direction: column;
-                    min-inline-size: min-content;
-                    margin-inline: 0px;
-                    border-width: 0px;
-                    border-style: none;
-                    padding-block: 0em 0em;
-                    padding-inline: 0em;
-
-                    // choix multiples: carrelage marbre etc
-                    .checkbox_choices{
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-    
-                        input{
-                            display: none;
-                        }
-    
-                        label{
-                            display: flex;
-                            // centre le texte du label verticalement dans son background blanc
-                            align-items: center;
-                            margin: 0.1rem 1rem 0.5rem 0rem;
-                            padding: 0.4rem 0.9rem;
-                            border: 1px solid var.$grey;
-                            border-radius: 3px;
-                            background-color:var.$white;
-                            cursor: pointer;
-                            transition: background-color 0.1s ease;
-                        
-                            &:hover{
-                                // background-color: var.$black;
-                                background-color: var.$anthracite;
-                                border-color: var.$anthracite;
-                                color: var.$white;
-                            }
-
-                            &:active {
-                                background-color: var.$soft-grey; /* Couleur temporaire pendant le clic */
-                            }
-                        }
-                    }
-    
-                    // couleeur de survol des checkbox cochées
-                    // .checkbox_choices input[type="checkbox"]:checked + label {
-                        // &:hover{
-                        //     background-color: var.$anthracite;
-                        //     color: white;
-                        //     border-color: var.$anthracite;
-                        // }
-                    // }
-    
-                    // .checkbox_choices input[type="checkbox"]:active + label {
-                    //     background-color: var.$soft-grey; /* Couleur temporaire pendant le clic */
-                    // }
-
-                    .label_autre{
-                        display: none;
-                    }
-
-                    .legend2{
-                        padding-top: 1.1rem;
-                        margin-bottom: 0.5rem;
-                        font-weight: 600;
-                    }
-
-                    .support{
-                        border: 0.02rem solid var.$grey;
-                        border-radius: 4px;
-                    }
-
-                    .radio-group input[type="radio"] {
-                        display: none;
-                    }
-                    
-                    /* Style pour le label (remplace l'apparence de l'input) */
-                    .radio-group label {
-                        display: inline-block;
-                        padding: 0.4rem 0.9rem;
-                        margin: 0.5rem 1rem 1rem 0rem ;
-                        border: 1px solid var.$grey;
-                        border-radius: 4px;
-                        background-color: var.$white;
-                        cursor: pointer;
-                        transition: background-color 0.1s ease;
-
-                        &:hover{
-                            background-color: var.$anthracite;
-                            color:var.$white;
-                            border: 1px solid var.$anthracite;
-                        }
-                    }
-                    
-                    /* Style lorsque le radio est sélectionné (lié via :checked) */
-                    .radio-group input[type="radio"]:checked + label {
-                        background-color: var.$black;
-                        color: white;
-                        border-color: var.$black;                       
-                    }
-
-                    .open_menu {
-                        display: flex;
-                        flex-direction: column;
-
-                         // les grandes catégories murs sols plafonds elements
-                        .label_menu_toggle{
-                            margin: auto auto 1rem 0;
-                            padding: 0.5rem 1rem;
-                            border-radius: 3px;
-                            border: 1px solid var.$anthracite;
-
-                            &:hover{
-                                background-color: var.$anthracite;
-                                color:var.$white;
-                            }
-                        }
-                        
-                        input[type="checkbox"] {
-                            display: none; // Facultatif pour masquer la case à cocher
-                        }
-                    
-                        input[type="checkbox"]:checked ~ .menu_murs {
-                            display: flex; // lorsque cochée, section visible
-                            flex-direction: column; 
-                            margin-bottom: 6rem;
-                            margin-top: 1rem;
-                            background-color: var.$form_sections;
-                            // background-color: var.$black;
-                            border:1px solid var.$anthracite;
-                            border-radius: 3px;
-                            padding: 1.5rem;
-
-                            .label_surface{
-                                font-weight: 600;
-                            }
-                        }
-
-                        input[type="checkbox"]:checked + label {
-                            background-color: var.$black;
-                            color: var.$white;
-                            border-color: var.$black;
-
-                            // &:hover{
-                            //     background-color: var.$anthracite;
-                            //     color:var.$white;
-                            // }
-                        }
-                    
-                        .menu_murs {
-                            display: none; // Par défaut, les sections sont cachées
-                        }
-                    }
-
-                }
-            }
-
-            button{
-                border-radius: 4px;
-                border-style: none;
-                background-color: var.$deep-anthracite;
+              &:hover {
+                // background-color: var.$black;
+                background-color: var.$anthracite;
+                border-color: var.$anthracite;
                 color: var.$white;
-                padding: 12px;
-                margin: 3rem auto 2rem auto;
-                width: auto;
-                font-size: 1.2rem;
+              }
 
-                &:hover{
-                    background-color:var.$black;
-                }
-                &:active{
-                    background-color: var.$deep-anthracite;
-                }
+              &:active {
+                background-color: var.$soft-grey; /* Couleur temporaire pendant le clic */
+              }
             }
+          }
+
+          // couleeur de survol des checkbox cochées
+          // .checkbox_choices input[type="checkbox"]:checked + label {
+          // &:hover{
+          //     background-color: var.$anthracite;
+          //     color: white;
+          //     border-color: var.$anthracite;
+          // }
+          // }
+
+          // .checkbox_choices input[type="checkbox"]:active + label {
+          //     background-color: var.$soft-grey; /* Couleur temporaire pendant le clic */
+          // }
+
+          .label_autre {
+            display: none;
+          }
+
+          .legend2 {
+            padding-top: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+          }
+
+          .support {
+            border: 0.02rem solid var.$grey;
+            border-radius: 4px;
+          }
+
+          .radio-group input[type="radio"] {
+            display: none;
+          }
+
+          /* Style pour le label (remplace l'apparence de l'input) */
+          .radio-group label {
+            display: inline-block;
+            padding: 0.4rem 0.9rem;
+            margin: 0.5rem 1rem 1rem 0rem;
+            border: 1px solid var.$grey;
+            border-radius: 4px;
+            background-color: var.$white;
+            cursor: pointer;
+            transition: background-color 0.1s ease;
+
+            &:hover {
+              background-color: var.$anthracite;
+              color: var.$white;
+              border: 1px solid var.$anthracite;
+            }
+          }
+
+          /* Style lorsque le radio est sélectionné (lié via :checked) */
+          .radio-group input[type="radio"]:checked + label {
+            background-color: var.$black;
+            color: white;
+            border-color: var.$black;
+          }
+
+          .open_menu {
+            display: flex;
+            flex-direction: column;
+
+            // les grandes catégories murs sols plafonds elements
+            .label_menu_toggle {
+              margin: auto auto 1rem 0;
+              padding: 0.5rem 1rem;
+              border-radius: 3px;
+              border: 1px solid var.$anthracite;
+
+              &:hover {
+                background-color: var.$anthracite;
+                color: var.$white;
+              }
+            }
+
+            input[type="checkbox"] {
+              display: none; // Facultatif pour masquer la case à cocher
+            }
+
+            input[type="checkbox"]:checked ~ .menu_murs {
+              display: flex; // lorsque cochée, section visible
+              flex-direction: column;
+              margin-bottom: 6rem;
+              margin-top: 1rem;
+              background-color: var.$form_sections;
+              // background-color: var.$black;
+              border: 1px solid var.$anthracite;
+              border-radius: 3px;
+              padding: 1.5rem;
+
+              .label_surface {
+                font-weight: 600;
+              }
+            }
+
+            input[type="checkbox"]:checked + label {
+              background-color: var.$black;
+              color: var.$white;
+              border-color: var.$black;
+
+              // &:hover{
+              //     background-color: var.$anthracite;
+              //     color:var.$white;
+              // }
+            }
+
+            .menu_murs {
+              display: none; // Par défaut, les sections sont cachées
+            }
+          }
         }
+      }
+
+      button {
+        border-radius: 4px;
+        border-style: none;
+        background-color: var.$deep-anthracite;
+        color: var.$white;
+        padding: 12px;
+        margin: 3rem auto 2rem auto;
+        width: auto;
+        font-size: 1.2rem;
+
+        &:hover {
+          background-color: var.$black;
+        }
+        &:active {
+          background-color: var.$deep-anthracite;
+        }
+      }
     }
+  }
 }
-
-
-
-
-
