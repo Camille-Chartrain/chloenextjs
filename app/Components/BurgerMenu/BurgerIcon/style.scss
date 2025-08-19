@@ -11,7 +11,7 @@
   // small
   --small-burger_width: 26px;
   --small-burger_line_height: 2px;
-  --small-burger_box_height: 24px;
+  --small-burger_box_height: 15px;
   // medium & big
   --medium-burger_width: 26px;
   --medium-burger_line_height: 2px;
@@ -23,10 +23,11 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  margin-left: 2rem;
+  margin-left: 0.5rem;
   position: relative;
 
   @include mixin.medium {
+    margin-left: 2rem;
     height: var(--medium-burger_box_height);
   }
 

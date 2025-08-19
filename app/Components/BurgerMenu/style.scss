@@ -6,10 +6,16 @@
   font-family: PortherasRegular;
   display: flex;
   position: sticky;
-  top: 0;
+  bottom: 0;
+  top: unset;
   left: 0;
   width: 100%;
   background-color: white;
+
+  @include mixin.medium {
+    top: 0;
+    bottom: unset;
+  }
 
   &.home_burgerMenu {
     background-color: transparent;
@@ -25,9 +31,5 @@
     flex-direction: row;
     align-items: center;
     padding-top: 1rem;
-
-    @include mixin.medium {
-      padding-top: 1rem;
-    }
   }
 }
