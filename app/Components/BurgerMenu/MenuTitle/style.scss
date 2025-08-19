@@ -23,12 +23,12 @@
     }
 
     .img_CC {
-      width: 2rem;
+      width: 1.5rem;
       height: auto;
       margin-right: 0.6rem;
 
       @include mixin.medium {
-        width: 5rem;
+        width: 3rem;
         height: auto;
         margin-right: 1rem;
       }

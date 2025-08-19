@@ -5,7 +5,7 @@
   z-index: 2;
   font-family: PortherasRegular;
   display: flex;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   top: unset;
   left: 0;
@@ -13,6 +13,7 @@
   background-color: white;
 
   @include mixin.medium {
+    position: sticky;
     top: 0;
     bottom: unset;
   }
@@ -30,6 +31,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    @include mixin.medium {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
   }
 }
