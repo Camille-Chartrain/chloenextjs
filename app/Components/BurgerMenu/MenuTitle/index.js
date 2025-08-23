@@ -13,7 +13,7 @@ export default function MenuTitle({ showNav }) {
             alt="logo chloé chartrain"
             className="img_CC"
           ></img>
-          CHLOÉ CHARTRAIN
+          <p className="titleName">CHLOÉ CHARTRAIN</p>
         </Link>
       </h1>
     </>

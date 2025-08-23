@@ -7,30 +7,55 @@
  */
 
 .menuTitle {
+  grid-row: 1;
+  grid-column: 1;
+  display: flex;
+
+  @include mixin.medium {
+    grid-column: 2;
+  }
+
   .logo {
-    margin-left: 1rem;
+    margin-left: initial;
     transition: margin-left 0.3s ease-in-out;
-    display: flex;
-    align-items: center; /* Aligne verticalement le contenu */
     width: fit-content;
     font-size: 0.9rem;
 
+    // display :
+    display: flex;
+    align-items: center; // Aligne verticalement le contenu
+    // - firefox only
+    @-moz-document url-prefix() {
+      display: inline;
+    }
+
     @include mixin.medium {
-      margin-left: 2rem;
+      display: flex; // in laptop, firefox is not inline anymore
       justify-content: space-between;
       font-size: 1.3rem;
-      margin-left: 1rem;
     }
 
     .img_CC {
       width: 1.5rem;
       height: auto;
       margin-right: 0.6rem;
+      @-moz-document url-prefix() {
+        vertical-align: middle;
+      }
 
       @include mixin.medium {
-        width: 3rem;
+        display: block;
+        width: 4rem;
         height: auto;
         margin-right: 1rem;
+      }
+    }
+
+    .titleName {
+      // - firefox only
+      @-moz-document url-prefix() {
+        display: inline;
+        vertical-align: sub;
       }
     }
   }
