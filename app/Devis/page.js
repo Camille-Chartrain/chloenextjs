@@ -7,7 +7,7 @@ const Devis = () => {
     <>
       <div className="devis">
         <main className="main">
-          <h2>DEMANDE DE DEVIS GRATUIT</h2>
+          <h2>DEMANDE DE DEVIS</h2>
           <DevisForm />
         </main>
       </div>

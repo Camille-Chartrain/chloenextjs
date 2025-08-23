@@ -113,292 +113,305 @@ const DevisForm = () => {
 
       {!loading && !isSubmitted && (
         <form method="POST" onSubmit={handleSubmit}>
-          <div className="segment segment1">
-            <label htmlFor="lastname">
-              Nom - Prénom <span className="etoile">*</span>{" "}
-            </label>
-            <input type="text" name="lastname" id="lastname" required />
 
-            <label htmlFor="email">
-              Email <span className="etoile">*</span>{" "}
-            </label>
-            <input type="email" name="email" id="email" required multiple />
+          <div className="background_color">
 
-            <label htmlFor="telephone">Téléphone </label>
-            <input type="tel" name="telephone" id="telephone" />
+            <div className="segment segment1">
 
-            <label htmlFor="adresse">Adresse </label>
-            <input type="text" name="adresse" id="adresse" />
+              <label htmlFor="lastname">
+                Nom - Prénom <span className="etoile">*</span>{" "}
+              </label>
+              <input type="text" name="lastname" id="lastname" required />
 
-            <label htmlFor="etage">
-              Etage <span className="etoile"></span>
-            </label>
-            <input type="number" name="etage" id="etage" placeholder="ex: 2" />
+              <label htmlFor="email">
+                Email <span className="etoile">*</span>{" "}
+              </label>
+              <input type="email" name="email" id="email" required multiple />
 
-            <fieldset>
-              <legend>
-                Ascenseur : <span className="etoile"></span>
-              </legend>
-              <div className="radio-group">
-                <input type="radio" name="ascenseur" id="oui" value="oui" />
-                <label htmlFor="oui">Oui</label>
+              <label htmlFor="telephone">Téléphone </label>
+              <input type="tel" name="telephone" id="telephone" />
 
-                <input type="radio" name="ascenseur" id="non" value="non" />
-                <label htmlFor="non">Non</label>
+
+              <div className="segment">
+                <label htmlFor="message">Message :</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="5"
+                  cols="50"
+                ></textarea>
+                {/* cols ne sert pas puisque la width est indiquée en scss, il sert de valeur de secours pour des environnements très simples. */}
               </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>
-                Possibilité de parking gratuit :{" "}
-                <span className="etoile"></span>
-              </legend>
-              <div className="radio-group">
-                <input
-                  type="radio"
-                  name="parking"
-                  id="gratuit"
-                  value="gratuit"
-                />
-                <label htmlFor="gratuit">Oui</label>
-
-                <input type="radio" name="parking" id="payant" value="payant" />
-                <label htmlFor="payant">Non</label>
-              </div>
-            </fieldset>
-
-            <label htmlFor="date">Date souhaitée du projet :</label>
-            <input type="date" name="date" id="date" />
+            </div>
           </div>
 
-          <div className="segment">
-            <p className="titre_segment">
-              Eléments concernés par votre projet :{" "}
-              <span className="etoile"></span>
-            </p>
+          <div className="background_color">
 
-            <fieldset className="fieldset1">
-              <div className="open_menu">
-                <input type="checkbox" id="menu_toggle_murs"></input>
-                <label htmlFor="menu_toggle_murs" className="label_menu_toggle">
-                  <legend className="legend1 ">Murs</legend>
-                </label>
+            <div className="segment segment1">
 
-                <div className="menu_murs">
-                  <label htmlFor="surface_mur" className="label_surface">
-                    Surface des murs (hauteur x Largeur en mètres) :{" "}
-                    <span className="etoile"></span>
-                  </label>
-                  <input type="text" name="surface_mur" id="surface_mur" />
-                  <fieldset>
-                    <label htmlFor="type_support_mur" className="legend2">
-                      Type de support : <span className="etoile"></span>
-                    </label>
-                    <select
-                      id="type_support_mur"
-                      name="type_support_mur"
-                      className="checkbox_choices"
-                    >
-                      <option value="carrelage_mur">Carrelage</option>
-                      <option value="placo_mur">Plaque de plâtre</option>
-                      <option value="pierre_brique_mur">Pierre- brique</option>
-                      <option value="beton_cellulaire_mur">
-                        Béton céllulaire
-                      </option>
-                      <option value="Parpaing_mur">Parpaing</option>
-                      <option value="plaque_ciment_mur">
-                        Plaque de ciment
-                      </option>
-                      <option value="autres">Autre</option>
-                    </select>
-                  </fieldset>
+              <label htmlFor="adresse">Adresse </label>
+              <input type="text" name="adresse" id="adresse" />
 
-                  <fieldset>
-                    <label
-                      htmlFor="prestation_souhaitee_mur"
-                      className="legend2"
-                    >
-                      Prestation souhaitée : <span className="etoile"></span>
-                    </label>
-                    <select
-                      id="prestation_souhaitee_mur"
-                      name="prestation_souhaitee_mur"
-                      className="checkbox_choices"
-                    >
-                      <option value="beton_cire">Béton ciré</option>
-                      <option value="placobeton_texture">
-                        Plaque de Béton texture
-                      </option>
-                      <option value="chaux_brossee">Chaux brossée</option>
-                      <option value="beton_cellulaire">Béton céllulaire</option>
-                      <option value="chaux_lissee">Chaux lissée</option>
-                      <option value="chaux_ferree">Chaux ferrée</option>
-                      <option value="enduit_chaux">Enduit de chaux</option>
-                      <option value="besoin_conseil">Besoin de conseil</option>
-                    </select>
-                  </fieldset>
+              <label htmlFor="etage">
+                Etage <span className="etoile"></span>
+              </label>
+              <input type="number" name="etage" id="etage" placeholder="ex: 2" />
+
+              <fieldset>
+                <legend>
+                  Ascenseur : <span className="etoile"></span>
+                </legend>
+                <div className="radio-group">
+                  <input type="radio" name="ascenseur" id="oui" value="oui" />
+                  <label htmlFor="oui">Oui</label>
+
+                  <input type="radio" name="ascenseur" id="non" value="non" />
+                  <label htmlFor="non">Non</label>
                 </div>
-              </div>
-            </fieldset>
+              </fieldset>
 
-            <fieldset className="fieldset1">
-              <div className="open_menu">
-                <input type="checkbox" id="menu_toggle_sols"></input>
-                <label htmlFor="menu_toggle_sols" className="label_menu_toggle">
-                  <legend className="legend1 ">Sols</legend>
-                </label>
-
-                <div className="menu_murs">
-                  <label htmlFor="surface_sol" className="label_surface">
-                    Surface des sols (longueur x Largeur en mètres) :{" "}
-                    <span className="etoile"></span>
-                  </label>
-                  <input type="text" name="surface_sol" id="surface_sol" />
-
-                  <fieldset>
-                    <label htmlFor="type_support_sol" className="legend2">
-                      Type de support : <span className="etoile"></span>
-                    </label>
-                    <select
-                      id="type_support_sol"
-                      name="type_support_sol"
-                      className="checkbox_choices"
-                    >
-                      <option value="carrelage_sol">Carrelage</option>
-                      <option value="marbre">Marbre</option>
-                      <option value="ancien_beton_cire">
-                        Ancien béton ciré
-                      </option>
-                      <option value="chape_anhydrite">Chape anhydrite</option>
-                      <option value="chape_ciment">Chape ciment</option>
-                      <option value="calle_beton">Dalle béton</option>
-                      <option value="autres">Autre</option>
-                    </select>
-                  </fieldset>
-
-                  <fieldset>
-                    <label
-                      htmlFor="prestation_souhaitee_sol"
-                      className="legend2"
-                    >
-                      Prestation souhaitée : <span className="etoile"></span>
-                    </label>
-                    <select
-                      id="prestation_souhaitee_sol"
-                      name="prestation_souhaitee_sol"
-                      className="checkbox_choices"
-                    >
-                      <option value="beton_cire">Béton ciré</option>
-                      <option value="placobeton_texture">Béton texture</option>
-                      <option value="chaux_brossee">Chaux brossée</option>
-                      <option value="beton_cellulaire">Béton céllulaire</option>
-                      <option value="chaux_lissee">Chaux lissée</option>
-                      <option value="chaux_ferree">Chaux ferrée</option>
-                      <option value="enduit_chaux">Enduit de chaux</option>
-                      <option value="besoin_conseil">Besoin de conseil</option>
-                    </select>
-                  </fieldset>
-                </div>
-              </div>
-            </fieldset>
-
-            <fieldset className="fieldset1">
-              <div className="open_menu">
-                <input type="checkbox" id="menu_toggle_plafonds"></input>
-                <label
-                  htmlFor="menu_toggle_plafonds"
-                  className="label_menu_toggle"
-                >
-                  <legend className="legend1 ">Plafonds</legend>
-                </label>
-
-                <div className="menu_murs">
-                  <label htmlFor="surface_plafond" className="label_surface">
-                    Surface des plafonds (longueur x Largeur en mètres) :{" "}
-                    <span className="etoile"></span>
-                  </label>
+              <fieldset>
+                <legend>
+                  Possibilité de parking gratuit :{" "}
+                  <span className="etoile"></span>
+                </legend>
+                <div className="radio-group">
                   <input
-                    type="text"
-                    name="surface_plafond"
-                    id="surface_plafond"
+                    type="radio"
+                    name="parking"
+                    id="gratuit"
+                    value="gratuit"
                   />
+                  <label htmlFor="gratuit">Oui</label>
 
-                  <fieldset>
-                    <label htmlFor="type_support_plafond" className="legend2">
-                      Type de support : <span className="etoile"></span>
-                    </label>
-                    <select
-                      id="type_support_plafond"
-                      name="type_support_plafond"
-                      className="checkbox_choices"
-                    >
-                      <option value="plaque_platre_plafonds">
-                        Plaque de plâtre
-                      </option>
-                      <option value="beton_brut_plafonds">Béton brut</option>
-                      <option value="autres">Autre</option>
-                    </select>
-                  </fieldset>
-
-                  <fieldset>
-                    <label
-                      htmlFor="prestation_souhaitee_plafonds"
-                      className="legend2"
-                    >
-                      Prestation :
-                    </label>
-                    <select
-                      id="prestation_souhaitee_plafonds"
-                      name="prestation_souhaitee_plafonds"
-                      className="checkbox_choices"
-                    >
-                      <option value="beton_cire_plafonds">Béton ciré</option>
-                    </select>
-                  </fieldset>
+                  <input type="radio" name="parking" id="payant" value="payant" />
+                  <label htmlFor="payant">Non</label>
                 </div>
-              </div>
-            </fieldset>
+              </fieldset>
 
-            <fieldset className="fieldset1 last-fieldset">
-              <div className="open_menu">
-                <input type="checkbox" id="menu_toggle_mobilier"></input>
-                <label
-                  htmlFor="menu_toggle_mobilier"
-                  className="label_menu_toggle"
-                >
-                  <legend className="legend1 ">Mobiliers - éléments</legend>
-                </label>
+              <label htmlFor="date">Date souhaitée du projet :</label>
+              <input type="date" name="date" id="date" />
+            </div>
 
-                <div className="menu_murs">
-                  <p>
-                    Il est possible d'enduire votre mobilier de béton ciré.{" "}
-                  </p>
+            <div className="segment">
+              <p className="titre_segment">
+                Eléments concernés par votre projet :{" "}
+                <span className="etoile"></span>
+              </p>
 
-                  <label htmlFor="element">
-                    Précisez vos éléments à enduire (ex: meuble vasque, table,
-                    niche, banquette...) ainsi que leur matériau :
+              <fieldset className="fieldset1">
+                <div className="open_menu">
+                  <input type="checkbox" id="menu_toggle_murs"></input>
+                  <label htmlFor="menu_toggle_murs" className="label_menu_toggle">
+                    <legend className="legend1 ">Murs</legend>
                   </label>
-                  <input type="text" name="element" id="element" />
+
+                  <div className="menu_murs">
+                    <label htmlFor="surface_mur" className="label_surface">
+                      Surface des murs (hauteur x Largeur en mètres) :{" "}
+                      <span className="etoile"></span>
+                    </label>
+                    <input type="text" name="surface_mur" id="surface_mur" />
+                    <fieldset>
+                      <label htmlFor="type_support_mur" className="legend2">
+                        Type de support : <span className="etoile"></span>
+                      </label>
+                      <select
+                        id="type_support_mur"
+                        name="type_support_mur"
+                        className="checkbox_choices"
+                      >
+                        <option value="carrelage_mur">Carrelage</option>
+                        <option value="placo_mur">Plaque de plâtre</option>
+                        <option value="pierre_brique_mur">Pierre- brique</option>
+                        <option value="beton_cellulaire_mur">
+                          Béton céllulaire
+                        </option>
+                        <option value="Parpaing_mur">Parpaing</option>
+                        <option value="plaque_ciment_mur">
+                          Plaque de ciment
+                        </option>
+                        <option value="autres">Autre</option>
+                      </select>
+                    </fieldset>
+
+                    <fieldset>
+                      <label
+                        htmlFor="prestation_souhaitee_mur"
+                        className="legend2"
+                      >
+                        Prestation souhaitée : <span className="etoile"></span>
+                      </label>
+                      <select
+                        id="prestation_souhaitee_mur"
+                        name="prestation_souhaitee_mur"
+                        className="checkbox_choices"
+                      >
+                        <option value="beton_cire">Béton ciré</option>
+                        <option value="placobeton_texture">
+                          Plaque de Béton texture
+                        </option>
+                        <option value="chaux_brossee">Chaux brossée</option>
+                        <option value="beton_cellulaire">Béton céllulaire</option>
+                        <option value="chaux_lissee">Chaux lissée</option>
+                        <option value="chaux_ferree">Chaux ferrée</option>
+                        <option value="enduit_chaux">Enduit de chaux</option>
+                        <option value="besoin_conseil">Besoin de conseil</option>
+                      </select>
+                    </fieldset>
+                  </div>
                 </div>
-              </div>
-            </fieldset>
-          </div>
+              </fieldset>
 
-          <div className="segment">
-            <label htmlFor="message">Message :</label>
-            <textarea
-              name="message"
-              id="message"
-              rows="12"
-              cols="50"
-            ></textarea>
-            {/* cols ne sert pas puisque la width est indiquée en scss, il sert de valeur de secours pour des environnements très simples. */}
-          </div>
+              <fieldset className="fieldset1">
+                <div className="open_menu">
+                  <input type="checkbox" id="menu_toggle_sols"></input>
+                  <label htmlFor="menu_toggle_sols" className="label_menu_toggle">
+                    <legend className="legend1 ">Sols</legend>
+                  </label>
 
-          <button type="submit" name="valider">
-            Envoyer ma demande de devis
-          </button>
-        </form>
+                  <div className="menu_murs">
+                    <label htmlFor="surface_sol" className="label_surface">
+                      Surface des sols (longueur x Largeur en mètres) :{" "}
+                      <span className="etoile"></span>
+                    </label>
+                    <input type="text" name="surface_sol" id="surface_sol" />
+
+                    <fieldset>
+                      <label htmlFor="type_support_sol" className="legend2">
+                        Type de support : <span className="etoile"></span>
+                      </label>
+                      <select
+                        id="type_support_sol"
+                        name="type_support_sol"
+                        className="checkbox_choices"
+                      >
+                        <option value="carrelage_sol">Carrelage</option>
+                        <option value="marbre">Marbre</option>
+                        <option value="ancien_beton_cire">
+                          Ancien béton ciré
+                        </option>
+                        <option value="chape_anhydrite">Chape anhydrite</option>
+                        <option value="chape_ciment">Chape ciment</option>
+                        <option value="calle_beton">Dalle béton</option>
+                        <option value="autres">Autre</option>
+                      </select>
+                    </fieldset>
+
+                    <fieldset>
+                      <label
+                        htmlFor="prestation_souhaitee_sol"
+                        className="legend2"
+                      >
+                        Prestation souhaitée : <span className="etoile"></span>
+                      </label>
+                      <select
+                        id="prestation_souhaitee_sol"
+                        name="prestation_souhaitee_sol"
+                        className="checkbox_choices"
+                      >
+                        <option value="beton_cire">Béton ciré</option>
+                        <option value="placobeton_texture">Béton texture</option>
+                        <option value="chaux_brossee">Chaux brossée</option>
+                        <option value="beton_cellulaire">Béton céllulaire</option>
+                        <option value="chaux_lissee">Chaux lissée</option>
+                        <option value="chaux_ferree">Chaux ferrée</option>
+                        <option value="enduit_chaux">Enduit de chaux</option>
+                        <option value="besoin_conseil">Besoin de conseil</option>
+                      </select>
+                    </fieldset>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset className="fieldset1">
+                <div className="open_menu">
+                  <input type="checkbox" id="menu_toggle_plafonds"></input>
+                  <label
+                    htmlFor="menu_toggle_plafonds"
+                    className="label_menu_toggle"
+                  >
+                    <legend className="legend1 ">Plafonds</legend>
+                  </label>
+
+                  <div className="menu_murs">
+                    <label htmlFor="surface_plafond" className="label_surface">
+                      Surface des plafonds (longueur x Largeur en mètres) :{" "}
+                      <span className="etoile"></span>
+                    </label>
+                    <input
+                      type="text"
+                      name="surface_plafond"
+                      id="surface_plafond"
+                    />
+
+                    <fieldset>
+                      <label htmlFor="type_support_plafond" className="legend2">
+                        Type de support : <span className="etoile"></span>
+                      </label>
+                      <select
+                        id="type_support_plafond"
+                        name="type_support_plafond"
+                        className="checkbox_choices"
+                      >
+                        <option value="plaque_platre_plafonds">
+                          Plaque de plâtre
+                        </option>
+                        <option value="beton_brut_plafonds">Béton brut</option>
+                        <option value="autres">Autre</option>
+                      </select>
+                    </fieldset>
+
+                    <fieldset>
+                      <label
+                        htmlFor="prestation_souhaitee_plafonds"
+                        className="legend2"
+                      >
+                        Prestation :
+                      </label>
+                      <select
+                        id="prestation_souhaitee_plafonds"
+                        name="prestation_souhaitee_plafonds"
+                        className="checkbox_choices"
+                      >
+                        <option value="beton_cire_plafonds">Béton ciré</option>
+                      </select>
+                    </fieldset>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset className="fieldset1 last-fieldset">
+                <div className="open_menu">
+                  <input type="checkbox" id="menu_toggle_mobilier"></input>
+                  <label
+                    htmlFor="menu_toggle_mobilier"
+                    className="label_menu_toggle"
+                  >
+                    <legend className="legend1 ">Mobiliers - éléments</legend>
+                  </label>
+
+                  <div className="menu_murs">
+                    <p>
+                      Il est possible d'enduire votre mobilier de béton ciré.{" "}
+                    </p>
+
+                    <label htmlFor="element">
+                      Précisez vos éléments à enduire (ex: meuble vasque, table,
+                      niche, banquette...) ainsi que leur matériau :
+                    </label>
+                    <input type="text" name="element" id="element" />
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+
+            <button type="submit" name="valider">
+              Envoyer ma demande de devis
+            </button>
+          </div>
+        </form >
       )}
     </>
   );

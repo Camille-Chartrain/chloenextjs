@@ -2,15 +2,20 @@
 @use "../style/var";
 
 .devis {
-  background-image: url(../public/IMG_3684.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-image: url(../public/IMG_3684.jpg);
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  font-size: 0.9rem;
   font-family: "PortherasThin", "ZH-Sans", Arial, "Lucida Sans Unicode",
     sans-serif;
   width: 100%;
   min-height: 100vh; // Au lieu de height: 100%
+
+  @include mixin.medium {
+        font-size: 1rem;
+      }
 
   main {
     display: flex;
@@ -20,8 +25,11 @@
     padding-bottom: 2rem; // Ajoute un peu d'espace en bas
 
     h2 {
-      margin-top: 7rem;
+      margin-top: 2rem;
       margin-bottom: 2rem;
+      @include mixin.medium {
+        margin-top: 0rem;
+      }
     }
 
     .success-message {
@@ -58,11 +66,20 @@
       margin: 8px;
       margin-bottom: 6rem;
       width: 90%;
-      background-color: var.$soft-white-transparent;
+      // background-color: var.$soft-white-transparent;
       border-radius: 0.2rem;
 
       @include mixin.medium {
         width: 50%;
+      }
+
+      .background_color{
+        background-color:var.$soft-white-transparent;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 5.5rem;
+        padding-bottom: 2rem;
       }
 
       .segment {
@@ -70,10 +87,14 @@
         flex-direction: column;
         width: 90%;
         margin-bottom: 5.5rem;
+        margin: auto;
+        // background-color: var.$soft-white-transparent;
 
         &.segment1 {
-          margin-top: 2rem;
+          margin-top: 1rem;
         }
+
+      
 
         .etoile {
           color: rgb(185, 42, 42);
@@ -98,11 +119,11 @@
 
           border-style: none;
           border-bottom: 0.02rem solid var.$black;
-          padding: 12px 0px 12px 12px; /*hauteur de la bande blanche*/
+          padding: 10px 0px 10px 10px; /*hauteur de la bande blanche*/
           background-color: var.$white; /* Couleur blanche avec 50% d'opacité */
           // margin-top: 0.4rem;
           margin-bottom: 0.7rem;
-          font-size: 1rem;
+          font-size: 0.9rem;
           outline: none; /* Supprime le contour par défaut */
 
           &:focus {
@@ -150,11 +171,11 @@
           background-color: var.$white;
           outline: none;
           padding: 10px;
-          font-size: 1rem;
+          // font-size: 1rem;
           color: var.$black;
           width: 100%; /* Prend toute la largeur du parent */
           resize: vertical; /* Permet le redimensionnement vertical uniquement */
-          margin-top: 0.4rem;
+          // margin-top: 0.4rem;
 
           &:focus {
             border: 1px solid var.$black;
@@ -186,7 +207,7 @@
               display: flex;
               // centre le texte du label verticalement dans son background blanc
               align-items: center;
-              margin: 0.1rem 1rem 0.5rem 0rem;
+              margin: 0rem 1rem 0.5rem 0rem;
               padding: 0.4rem 0.9rem;
               border: 1px solid var.$grey;
               border-radius: 3px;
@@ -242,8 +263,8 @@
           /* Style pour le label (remplace l'apparence de l'input) */
           .radio-group label {
             display: inline-block;
-            padding: 0.4rem 0.9rem;
-            margin: 0.5rem 1rem 1rem 0rem;
+            padding: 0.2rem 0.6rem;
+            margin: 0rem 1rem 1rem 0rem;
             border: 1px solid var.$grey;
             border-radius: 4px;
             background-color: var.$white;
@@ -327,7 +348,7 @@
         padding: 12px;
         margin: 3rem auto 2rem auto;
         width: auto;
-        font-size: 1.2rem;
+        font-size: 0.9rem;
 
         &:hover {
           background-color: var.$black;
@@ -335,6 +356,10 @@
         &:active {
           background-color: var.$deep-anthracite;
         }
+
+        @include mixin.medium {
+        font-size: 1rem;
+      }
       }
     }
   }
