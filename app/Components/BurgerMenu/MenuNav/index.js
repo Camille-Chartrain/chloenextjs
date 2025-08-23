@@ -9,16 +9,24 @@ export default function MenuNav({ isOpen, showNav, hideNav }) {
       <nav className={`menu ${isOpen ? "open" : ""}`} onMouseEnter={showNav}>
         <ul>
           <li>
-            <Link href="/Prestations">TYPES DE PRESTATIONS</Link>
+            <Link href="/Prestations" onClick={hideNav}>
+              TYPES DE PRESTATIONS
+            </Link>
           </li>
           <li>
-            <Link href="/Realisations">RÉALISATIONS</Link>
+            <Link href="/Realisations" onClick={hideNav}>
+              RÉALISATIONS
+            </Link>
           </li>
           <li>
-            <Link href="/Partenaires">PARTENAIRES</Link>
+            <Link href="/Partenaires" onClick={hideNav}>
+              PARTENAIRES
+            </Link>
           </li>
           <li>
-            <Link href="/Devis">DEMANDE DE DEVIS</Link>
+            <Link href="/Devis" onClick={hideNav}>
+              DEMANDE DE DEVIS
+            </Link>
           </li>
         </ul>
       </nav>

@@ -19,15 +19,18 @@
 
   width: var(--small-burger_width);
   height: var(--small-burger_box_height);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
-  margin-left: 0.5rem;
+  margin-left: initial;
   position: relative;
+  grid-row: 1;
+  grid-column: 2;
 
   @include mixin.medium {
-    margin-left: 2rem;
+    grid-column: 1;
+    // margin-left: 2rem;
     height: var(--medium-burger_box_height);
   }
 
