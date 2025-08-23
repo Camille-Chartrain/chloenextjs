@@ -100,8 +100,7 @@
           color: rgb(185, 42, 42);
         }
         .titre_segment {
-          // font-weight: 600;
-          margin-bottom: 1rem;
+          margin-top: 4rem;
         }
 
         input:-internal-autofill-selected {
@@ -291,10 +290,11 @@
 
             // les grandes catégories murs sols plafonds elements
             .label_menu_toggle {
-              margin: auto auto 1rem 0;
-              padding: 0.5rem 1rem;
+              margin: auto auto 0.5rem 0;
+              padding: 0.3rem 0.6rem;
               border-radius: 3px;
               border: 1px solid var.$anthracite;
+              background-color: white;
 
               &:hover {
                 background-color: var.$anthracite;
@@ -346,7 +346,7 @@
         background-color: var.$deep-anthracite;
         color: var.$white;
         padding: 12px;
-        margin: 3rem auto 2rem auto;
+        margin: 0rem auto 2rem auto;
         width: auto;
         font-size: 0.9rem;
 

@@ -145,6 +145,10 @@ const DevisForm = () => {
             </div>
           </div>
 
+          <p>
+            - Facultatif -
+          </p>
+
           <div className="background_color">
 
             <div className="segment segment1">
@@ -405,12 +409,11 @@ const DevisForm = () => {
                 </div>
               </fieldset>
             </div>
-
-
-            <button type="submit" name="valider">
-              Envoyer ma demande de devis
-            </button>
           </div>
+
+          <button type="submit" name="valider">
+            Envoyer ma demande de devis
+          </button>
         </form >
       )}
     </>
