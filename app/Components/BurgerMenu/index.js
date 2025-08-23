@@ -38,7 +38,7 @@ const BurgerMenu = () => {
       <MenuNav isOpen={isOpen} showNav={showNav} hideNav={hideNav} />
       <header className="burger_logo">
         <BurgerIcon isOpen={isOpen} showNav={showNav} toggleMenu={toggleMenu} />
-        <MenuTitle showNav={showNav} />
+        <MenuTitle showNav={showNav} hideNav={hideNav} />
       </header>
     </div>
   );
