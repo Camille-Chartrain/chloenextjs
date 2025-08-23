@@ -70,7 +70,7 @@
       border-radius: 0.2rem;
 
       @include mixin.medium {
-        width: 50%;
+        width: 35%;
       }
 
       .background_color{
@@ -115,13 +115,13 @@
           font-family: "PortherasThin", "ZH-Sans", Arial, "Lucida Sans Unicode",
             sans-serif;
           width: 100%;
-
+          margin-bottom: 0.4rem;
           border-style: none;
           border-bottom: 0.02rem solid var.$black;
           padding: 10px 0px 10px 10px; /*hauteur de la bande blanche*/
           background-color: var.$white; /* Couleur blanche avec 50% d'opacité */
           // margin-top: 0.4rem;
-          margin-bottom: 0.7rem;
+          // margin-bottom: 0.7rem;
           font-size: 0.9rem;
           outline: none; /* Supprime le contour par défaut */
 
@@ -197,6 +197,10 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            padding: 0.5rem;
+            background-color: white;
+            border: 1px solid var.$grey;
+              border-radius: 3px;
 
             input {
               display: none;
@@ -246,8 +250,8 @@
 
           .legend2 {
             padding-top: 1.1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            // margin-bottom: 0.5rem;
+            // font-weight: 600;
           }
 
           .support {
@@ -263,7 +267,7 @@
           .radio-group label {
             display: inline-block;
             padding: 0.2rem 0.6rem;
-            margin: 0rem 1rem 1rem 0rem;
+            margin: 0rem 1rem 0.3rem 0rem;
             border: 1px solid var.$grey;
             border-radius: 4px;
             background-color: var.$white;
@@ -309,16 +313,15 @@
             input[type="checkbox"]:checked ~ .menu_murs {
               display: flex; // lorsque cochée, section visible
               flex-direction: column;
-              margin-bottom: 6rem;
-              margin-top: 1rem;
-              background-color: var.$form_sections;
+              margin-bottom: 2rem;
+              background-color: var.$soft-white-transparent;
               // background-color: var.$black;
               border: 1px solid var.$anthracite;
               border-radius: 3px;
               padding: 1.5rem;
 
               .label_surface {
-                font-weight: 600;
+                // font-weight: 600;
               }
             }
 
