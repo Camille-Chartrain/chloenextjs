@@ -2,14 +2,17 @@
 @use '../../style/var';
 
 h2{
-    margin: 5rem auto auto auto;
+    margin: 1rem auto auto auto;
     text-align: center;
+    @include mixin.medium {
+        margin: 0rem auto 4rem auto;
+    }
     
 }
 
 .intro_beton{
             width: 95%;
-            margin: 4rem auto 4rem auto;
+            margin: 2rem auto 2rem auto;
             letter-spacing: 0rem;
             line-height: 1.6rem;
             font-size: 0.9rem;
@@ -33,7 +36,7 @@ h2{
     }
 
     .section{
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
         @include mixin.medium {
             width: 50%;
             margin-bottom: 5rem;
