@@ -8,7 +8,8 @@ const EnduitsDecoratifs = () => {
       <h2>ENDUITS DECORATIFS</h2>
 
       <div className="all_sections">
-        <div className="section">
+
+        <Link href="/Prestations/EnduitsDecoratifs/BetonMuralClassic" className="section">
           <div className="duo_img">
             <img
               src={"/IMG_3684.jpg"}
@@ -26,9 +27,9 @@ const EnduitsDecoratifs = () => {
                         Cet enduit est plus fin que le béton ciré. Il est uniquement décoratif. <span className='commentaires'>(ca veut dire quoi)</span>
                         Doux au toucher, il offre un rendu lisse et nuageux. Son effet patiné et chic lui apporte toute son élégance.
                     </p> */}
-        </div>
+        </Link>
 
-        <div className="section">
+        <Link href="/Prestations/EnduitsDecoratifs/BetonMuralTexture" className="section">
           <div className="duo_img">
             <img
               src={"/IMG_3684.jpg"}
@@ -45,9 +46,9 @@ const EnduitsDecoratifs = () => {
           {/* <p>
                         Son rendu industriel, brut, texturé et pleins de petites cavités saura vous ravir pour vos créations à l’esthétique brutaliste. Il est uniquement destiné pour des projets décoratifs.<span className='commentaires'>idem</span>
                     </p> */}
-        </div>
+        </Link>
 
-        <div className="section">
+        <Link href="/Prestations/EnduitsDecoratifs/EnduitMarmorino" className="section">
           <div className="duo_img">
             <img
               src={"/IMG_3684.jpg"}
@@ -65,7 +66,8 @@ const EnduitsDecoratifs = () => {
                         Naturel et écologique, sans solvant, ni composés organiques volatiles.
                         Aspect élégant, souvent marbré ou nuagé, il a la capacité d’offrir une finition minérale haut de gamme.
                     </p> */}
-        </div>
+        </Link>
+
 
         <Link
           href="/Prestations/EnduitsDecoratifs/ChauxFine"

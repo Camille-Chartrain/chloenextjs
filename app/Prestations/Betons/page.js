@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.scss";
+import Link from "next/link";
 
 const betons = () => {
   return (
@@ -15,7 +16,11 @@ const betons = () => {
         Mobiliers sur mesures Cuisines Voici ces différentes déclinaisons :
       </p>
       <div className="all_sections">
-        <div className="section">
+
+
+        <Link href="/Prestations/Betons/BetonCireClassic"
+          className="section">
+
           <div className="duo_img">
             <img
               src={"/IMG_3684.jpg"}
@@ -28,14 +33,16 @@ const betons = () => {
               className="image"
             />
           </div>
+
           <h3>BETON CIRE "CLASSIC"</h3>
           {/* <p>
                         Conseillée pour tous vos éléments, la finition « lissée » est légèrement nuancée. C’est l’une des plus réputées, notamment dans les intérieurs contemporains. Elle offre un rendu élégant.
                         Les nuances sont légères ou affirmées selon le choix de la teinte.
                     </p> */}
-        </div>
+        </Link>
 
-        <div className="section">
+        <Link href="/Prestations/Betons/BetonCireMineral" className="section">
+
           <div className="duo_img">
             <img
               src={"/IMG_3684.jpg"}
@@ -48,13 +55,14 @@ const betons = () => {
               className="image"
             />
           </div>
+
           <h3>BETON CIRE MINERAL</h3>
           {/* <p>
                         Un effet pierre qui laisse les pores du béton ciré ouvert.  Il est conseillé pour les murs et les plafonds et présente un rendu doux et nuageux..
                     </p> */}
-        </div>
+        </Link>
 
-        <div className="section">
+        <Link href="/Prestations/Betons/BetonCireFerre" className="section">
           <div className="duo_img">
             <img
               src={"/IMG_3684.jpg"}
@@ -71,7 +79,7 @@ const betons = () => {
           {/* <p>
                         Des reflets marbrés donneront à votre matériau toute son authenticité. Selon l’outil utilisé, cet effet peut être plus ou moins accentué (effet réalisable sur murs, sols, plafonds, escaliers et mobiliers.)
                     </p> */}
-        </div>
+        </Link>
       </div>
     </>
   );

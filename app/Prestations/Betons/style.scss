@@ -36,7 +36,9 @@ h2{
     }
 
     .section{
-        margin-bottom: 3rem;
+        display: block;
+        margin-bottom: 2rem;
+
         @include mixin.medium {
             width: 50%;
             margin-bottom: 5rem;
@@ -55,11 +57,8 @@ h2{
         }
 
         h3{
-        // text-align: center;
-        // déjà dans le global scss
             margin-bottom: 1rem;
-
-    }
+        }
     }
 
     .duo_img{
