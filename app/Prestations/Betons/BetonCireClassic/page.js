@@ -1,8 +1,8 @@
 // "use client";
 
-// import React from "react";
-// import "../style.scss";
-// import Link from "next/link";
+import React from "react";
+import "../style.scss";
+import Link from "next/link";
 
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Mousewheel } from "swiper/modules";
@@ -21,13 +21,15 @@
 
 
 
-// const BetonCireClassic = () => {
-//     return (
-//         <>
-//             <h2>BETON CIRE CLASSIC</h2>
+const BetonCireClassic = () => {
+    return (
+        <>
+            <h2>BETON CIRE CLASSIC</h2>
 
-//             <div className="carousel">
-//                 <Swiper
+
+
+            {/* <div className="carousel">
+               <Swiper 
 //                     direction="vertical"
 //                     modules={[Navigation, Mousewheel]}
 //                     mousewheel={true}
@@ -41,11 +43,12 @@
 //                         </SwiperSlide>
 //                     ))}
 //                 </Swiper>
-//             </div>
+//             </div> */}
 
 
-//         </>
-//     );
-// };
 
-// export default BetonCireClassic;
+        </>
+    );
+};
+
+export default BetonCireClassic;
