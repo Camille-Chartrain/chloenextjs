@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.scss";
 import Link from "next/link";
+import LinkForm from "@/app/Components/LinkForm/page";
 
 const betons = () => {
   return (
@@ -81,6 +82,7 @@ const betons = () => {
                     </p> */}
         </Link>
       </div>
+      <LinkForm />
     </>
   );
 };

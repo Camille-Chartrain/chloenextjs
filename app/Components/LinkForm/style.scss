@@ -1,0 +1,20 @@
+@use "../style/mixin";
+@use "../style/var";
+
+
+.link{
+    display: block;
+    // width: 100%;
+    text-align: center;
+    margin: 1rem auto 5rem auto;
+    font-size: 0.9rem;
+    
+
+    .button{
+        padding: 1rem;
+        border-radius: 0.2rem;
+        border-color: var.$soft-white-transparent;
+        background-color: var.$soft-white-transparent;
+    }
+
+}

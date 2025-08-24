@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.scss";
 import Link from "next/link";
+import LinkForm from "../Components/LinkForm/page";
 
 const prestations = () => {
   return (
@@ -68,6 +69,7 @@ const prestations = () => {
           habitat.
         </p>
       </section>
+      <LinkForm />
     </>
   );
 };
