@@ -1,0 +1,15 @@
+@use '../../style/mixin';
+@use '../../style/var';
+
+.lien {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    
+    background-color: black;
+    color: white;
+
+    .liens{
+         color: white;
+    }
+}

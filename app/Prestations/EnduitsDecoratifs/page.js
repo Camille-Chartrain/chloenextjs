@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.scss";
 import Link from "next/link";
+import LinkForm from "@/app/Components/LinkForm/page";
 
 const EnduitsDecoratifs = () => {
   return (
@@ -94,6 +95,7 @@ const EnduitsDecoratifs = () => {
                     </p> */}
         </Link>
       </div>
+      <LinkForm />
     </>
   );
 };

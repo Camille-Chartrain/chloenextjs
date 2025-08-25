@@ -2,6 +2,7 @@ import "./style/globals.scss";
 import Head from "next/head";
 import React from "react";
 import BurgerMenu from "@/app/components/BurgerMenu";
+import Footer from "./Components/Footer/page";
 
 export const metadata = {
   title: "Chloé Chartrain",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <BurgerMenu />
         {children}
       </body>
+      <Footer />
     </html>
   );
 }
