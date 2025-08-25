@@ -4,12 +4,12 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <div className="lien">
+        <footer className="lien">
 
             <Link href="/PolitiqueConfidentialite" className="liens">Politique de confidentialité</Link>
-            <Link href="/MentionsLegales" className="liens">Mention légale</Link>
+            <Link href="/MentionsLegales" className="liens">Mentions légales</Link>
 
-        </div>
+        </footer>
     );
 };
 
