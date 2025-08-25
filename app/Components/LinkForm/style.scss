@@ -6,15 +6,20 @@
     display: block;
     // width: 100%;
     text-align: center;
-    margin: 1rem auto 5rem auto;
+    margin: 9rem auto 10rem auto;
     font-size: 0.9rem;
+    background-color: var.$soft-white-transparent;
+    padding: 5rem;
     
+    @include mixin.medium {
+        font-size: 1rem;
+      }
 
     .button{
         padding: 1rem;
         border-radius: 0.2rem;
-        border-color: var.$soft-white-transparent;
-        background-color: var.$soft-white-transparent;
+        border: 0.1rem solid var.$anthracite; 
+        background-color: white;
     }
 
 }
