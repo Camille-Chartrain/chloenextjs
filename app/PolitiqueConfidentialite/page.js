@@ -4,77 +4,92 @@ import Link from "next/link";
 
 const PolitiqueConfidentialite = () => {
     return (
-        <p className="">
-            Politique de confidentialité
+        <section className="politics">
+            <h4>Politique de confidentialité</h4>
 
-            Dernière mise à jour : [date]
+            <p>Dernière mise à jour : [date]</p>
 
-            Nous attachons une grande importance à la protection de vos données personnelles.
-            La présente politique explique quelles informations nous collectons, dans quel but et comment elles sont traitées.
+            <p>
+                Nous attachons une grande importance à la protection de vos données personnelles.
+                La présente politique explique quelles informations nous collectons, dans quel but et comment elles sont traitées.
+            </p>
 
-            1. Données collectées
+            <h5>1. Données collectées</h5>
 
-            Dans le cadre de nos formulaires de contact ou de demande de devis, nous pouvons être amenés à collecter les informations suivantes :
+            <p>
+                Dans le cadre de nos formulaires de contact ou de demande de devis, nous pouvons être amenés à collecter les informations suivantes :
+            </p>
 
-            Nom et prénom
+            <ul>
+                <li>- Nom et prénom</li>
+                <li>- Adresse e-mail</li>
+                <li>- Numéro de téléphone</li>
+                <li>- Adresse postale</li>
+                <li>- Toute autre information transmise volontairement dans le message</li>
 
-            Adresse e-mail
+            </ul>
 
-            Numéro de téléphone
 
-            Adresse postale
 
-            Toute autre information transmise volontairement dans le message
+            <h5>2. Finalité de la collecte</h5>
 
-            2. Finalité de la collecte
+            <p> Ces données sont utilisées uniquement pour :</p>
 
-            Ces données sont utilisées uniquement pour :
+            <ul>
+                <li>- répondre à votre demande,</li>
+                <li>- établir un devis,</li>
+                <li>- vous recontacter si nécessaire.</li>
+            </ul>
 
-            répondre à votre demande,
+            <p>Nous ne transmettons jamais vos données à des tiers, sauf obligation légale.</p>
 
-            établir un devis,
 
-            vous recontacter si nécessaire.
+            <h5>3. Conservation des données</h5>
 
-            Nous ne transmettons jamais vos données à des tiers, sauf obligation légale.
+            <p>
+                Les informations reçues par e-mail sont conservées uniquement le temps nécessaire au traitement de votre demande, puis supprimées au plus tard [X mois – ex : 6 mois] après le dernier contact.
+            </p>
 
-            3. Conservation des données
+            <h5>4. Sécurité</h5>
 
-            Les informations reçues par e-mail sont conservées uniquement le temps nécessaire au traitement de votre demande, puis supprimées au plus tard [X mois – ex : 6 mois] après le dernier contact.
+            <p>
+                Nous mettons en place toutes les mesures nécessaires pour protéger vos informations personnelles.
+                Vos données sont transmises via une connexion sécurisée HTTPS et ne sont pas stockées dans une base de données.
+            </p>
 
-            4. Sécurité
+            <h5>5. Vos droits</h5>
 
-            Nous mettons en place toutes les mesures nécessaires pour protéger vos informations personnelles.
-            Vos données sont transmises via une connexion sécurisée HTTPS et ne sont pas stockées dans une base de données.
+            <p>Conformément au RGPD, vous disposez des droits suivants:</p>
 
-            5. Vos droits
+            <ul>
+                <li>- droit d’accès à vos données,</li>
+                <li>- droit de rectification,</li>
+                <li>- droit de suppression,</li>
+                <li>- droit de limiter ou refuser le traitement.</li>
+            </ul>
 
-            Conformément au RGPD, vous disposez des droits suivants :
+            <p>
+                Pour exercer vos droits, vous pouvez nous contacter à l’adresse suivante:
+                📧[ton email]
+            </p>
 
-            droit d’accès à vos données,
+            <h5> 6. Cookies</h5>
 
-            droit de rectification,
+            <p>
+                Notre site n’utilise pas de cookies à des fins publicitaires ou de suivi.
+                Seuls les cookies strictement nécessaires au bon fonctionnement du site peuvent être utilisés.
+            </p>
 
-            droit de suppression,
+            <h5>7. Responsable du traitement</h5>
 
-            droit de limiter ou refuser le traitement.
+            <p>
+                Le responsable du traitement des données est:
+                Chloé Chartrain
+                📍[Ton adresse]
+                📧[Ton email]
+            </p>
 
-            Pour exercer vos droits, vous pouvez nous contacter à l’adresse suivante :
-            📧 [ton email]
-
-            6. Cookies
-
-            Notre site n’utilise pas de cookies à des fins publicitaires ou de suivi.
-            Seuls les cookies strictement nécessaires au bon fonctionnement du site peuvent être utilisés.
-
-            7. Responsable du traitement
-
-            Le responsable du traitement des données est :
-            [Ton nom / ta société]
-            📍 [Ton adresse]
-            📧 [Ton email]
-
-        </p>
+        </section >
     );
 };
 
