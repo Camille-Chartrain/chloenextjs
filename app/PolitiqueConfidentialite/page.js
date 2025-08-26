@@ -7,7 +7,7 @@ const PolitiqueConfidentialite = () => {
         <section className="politics">
             <h4>Politique de confidentialité</h4>
 
-            <p>Dernière mise à jour : [date]</p>
+            <p>Dernière mise à jour : 26/08/2025</p>
 
             <p>
                 Nous attachons une grande importance à la protection de vos données personnelles.
@@ -47,7 +47,7 @@ const PolitiqueConfidentialite = () => {
             <h5>3. Conservation des données</h5>
 
             <p>
-                Les informations reçues par e-mail sont conservées uniquement le temps nécessaire au traitement de votre demande, puis supprimées au plus tard [X mois – ex : 6 mois] après le dernier contact.
+                Les informations reçues par e-mail sont conservées uniquement le temps nécessaire au traitement de votre demande, puis supprimées au plus tard 6 mois après le dernier contact.
             </p>
 
             <h5>4. Sécurité</h5>
@@ -70,7 +70,7 @@ const PolitiqueConfidentialite = () => {
 
             <p>
                 Pour exercer vos droits, vous pouvez nous contacter à l’adresse suivante:
-                📧[ton email]
+                connection.chloechartrain@gmail.com
             </p>
 
             <h5> 6. Cookies</h5>
@@ -85,8 +85,7 @@ const PolitiqueConfidentialite = () => {
             <p>
                 Le responsable du traitement des données est:
                 Chloé Chartrain
-                📍[Ton adresse]
-                📧[Ton email]
+                connection.chloechartrain@gmail.com
             </p>
 
         </section >

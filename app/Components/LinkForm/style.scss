@@ -4,7 +4,7 @@
 
 .link{
     display: block;
-    // width: 100%;
+    width: 95%;
     text-align: center;
     margin: 9rem auto 10rem auto;
     font-size: 0.9rem;
@@ -13,7 +13,8 @@
     
     @include mixin.medium {
         font-size: 1rem;
-      }
+         width: 60%;
+    }
 
     .button{
         padding: 1rem;
