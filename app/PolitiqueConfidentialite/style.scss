@@ -29,6 +29,7 @@
     }
 
     ul{
+        list-style-type: none;
         margin-left: 1rem;
 
         @include mixin.medium {

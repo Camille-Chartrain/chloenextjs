@@ -28,13 +28,14 @@ const MentionsLegales = () => {
 
             <h5>2. Hébergeur</h5>
 
-            <p>Le site est hébergé par :
-                <ul>
-                    <li>Hostinger International Ltd</li>
-                    <li>Adresse : [adresse de l’hébergeur]</li>
-                    <li>Site web : https://www.hostinger.fr</li>
-                </ul>
-            </p>
+            <p>Le site est hébergé par :</p>
+
+            <ul>
+                <li>Hostinger International Ltd</li>
+                <li>Adresse : [adresse de l’hébergeur]</li>
+                <li>Site web : https://www.hostinger.fr</li>
+            </ul>
+
 
             <h5>3. Propriété intellectuelle</h5>
 
