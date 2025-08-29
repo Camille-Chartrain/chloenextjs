@@ -13,39 +13,39 @@ export default function MenuNav({ isOpen, showNav, hideNav }) {
               TYPES DE PRESTATIONS
             </Link>
 
-            <ul className="subSection">
+            <ul>
 
-              <Link href="/Prestations/Betons" onClick={hideNav}>
+              <Link href="/Prestations/Betons" onClick={hideNav} className="subSection">
                 LES BETONS CIRES
               </Link>
 
               <ul>
-                <Link href="/Prestations/Betons/BetonCireClassic" onClick={hideNav}>
+                <Link href="/Prestations/Betons/BetonCireClassic" onClick={hideNav} className="subSubSection">
                   <li>CLASSIC</li>
                 </Link>
-                <Link href="/Prestations/Betons/BetonCireMineral" onClick={hideNav}>
+                <Link href="/Prestations/Betons/BetonCireMineral" onClick={hideNav} className="subSubSection">
                   <li>MINERAL</li>
                 </Link>
-                <Link href="/Prestations/Betons/BetonCireFerre" onClick={hideNav}>
+                <Link href="/Prestations/Betons/BetonCireFerre" onClick={hideNav} className="subSubSection">
                   <li>FERRE</li>
                 </Link>
               </ul>
 
-              <Link href="/Prestations/EnduitsDecoratifs" onClick={hideNav}>
+              <Link href="/Prestations/EnduitsDecoratifs" onClick={hideNav} className="subSection">
                 LES ENDUITS DECORATIFS
               </Link>
 
               <ul>
-                <Link href="/Prestations/EnduitsDecoratifs/BetonMuralClassic" onClick={hideNav}>
+                <Link href="/Prestations/EnduitsDecoratifs/BetonMuralClassic" onClick={hideNav} className="subSubSection">
                   <li>BETON MURAL CLASSIC</li>
                 </Link>
-                <Link href="/Prestations/EnduitsDecoratifs/BetonMuralTexture" onClick={hideNav}>
+                <Link href="/Prestations/EnduitsDecoratifs/BetonMuralTexture" onClick={hideNav} className="subSubSection">
                   <li>BETON MURAL TEXTURE</li>
                 </Link>
-                <Link href="/Prestations/EnduitsDecoratifs/EnduitMarmorino" onClick={hideNav}>
+                <Link href="/Prestations/EnduitsDecoratifs/EnduitMarmorino" onClick={hideNav} className="subSubSection">
                   <li>ENDUIT DE CHAUX MARMORINO</li>
                 </Link>
-                <Link href="/Prestations/EnduitsDecoratifs/ChauxFine" onClick={hideNav}>
+                <Link href="/Prestations/EnduitsDecoratifs/ChauxFine" onClick={hideNav} className="subSubSection">
                   <li>ENDUIT DE CHAUX FINE</li>
                 </Link>
               </ul>
