@@ -162,7 +162,7 @@ const DevisForm = () => {
               <input type="number" name="etage" id="etage" placeholder="ex: 2" />
 
               <fieldset>
-                <legend>
+                <legend className="ascParking">
                   Ascenseur : <span className="etoile"></span>
                 </legend>
                 <div className="radio-group">
@@ -175,7 +175,7 @@ const DevisForm = () => {
               </fieldset>
 
               <fieldset>
-                <legend>
+                <legend className="ascParking">
                   Possibilité de parking gratuit :{" "}
                   <span className="etoile"></span>
                 </legend>
