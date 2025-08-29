@@ -1,7 +1,7 @@
 import "./style/globals.scss";
 import Head from "next/head";
 import React from "react";
-import BurgerMenu from "@/app/components/BurgerMenu";
+import BurgerMenu from "@/app/Components/BurgerMenu";
 import Footer from "./Components/Footer/page";
 
 export const metadata = {
@@ -26,8 +26,9 @@ export default function RootLayout({ children }) {
       <body>
         <BurgerMenu />
         {children}
+        <Footer />
       </body>
-      <Footer />
+
     </html>
   );
 }

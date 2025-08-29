@@ -1,11 +1,9 @@
 import React from "react";
 import "./style.scss";
-import BurgerMenu from "@/app/components/BurgerMenu";
 
 const ChauxFine = () => {
   return (
     <>
-      <BurgerMenu />
       <h2>DECLINAISONS CHAUX FINE</h2>
 
       <div className="all_sections">

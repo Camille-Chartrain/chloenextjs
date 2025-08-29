@@ -7,13 +7,13 @@ export default function MenuNav({ isOpen, showNav, hideNav }) {
   return (
     <>
       <nav className={`menu ${isOpen ? "open" : ""}`} onMouseEnter={showNav}>
-        <ul>
+        <ul className="allLinks">
           <li>
-            <Link href="/Prestations" onClick={hideNav}>
+            <Link href="/Prestations" onClick={hideNav} className="section">
               TYPES DE PRESTATIONS
             </Link>
 
-            <ul>
+            <ul className="subSection">
 
               <Link href="/Prestations/Betons" onClick={hideNav}>
                 LES BETONS CIRES
@@ -52,7 +52,7 @@ export default function MenuNav({ isOpen, showNav, hideNav }) {
 
             </ul>
 
-            <Link href="/Realisations" onClick={hideNav}>
+            <Link href="/Realisations" onClick={hideNav} className="section">
               RÉALISATIONS
             </Link>
           </li>
@@ -62,7 +62,7 @@ export default function MenuNav({ isOpen, showNav, hideNav }) {
             </Link>
           </li> */}
           <li>
-            <Link href="/Devis" onClick={hideNav}>
+            <Link href="/Devis" onClick={hideNav} className="section">
               DEMANDE DE DEVIS
             </Link>
           </li>

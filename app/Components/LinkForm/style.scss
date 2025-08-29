@@ -2,25 +2,50 @@
 @use "../style/var";
 
 
+// .link{
+//     display: block;
+//     width: 95%;
+//     text-align: center;
+//     margin: 9rem auto 10rem auto;
+//     font-size: 0.9rem;
+//     background-color: var.$soft-white-transparent;
+//     padding: 5rem;
+    
+//     @include mixin.medium {
+//         font-size: 1rem;
+//         width: 60%;
+//     }
+
+//     .button{
+//         padding: 1rem;
+//         border-radius: 0.2rem;
+//         border: 0.1rem solid var.$anthracite; 
+//         background-color: white;
+//     }
+
+// }
+
 .link{
     display: block;
-    width: 95%;
+    // width: 95%;
     text-align: center;
-    margin: 9rem auto 10rem auto;
+    // margin: auto;
+    margin: 4rem auto 4rem auto;
     font-size: 0.9rem;
-    background-color: var.$soft-white-transparent;
+    // background-color: var.$soft-white-transparent;
     padding: 5rem;
     
     @include mixin.medium {
         font-size: 1rem;
-         width: 60%;
+        // width: 60%;
+        margin: 4rem auto 8rem auto;
     }
 
     .button{
-        padding: 1rem;
+        padding:  1rem 1.3rem;
         border-radius: 0.2rem;
-        border: 0.1rem solid var.$anthracite; 
-        background-color: white;
+        // border: 0.1rem solid var.$anthracite; 
+        background-color: var.$soft-white-transparent;
     }
 
 }

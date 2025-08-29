@@ -1,6 +1,7 @@
 "use client";
 import "./index.scss";
 import React from "react";
+import LinkForm from "./Components/LinkForm/page";
 
 export default function Home() {
   return (
@@ -45,6 +46,8 @@ export default function Home() {
           et profondément habités.
         </div>
       </div>
+
+      <LinkForm />
 
       <div className="logo_partenaires">
         <img

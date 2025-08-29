@@ -37,6 +37,18 @@
   padding-top: 6rem;
   z-index: -1;
 
+  .allLinks{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .section{
+    font-weight: bold;
+  }
+
   a {
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -45,7 +57,12 @@
     &:hover {
       color: rgb(117, 117, 117);
     }
+
+    // .subSection{
+    //   font-size: 0.8rem;
+    // }
   }
+  
 
   &.open {
     // position: fixed;
@@ -56,7 +73,6 @@
   ul {
     list-style-type: none;
     margin-left: 1rem;
-    // margin: 20px;
-    // margin-top: 7rem;
   }
 }
+
