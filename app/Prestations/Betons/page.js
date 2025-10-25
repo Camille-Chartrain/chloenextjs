@@ -8,9 +8,8 @@ const betons = () => {
     <>
       <h2>BETONS CIRES</h2>
       <p className="intro_beton">
-        Vous recherchez une finition unique, moderne et intemporelle pour vos
-        intérieurs ? Avec son aspect lisse et raffiné, le béton ciré s’intègre
-        parfaitement dans tous les styles, qu’il s’agisse d’une maison
+        Le béton ciré offre une finition unique, moderne et intemporelle. Avec son aspect lisse et raffiné, il s’intègre
+        parfaitement dans vos intérieurs, qu’il s’agisse d’une maison
         contemporaine, d’un loft industriel ou d’un espace haut de gamme.
         Durable, esthétique et facile d’entretien, il est idéal pour tous vos
         lieux de vie : Sols, murs et plafonds Salles de bains Escaliers

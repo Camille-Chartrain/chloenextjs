@@ -16,11 +16,12 @@ export default function Home() {
           {/* <h1>Texte au-dessus de la vidéo</h1> */}
         </div>
       </div>
+      <div className="photo" >
+        <img alt="photo" src="/fondClair.jpg"></img>
+      </div>
 
       <div className="intro">
-        <div className="intro_text">
-          <span className="commentaires"> A propos de nous</span> :
-        </div>
+
         <div className="intro_text">
           Artisane spécialisée dans le béton ciré depuis plus de cinq ans, je
           mets mon expertise au service des projets les plus exigeants. Formée
@@ -46,6 +47,7 @@ export default function Home() {
           et profondément habités.
         </div>
       </div>
+
 
       <LinkForm />
 

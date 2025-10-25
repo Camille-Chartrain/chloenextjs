@@ -107,7 +107,7 @@ const DevisForm = () => {
       {!loading && isSubmitted && (
         <div className="success-message">
           <h3>Merci pour votre message !</h3>
-          <p>Votre demande a bien été envoyée. Je vous contacterai sous peu.</p>
+          <p>Votre demande a bien été envoyée. Je vous contacterai très prochainement.</p>
         </div>
       )}
 
@@ -224,13 +224,13 @@ const DevisForm = () => {
                         id="type_support_mur"
                         name="type_support_mur"
                         className="checkbox_choices"
+                        defaultValue=""
                       >
+                        <option value="" disabled>Séléctionnez:</option>
                         <option value="carrelage_mur">Carrelage</option>
                         <option value="placo_mur">Plaque de plâtre</option>
                         <option value="pierre_brique_mur">Pierre- brique</option>
-                        <option value="beton_cellulaire_mur">
-                          Béton céllulaire
-                        </option>
+                        <option value="beton_cellulaire_mur"> Béton céllulaire </option>
                         <option value="Parpaing_mur">Parpaing</option>
                         <option value="plaque_ciment_mur">
                           Plaque de ciment
@@ -250,16 +250,16 @@ const DevisForm = () => {
                         id="prestation_souhaitee_mur"
                         name="prestation_souhaitee_mur"
                         className="checkbox_choices"
+                        defaultValue=""
                       >
+                        <option value="" disabled>Séléctionnez:</option>
                         <option value="beton_cire">Béton ciré</option>
-                        <option value="placobeton_texture">
-                          Plaque de Béton texture
-                        </option>
-                        <option value="chaux_brossee">Chaux brossée</option>
-                        <option value="beton_cellulaire">Béton céllulaire</option>
+                        <option value="beton_texture">Béton texture</option>
+                        <option value="beton_mural">Béton mural</option>
+                        <option value="chaux_brossee">Chaux badigeon</option>
                         <option value="chaux_lissee">Chaux lissée</option>
                         <option value="chaux_ferree">Chaux ferrée</option>
-                        <option value="enduit_chaux">Enduit de chaux</option>
+                        <option value="chaux_marmorino">Chaux marmorino</option>
                         <option value="besoin_conseil">Besoin de conseil</option>
                       </select>
                     </fieldset>
@@ -289,7 +289,9 @@ const DevisForm = () => {
                         id="type_support_sol"
                         name="type_support_sol"
                         className="checkbox_choices"
+                        defaultValue=""
                       >
+                        <option value="" disabled>Séléctionnez:</option>
                         <option value="carrelage_sol">Carrelage</option>
                         <option value="marbre">Marbre</option>
                         <option value="ancien_beton_cire">
@@ -315,13 +317,6 @@ const DevisForm = () => {
                         className="checkbox_choices"
                       >
                         <option value="beton_cire">Béton ciré</option>
-                        <option value="placobeton_texture">Béton texture</option>
-                        <option value="chaux_brossee">Chaux brossée</option>
-                        <option value="beton_cellulaire">Béton céllulaire</option>
-                        <option value="chaux_lissee">Chaux lissée</option>
-                        <option value="chaux_ferree">Chaux ferrée</option>
-                        <option value="enduit_chaux">Enduit de chaux</option>
-                        <option value="besoin_conseil">Besoin de conseil</option>
                       </select>
                     </fieldset>
                   </div>
@@ -357,7 +352,9 @@ const DevisForm = () => {
                         id="type_support_plafond"
                         name="type_support_plafond"
                         className="checkbox_choices"
+                        defaultValue="sélectionner"
                       >
+                        <option value="" disabled>Séléctionnez:</option>
                         <option value="plaque_platre_plafonds">
                           Plaque de plâtre
                         </option>
@@ -377,8 +374,17 @@ const DevisForm = () => {
                         id="prestation_souhaitee_plafonds"
                         name="prestation_souhaitee_plafonds"
                         className="checkbox_choices"
+                        defaultValue=""
                       >
-                        <option value="beton_cire_plafonds">Béton ciré</option>
+                        <option value="" disabled>Séléctionnez:</option>
+                        <option value="beton_cire">Béton ciré</option>
+                        <option value="beton_texture">Béton texture</option>
+                        <option value="beton_mural">Béton mural</option>
+                        <option value="chaux_brossee">Chaux badigeon</option>
+                        <option value="chaux_lissee">Chaux lissée</option>
+                        <option value="chaux_ferree">Chaux ferrée</option>
+                        <option value="chaux_marmorino">Chaux marmorino</option>
+                        <option value="besoin_conseil">Besoin de conseil</option>
                       </select>
                     </fieldset>
                   </div>
@@ -401,13 +407,18 @@ const DevisForm = () => {
                     </p>
 
                     <label htmlFor="element">
-                      Précisez vos éléments à enduire (ex: meuble vasque, table,
+                      Précisez vos éléments à enduire (ex: plan vasque, table,
                       niche, banquette...) ainsi que leur matériau :
                     </label>
                     <input type="text" name="element" id="element" />
                   </div>
                 </div>
               </fieldset>
+            </div>
+            <div className="dropFile">
+              <label for="dropFile">Déposer vos plans:</label>
+
+              <input type="file" id="dropFile" name="avatar" accept="image/*,.pdf,.jpg,.jpeg,.doc" multiple />
             </div>
           </div>
 

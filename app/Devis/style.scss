@@ -2,11 +2,11 @@
 @use "../style/var";
 
 .devis {
-  // background-image: url(../public/IMG_3684.jpg);
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
+  background-image: url(/beton_cire.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-size: 0.9rem;
   font-family: "PortherasThin", "ZH-Sans", Arial, "Lucida Sans Unicode",
     sans-serif;
@@ -29,7 +29,7 @@
       margin-top: 2rem;
       margin-bottom: 2rem;
       @include mixin.medium {
-        margin-top: 0rem;
+        margin-top: 2rem;
       }
     }
 
@@ -75,12 +75,29 @@
       }
 
       .background_color{
-        background-color:var.$soft-white-transparent;
+        background-color:#dfe0d2;
+        // background-color:#e7e7dd;
+        // background-color:#efefe5;
+        // background-color: #e3e3d7;
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-bottom: 5.5rem;
         padding-bottom: 2rem;
+      }
+
+      .dropFile{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 3rem auto auto auto;
+
+        input{
+          // margin: auto auto 0.5rem 0;
+          // padding: 0.5rem 0.6rem;
+          // border-radius: 3px;
+          // border: 1px solid rgb(150, 150, 150); 
+        }
       }
 
       .segment {

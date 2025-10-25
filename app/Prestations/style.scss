@@ -2,11 +2,11 @@
 @use '../style/var';
 
 h2{
-    margin: 1rem auto 2rem auto;
+    margin: 0rem auto 2rem auto;
     text-align: center;
 
     @include mixin.medium {
-        margin: 0rem auto 4rem auto;
+        margin: 2rem auto 4rem auto;
     }
     
 }
@@ -47,7 +47,7 @@ h2{
 .note{
     width: 95%;
     font-size: 0.9rem;
-    margin: 7rem auto auto auto;
+    margin: 2rem auto 2rem auto;
     letter-spacing: .0rem;
     text-align: center;
 
@@ -55,7 +55,7 @@ h2{
         font-size: 0.95rem;
         text-align: center;
         letter-spacing: .01rem;
-        margin: 6rem auto auto auto;
+        margin: 3rem auto 3rem auto;
     }
 }
 
