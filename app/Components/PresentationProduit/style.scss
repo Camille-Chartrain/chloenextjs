@@ -1,0 +1,30 @@
+@use "mixin";
+@use "var";
+
+/* mobile */
+.presentation-produit {
+  display: grid;
+  gap: 10px;
+
+  grid-template-rows: auto 1fr;
+
+  .presentation-carousel {
+    display: flex;
+    justify-content: center;
+  }
+  .presentation-description {
+    h3 {
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* laptop */
+@include mixin.medium {
+  .presentation-produit {
+    grid-template-rows: auto;
+    grid-template-columns: auto 1fr;
+    width: 100%;
+    gap: 45px;
+  }
+}

@@ -1,0 +1,177 @@
+@use "mixin";
+@use "var";
+
+/* default to vertical carousel */
+.carousel-section {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+
+  .carousel-slides {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    gap: 0px;
+    scroll-behavior: smooth;
+
+    /* Hide scrollbar */
+    scrollbar-width: none; /* for Firefox, Safari 18.2+, and Chromium 121+ */
+    -ms-overflow-style: none; /* for IE 10+, and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* for older Chromium and Safari, and Opera */
+    }
+
+    /* -> VERTICAL SPECIFIC */
+    height: 500px;
+    grid-auto-flow: row;
+    grid-auto-rows: 100%; /* ensure each grid children is 100% height */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+    .carousel-item {
+      /* -> VERTICAL SPECIFIC */
+      height: 100%;
+
+      width: 100%;
+      overflow: hidden;
+      scroll-snap-align: center;
+
+      .carousel-image {
+        /* -> VERTICAL SPECIFIC */
+        height: 100%;
+        width: auto;
+
+        object-fit: contain;
+        object-position: center top;
+      }
+    }
+  }
+
+  .carousel-navigation {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+
+    /* -> VERTICAL SPECIFIC */
+    flex-direction: column;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+    left: auto;
+
+    .nav-button {
+      /* -> VERTICAL SPECIFIC */
+      width: 2px;
+      height: 25px;
+      margin: 4px 0;
+
+      border-radius: 20%;
+      border: none;
+      background-color: #000;
+      cursor: pointer;
+
+      /* Increase clickable area */
+      padding: 0 10px; /* -> VERTICAL SPECIFIC */
+      box-sizing: content-box; /* ensures padding doesn't affect the visual size */
+      background-clip: content-box; /* background only covers the content box (not padding) */
+
+      &.active {
+        background-color: #ccc;
+      }
+    }
+
+    .nav-image {
+      display: none;
+    }
+  }
+}
+
+/* Override for horizontal carousel */
+.carousel-section.carousel-orientation-horizontal {
+  width: 500px;
+  max-width: 90vw;
+
+  .carousel-slides {
+    grid-auto-flow: column;
+    grid-auto-columns: 100%; /* ensure each grid children is 100% width */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    height: auto;
+
+    .carousel-item {
+      height: auto;
+
+      .carousel-image {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .carousel-navigation {
+    flex-direction: row;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    top: auto;
+
+    .nav-button {
+      width: 25px;
+      height: 2px;
+      margin: 0 4px;
+
+      /* Increase clickable area */
+      padding: 10px 0;
+    }
+  }
+}
+
+/* Override for responsive carousel */
+@include mixin.medium {
+  .carousel-section {
+    display: grid;
+    grid-auto-flow: column;
+    // grid-auto-columns: auto auto;
+    gap: 10px;
+
+    &.carousel-orientation-horizontal .carousel-navigation {
+      flex-direction: column;
+    }
+
+    .carousel-navigation {
+      justify-content: flex-end;
+      max-width: 65px;
+      height: 100%;
+      grid-column-start: 1;
+
+      position: relative;
+      top: auto;
+      right: auto;
+      transform: none;
+
+      .nav-button {
+        display: none;
+      }
+
+      .nav-image {
+        display: flex;
+        max-width: 100%;
+        border: 1px solid #d1d1d6;
+        margin-top: 8px;
+        opacity: 0.5;
+        background-color: transparent;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+          border-color: #1e1e1e;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
