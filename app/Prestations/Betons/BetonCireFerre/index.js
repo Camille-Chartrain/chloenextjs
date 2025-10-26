@@ -1,25 +1,14 @@
 import React from "react";
 import "./style.scss";
+import Carousel from "@/app/components/Caroussel";
 
 export default function BetonCireFerre() {
   return (
     <>
-      <div className="section">
-        <div className="duo_img">
-          <img
-            src={"/IMG_3684.jpg"}
-            alt={"illustration de béton ciré"}
-            className="image"
-          />
-          <img
-            src={"/IMG_3684.jpg"}
-            alt={"illustration de béton ciré"}
-            className="image"
-          />
-        </div>
-
-        <h3>BETON CIRE "FERRE"</h3>
-      </div>
+      <Carousel
+        images={["/IMG_3684.jpg", "/IMG_3684.jpg"]}
+        title='beton cire "ferre"'
+      />
     </>
   );
 }
