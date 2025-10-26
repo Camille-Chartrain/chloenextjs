@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import Carousel from "@/app/components/Caroussel";
+import Carousel from "@/app/components/VerticalCaroussel";
 
 export default function BetonCireClassic() {
   return (

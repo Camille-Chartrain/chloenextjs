@@ -19,7 +19,7 @@ export default function Carousel({ images, title }) {
           ))}
         </div>
 
-        <h3>{title.toUpperCase()}</h3>
+        <h3>{title_upper}</h3>
       </div>
     </>
   );
