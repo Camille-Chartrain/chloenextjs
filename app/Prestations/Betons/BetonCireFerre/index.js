@@ -6,7 +6,12 @@ export default function BetonCireFerre() {
   return (
     <>
       <Carousel
-        images={["/IMG_3684.jpg", "/IMG_3684.jpg"]}
+        images={[
+          "/IMG_3684.jpg",
+          "/IMG_3684.jpg",
+          "/IMG_3684.jpg",
+          "/IMG_3684.jpg",
+        ]}
         title='beton cire "ferre"'
       />
     </>
