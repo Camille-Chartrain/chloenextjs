@@ -8,18 +8,22 @@ export default function Carousel({ images, title }) {
   return (
     <>
       <div className="section">
-        <div className="vertical-carousel">
+        <div className="vertical-caroussel">
           {images.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`illustration ${title_without_quotes} ${index + 1}`}
-              className="caroussel-image"
-            />
+            <div className="caroussel-item">
+              <img
+                key={index}
+                src={src}
+                alt={`illustration ${title_without_quotes} ${index + 1}`}
+                className="caroussel-image"
+              />
+            </div>
           ))}
         </div>
 
-        <h3>{title_upper}</h3>
+        <div className="caroussel-description">
+          <h3>{title_upper}</h3>
+        </div>
       </div>
     </>
   );

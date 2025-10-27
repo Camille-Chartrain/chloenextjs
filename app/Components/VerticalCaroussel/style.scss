@@ -2,68 +2,46 @@
 @use "var";
 
 .section {
-  display: block;
   margin-bottom: 2rem;
+  overflow: hidden;
+  width: 100%;
 
-  @include mixin.medium {
-    width: 50%;
-    margin-bottom: 5rem;
-  }
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
 
-  p {
-    width: 90%;
+  .vertical-caroussel {
+    width: 100%;
+    height: 500px;
     margin: auto;
-    text-align: justify;
-    font-size: 1rem;
-    letter-spacing: 0rem;
 
-    @include mixin.medium {
-      width: 91%;
+    display: grid;
+    grid-auto-rows: 100%; /* ensure each grid children is 100% height */
+    gap: 0px;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory; /* Snap on y-axis, mandatory */
+
+    .caroussel-item {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      scroll-snap-align: center; /* Snap to the start of each item */
+
+      .caroussel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Ensures images fill the space */
+        object-position: center top; /* Place images inside the frame */
+      }
     }
   }
 
-  h3 {
-    margin-bottom: 1rem;
-  }
-}
-
-// .vertical-carousel {
-//   display: flex;
-//   justify-content: space-evenly;
-//   // margin-top: 3rem;
-//   margin-bottom: 0.5rem;
-
-//   @include mixin.medium {
-//     justify-content: center;
-//     // margin-top: 5rem;
-//   }
-
-//   .caroussel-image {
-//     width: 47%;
-//     // height: 550px;
-
-//     @include mixin.medium {
-//       width: 45%; // exemple : largeur quand l’écran ≥ 60rem
-//       margin-right: 0.3rem;
-//     }
-//   }
-// }
-
-.vertical-carousel {
-  height: 800px;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  scroll-snap-align: start;
-  gap: 10px;
-
-  .carousel-image {
-    width: 100%;
-    height: auto;
-    scroll-snap-align: start;
-    display: block;
+  .carousel-description {
+    h3 {
+      margin-bottom: 1rem;
+    }
   }
 }
