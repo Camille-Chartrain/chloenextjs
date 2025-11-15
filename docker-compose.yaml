@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   front:
     image: "node:18"
@@ -7,7 +5,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./chloenextjs:/app
+      - ./:/app
       - /app/node_modules # Isolate node_modules to avoid conflicts
     command: >
       sh -c "ls -al /app &&
