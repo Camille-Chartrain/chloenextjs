@@ -1,76 +1,18 @@
+version: "3.8"
+
 services:
-  # bdd:
-  #   image: "postgres:14-alpine"
-  #   ports:
-  #     - "5433:5432"
-  #   environment:
-  #     POSTGRES_DB: "skillswap"
-  #     POSTGRES_PASSWORD: "notreApp"
-  #     POSTGRES_USER: "admin"
-  #   volumes:
-  #     - ./BACK/db/migration.sql:/docker-entrypoint-initdb.d/create_tables.sql 
-  #     - ./BACK/db/seeding.sql:/docker-entrypoint-initdb.d/seeding.sql
-  #     - ./psql:/var/lib/postgresql/data
-  #   container_name: bddLucileCam
-
-  # back:
-  #   image: "node:18"
-  #   working_dir: /home/server/Skillswap/BACK
-  #   environment:
-  #     - SECRET_POUR_EXPRESS_SESSION=dmfhmidfghmhifgd
-  #     - PGUSER=admin
-  #     - PGHOST=bdd
-  #     - PGPASSWORD=notreApp
-  #     - PGDATABASE=skillswap
-  #     - PGPORT=5432
-  #   ports:
-  #     - "3000:3000"
-  #   volumes:
-  #     - ./BACK:/home/server/Skillswap/BACK
-  #     # - ./BACK:/Skillswap/BACK
-  #     - node_modules_back:/home/server/Skillswap/BACK/node_modules
-  #   command: >
-  #     sh -c "ls -al /home/server/Skillswap/BACK && npm install && npm run dev"
-  #   depends_on:
-  #     - bdd
-
-  # front:
-  #   image: "node:18"
-  #   working_dir: /home/server/chloenextjs
-  #   ports:
-  #     - "1234:1234"
-  #   volumes:
-  #     - ./volumeDockerFront:/home/server/chloenextjs
-  #     - node_modules_front:/home/server/chloenextjs/node_modules
-  #   command: >
-  #     sh -c "ls -al /home/server/chloenextjs && npm install && npx next dev"
-  #   # depends_on:
-  #   #   - back
-
   front:
     image: "node:18"
-    working_dir: /home/server/chloenextjs
+    working_dir: /app
     ports:
       - "3000:3000"
-    #mappe le port 3000 de la machine hôte au port 3000 du conteneur.
     volumes:
-      - ../chloenextjs:/home/server/chloenextjs
-      - ../chloenextjs/node_modules:/home/server/chloenextjs/node_modules
+      - ./chloenextjs:/app
+      - /app/node_modules # Isolate node_modules to avoid conflicts
     command: >
-      sh -c "ls -al /home/server/chloenextjs && npm install && npx next dev"
-    # depends_on:
-    #   - back
-
-  # adminer:
-  #   image: adminer
-  #   ports:
-  #     - 8081:8080
-  #   environment:
-  #     ADMINER_DEFAULT_SERVER: bdd
-  #   depends_on:
-  #     - bdd
-
-volumes:
-  
-  # node_modules_back:
-  node_modules_front:
+      sh -c "ls -al /app &&
+             npm install &&
+             npx next dev"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=development
