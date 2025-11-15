@@ -1,16 +1,8 @@
 services:
   front:
-    image: "node:18"
-    working_dir: /app
+    build: . # This tells Docker Compose to use the Dockerfile in the current directory
     ports:
       - "3000:3000"
-    volumes:
-      - ./:/app
-      - /app/node_modules # Isolate node_modules to avoid conflicts
-    command: >
-      sh -c "ls -al /app &&
-             npm install &&
-             npx next dev"
     restart: unless-stopped
     environment:
       - NODE_ENV=development
