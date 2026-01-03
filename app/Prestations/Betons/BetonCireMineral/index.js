@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.scss";
+import "./index.scss";
 import PresentationProduit from "@/app/Components/PresentationProduit";
 
-export default function BetonCireMineral() {
+export default function BetonCireMineral({ isLink = true, orientation }) {
   return (
     <>
       <PresentationProduit
@@ -14,7 +14,8 @@ export default function BetonCireMineral() {
         ]}
         title='beton cire "mineral"'
         text="voici le beton cire mineral"
-        orientation="horizontal"
+        link={isLink === true ? "BetonCireMineral" : undefined}
+        orientation={orientation}
       />
     </>
   );

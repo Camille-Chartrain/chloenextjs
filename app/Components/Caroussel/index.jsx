@@ -7,10 +7,34 @@ export default function Carousel({ images, title, orientation = "vertical" }) {
   const title_without_quotes = title.replace(/"/g, "");
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselRef = useRef(null);
+  const [enlargedImage, setEnlargedImage] = useState(null);
   // Use a ref to store the target index of a programmatic scroll. null means no scroll is active.
   const targetIndexRef = useRef(null);
 
-  // Update active index on scroll
+  /**
+   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+   * Effect to handle 'Escape' key press for closing the enlarged image
+   */
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setEnlargedImage(null);
+      }
+    };
+    if (enlargedImage) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [enlargedImage]);
+
+  /**
+   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+   * Update active index on scroll
+   */
+
   useEffect(() => {
     const carousel = carouselRef.current;
     if (!carousel) return;
@@ -46,7 +70,11 @@ export default function Carousel({ images, title, orientation = "vertical" }) {
     return () => carousel.removeEventListener("scroll", handleScroll);
   }, [images]); // dependency array: re-run if images change
 
-  // Scroll to image when dot is clicked
+  /**
+   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+   * Scroll to image when dot is clicked
+   */
+
   const scrollToImage = (index) => {
     const carousel = carouselRef.current;
     if (!carousel) return;
@@ -66,12 +94,35 @@ export default function Carousel({ images, title, orientation = "vertical" }) {
     });
   };
 
+  /**
+   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+   * handle large images
+   */
+  const handleImageClick = (src) => {
+    setEnlargedImage(src);
+  };
+  const handleCloseEnlarged = (e) => {
+    // Close only if the click is on the background, not the image itself
+    if (e.target === e.currentTarget) {
+      setEnlargedImage(null);
+    }
+  };
+
+  /**
+   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+   * return
+   */
+
   return (
     <>
       <div className={`carousel-section carousel-orientation-${orientation}`}>
         <div className="carousel-slides" ref={carouselRef}>
           {images.map((src, index) => (
-            <div key={index} className="carousel-item">
+            <div
+              key={index}
+              className="carousel-item"
+              onClick={() => handleImageClick(src)}
+            >
               <img
                 src={src}
                 alt={`illustration ${title_without_quotes} ${index + 1}`}
@@ -100,6 +151,24 @@ export default function Carousel({ images, title, orientation = "vertical" }) {
           ))}
         </div>
       </div>
+      {enlargedImage && (
+        <div className="enlarged-view" onClick={handleCloseEnlarged}>
+          <button
+            className="close-button"
+            onClick={() => setEnlargedImage(null)}
+          >
+            &times;
+          </button>
+          <input type="checkbox" id="enlarged-image-checkbox" hidden />
+          <label class="image-container" for="enlarged-image-checkbox">
+            <img
+              className="enlarged-image"
+              src={enlargedImage}
+              alt={`Enlarged illustration ${title_without_quotes}`}
+            />
+          </label>
+        </div>
+      )}
     </>
   );
 }

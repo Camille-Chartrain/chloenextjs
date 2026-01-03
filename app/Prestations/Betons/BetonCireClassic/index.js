@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.scss";
+import "./index.scss";
 import PresentationProduit from "@/app/Components/PresentationProduit";
 
-export default function BetonCireClassic() {
+export default function BetonCireClassic({ isLink = true, orientation }) {
   return (
     <>
       <PresentationProduit
@@ -14,6 +14,8 @@ export default function BetonCireClassic() {
         ]}
         title='beton cire "classic"'
         text="voici le beton cire classic"
+        link={isLink === true ? "BetonCireClassic" : undefined}
+        orientation={orientation}
       />
     </>
   );
